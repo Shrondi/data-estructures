@@ -181,24 +181,41 @@ typename List<T>::Ref List<T>::create(std::istream &in) noexcept(false)
     //  parameter T type.
     // Remember: throw std::runtime_error("Wrong input format.") exception when an input
     //  format error was found.
-    T item;
+    
+    T item; // Item to save in the list
 
-    if (token != "["){
-        throw std::runtime_error("Wrong input format");
+    list = List<T>::create();
+
+    // If the list is not empty ...
+    if (token != "[]"){
+    
+        // Check the input format
+        if (token != "["){
+            throw std::runtime_error("Wrong input format.");
+        }
+
+        // Process each element of the input stream as a string until find "]"
+        while (in >> token && token != "]"){
+
+            // Convert string to template parameter T type
+            std::istringstream convert(token);
+
+            convert >> item;
+
+            // Fail if a element is not a T type
+            if (convert.fail()){
+                throw std::runtime_error("Wrong input format.");
+            }
+
+            // Save the item in the list
+            list->push_back(item);
+        }
+
+        // Check the format
+        if (token != "]"){
+            throw std::runtime_error("Wrong input format.");
+        }
     }
-
-    while (in >> token && token != "]"){
-        std::istringstream stream(token);
-
-        stream >> item;
-
-        
-    }
-
-    if (token != "]"){
-        throw std::runtime_error("Wrong input format");
-    }
-
     //
     return list;
 }
