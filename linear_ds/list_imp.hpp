@@ -304,6 +304,24 @@ void List<T>::fold(std::ostream &out) const
 {
     // TODO
 
+    // Empty list -> "[ ]"
+    if (is_empty()){
+
+        out << "[ ]";
+
+    // Another list -> [ 0 1 2 ]
+    }else{
+
+        out << "[ ";
+        
+        // Iterate trough the list sending each element to the output stream
+        for (auto it = begin(); it != end(); it.goto_next()){
+            out << it.item() << " ";
+        }
+        
+        out << "]";
+
+    }
     //
 }
 
