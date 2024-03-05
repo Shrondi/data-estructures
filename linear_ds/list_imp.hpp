@@ -526,6 +526,15 @@ typename List<T>::iterator List<T>::find(T const &it, List<T>::iterator const &f
     iterator ret_v;
     // TODO
 
+    // Iterate through the list searching the item
+    // If the item is not found the iterator end() is returned
+    for (ret_v = from; ret_v != end(); ret_v.goto_next()){
+
+        // If the item is the searched -> BREAK
+        if (ret_v.item() == it){
+            break;
+        }
+    }
     //
     assert(ret_v == end() || ret_v.item() == it);
     return ret_v;
