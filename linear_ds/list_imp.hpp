@@ -552,6 +552,48 @@ void List<T>::splice(iterator const &pos, Ref list2,
     // TODO
     // Hint: if the range [first, last) is empty, nothing must be done.
 
+    // Example:
+    //
+    // pos = b; first = e; last = h
+    //      before splice
+    //          this:            ⇄ a ⇄ b ⇄ c ⇄
+    //          list2:           ⇄ d ⇄ e ⇄ f ⇄ g ⇄ h ⇄
+    //      after splice:
+    //          this:            ⇄ a ⇄ e ⇄ f ⇄ g ⇄ b ⇄ c ⇄
+    //          list2:           ⇄ d ⇄ h ⇄
+
+
+    auto range_size = first.distance(last);
+
+    if (range_size > 0){
+        
+        // Update lists sizes
+        _size += range_size;
+        list2->_size -= range_size;
+
+
+        auto posNode = pos.node();
+        auto prevPosNode = posNode->prev();
+        auto firstNode = first.node();
+        auto prevFirstNode = firstNode->prev();
+        auto lastNode = last.node();
+        auto prevLastNode = lastNode->prev();
+
+        // Connect list2 range into this
+
+        prevPosNode->set_next(firstNode); // a --> e : a next to e
+        firstNode->set_prev(prevPosNode); // a <-- e : e prev to a
+
+        posNode->set_prev(prevLastNode); // g <-- b : b prev to g
+        prevLastNode->set_next(posNode); // g --> b : g next to b
+
+        // Remove range from lis2
+
+        prevFirstNode->set_next(lastNode);
+        lastNode->set_prev(prevFirstNode);
+    }
+
+    
     //
     assert(size() == (old_size + old_range_size));
     assert(list2->size() == (old_l2_size - old_range_size));
@@ -566,7 +608,7 @@ void List<T>::splice(iterator const &pos, Ref list2)
 #endif
     // TODO
     // Hint: Delegate in splice the list2 range [begin, end).
-
+    splice(pos, list2, list2->begin(), list2->end());
     //
     assert(size() == (old_size + old_list2_size));
     assert(list2->size() == 0);
@@ -582,7 +624,7 @@ void List<T>::splice(iterator const &pos, Ref list2, iterator const &i)
 #endif
     // TODO
     // Hint: Delegate in splice the list2 range [i, i.next()).
-
+    splice(pos, list2, i, i.next());
     //
     assert(size() == (old_size + 1));
     assert(list2->size() == (old_list2_size - 1));
