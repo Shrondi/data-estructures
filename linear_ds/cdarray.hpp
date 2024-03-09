@@ -185,6 +185,17 @@ protected:
     // TODO
     // Give a representation.
     // Hint: use std::shared_ptr<T> to manage the block of allocated memory.
+    // Array de T
+    // Entero para cap -> max
+    // Entero para tam -> actuales
+    // Puntero a front
+    // Puntero a back
+    // Entre front y back pertenecen
+    std::shared_ptr<T> data_;
+    int cap_;
+    int tam_;
+    int front_;
+    int back_;
 
     //
 };
