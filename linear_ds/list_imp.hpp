@@ -637,6 +637,23 @@ void List<T>::merge(List<T>::Ref other, Compare comp)
     // TODO
     // Remember: The nodes of the other list are spliced into this list.
 
+    auto it1 = begin(), it2 = other->begin();
+    while (it1 != end() && it2 != other->end()){
+        if (comp(it1.item(), it2.item())){
+            it1.goto_next();
+
+        }else{
+            auto tmp = it2;
+
+            it2.goto_next();
+
+            splice(it1, other, tmp);
+        }
+    }
+
+    if (it2 != other->end()){
+        splice(it1, other);
+    }
     //
 }
 
