@@ -670,6 +670,18 @@ void List<T>::sort(Compare comp)
 
     // The empty list and a list with only one element are sorted by default.
 
+    if (_size > 1){
+        auto tmp = List<T>::create();
+        auto midpoint = begin().next(_size/2);
+
+        tmp->splice(tmp->begin(), this_, midpoint, end());
+
+        sort(comp);
+        tmp->sort(comp);
+        
+        merge(tmp, comp);
+    }
+
     //
 }
 
