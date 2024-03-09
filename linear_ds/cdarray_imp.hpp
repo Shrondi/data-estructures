@@ -55,6 +55,42 @@ CDArray<T>::create(std::istream &in) noexcept(false)
     // Remember: throw std::runtime_error("Wrong input format.") exception when an input
     //  format error was found.
 
+    std::string token;
+    in >> token;
+
+    T item; // Item to save in the array
+
+    // If the array is not empty ...
+    if (token != "[]"){
+    
+        // Check the input format
+        if (token != "["){
+            throw std::runtime_error("Wrong input format.");
+        }
+
+        // Process each element of the input stream as a string until find "]"
+        while (in >> token && token != "]"){
+
+            // Convert string to template parameter T type
+            std::istringstream convert(token);
+
+            convert >> item;
+
+            // Fail if a element is not a T type
+            if (convert.fail()){
+                throw std::runtime_error("Wrong input format.");
+            }
+
+            // Save the item in the array
+            ret_v->push_back(item);
+        }
+
+        // Check the format
+        if (token != "]"){
+            throw std::runtime_error("Wrong input format.");
+        }
+    }
+
     //
     return ret_v;
 }
@@ -111,7 +147,24 @@ std::ostream &
 CDArray<T>::fold(std::ostream &out) const
 {
     // TODO
+    // Empty array -> "[ ]"
+    if (is_empty()){
 
+        out << "[ ]";
+
+    // Another array -> [ 0 1 2 ] where 0 is the front and 2 is the back
+    }else{
+
+        out << "[ ";
+        
+        // Loop trough the array sending each element to the output stream
+        for (int i = 0; i < tam_; ++i){
+            out << get(i) << " ";
+        }
+        
+        out << "]";
+
+    }
     //
     return out;
 }
