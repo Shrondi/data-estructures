@@ -19,9 +19,7 @@ bool DNode<T>::is_dummy() const
 {
     bool ret_v = false;
     // TODO
-    if (_item == nullptr){
-        ret_v = true;
-    }
+    ret_v = _item == nullptr;
     //
     return ret_v;
 }
@@ -78,7 +76,7 @@ T DNode<T>::item() const
     assert(!is_dummy());
     T it;
     // TODO
-    it = *_item.get();
+    it = *_item;
     //
     return it;
 }
@@ -225,9 +223,7 @@ bool List<T>::is_empty() const
 {
     bool ret_val = true;
     // TODO
-    if (_size > 0){
-        ret_val = false;
-    }
+    ret_val = !(_size > 0);
     //
     return ret_val;
 }
@@ -333,6 +329,7 @@ void List<T>::hook(typename DNode<T>::Ref n, typename DNode<T>::Ref pos)
 #endif
     // TODO
     // Remember updating the size.
+
     _size += 1;
 
     n->set_prev(pos->prev());
@@ -340,20 +337,6 @@ void List<T>::hook(typename DNode<T>::Ref n, typename DNode<T>::Ref pos)
 
     n->set_next(pos);
     pos->set_prev(n);
-
-    /*
-        if (_size == 1){ // Si dummy no esta linkeado consigo mismo, hay que poner la condicion de cuando es 1 ya que 
-                        // los el otro codigo no funcionaria al obtener un nullptr
-            n->set_prev(_dummy);
-            _dummy->set_next(n);
-        }else{
-            n->set_prev(pos->prev());
-            pos->prev()->set_next(n);
-        }
-
-        n->set_next(pos);
-        pos->set_prev(n);
-    */
 
     //
     assert(size() == old_size + 1);
@@ -367,6 +350,7 @@ void List<T>::unhook(typename DNode<T>::Ref pos)
 #endif
     // TODO
     // Remember updating the size.
+
     _size -= 1;
 
     pos->prev()->set_next(pos->next());
@@ -388,11 +372,13 @@ typename List<T>::iterator List<T>::insert(typename List<T>::iterator const &pos
     iterator ret_v;
     // TODO
     // Hint: delegate in hook.
+
     auto node = DNode<T>::create(it);
 
     hook(node, pos.node());
 
     ret_v = typename ListIterator<T>::ListIterator(node);
+
     //
     assert(!old_is_empty || (front() == it && back() == it));
     assert(old_is_empty || ret_v.next() == pos);
@@ -435,38 +421,6 @@ void List<T>::push_front(T const &new_it)
 
     insert(begin(), new_it);
 
-    /*
-        if (_size == 0){ // Si dummy no esta linkeado consigo mismo hay que poner la condicion para cuando la lista esta vacia
-                        // ya que begin() obtendria nullptr
-            insert(_dummy, new_it);
-        }else{
-            insert(begin(), new_it);
-        }
-    */
-
-    /*
-        _size += 1;
-
-        auto n = DNode<T>::create(new_it);
-
-        if (_size == 1){
-            n->set_next(_dummy);
-            n->set_prev(_dummy);
-
-            _dummy->set_prev(n);
-            _dummy->set_next(n);
-
-        }else{
-
-            _dummy->next()->set_prev(n);
-
-            n->set_next(_dummy->next());
-            _dummy->set_next(n);
-
-            n->set_prev(_dummy);
-        } 
-    */
-
     //
     assert(front() == new_it);
     assert(size() == (old_size + 1));
@@ -480,7 +434,9 @@ void List<T>::push_back(T const &new_it)
 #endif
     // TODO
     //  Hint: delegate in insert();
+
     insert(end(), new_it);
+
     //
     assert(back() == new_it);
     assert(size() == (old_size + 1));
@@ -498,6 +454,7 @@ void List<T>::pop_front()
     // Hint: delegate in remove.
 
     remove(begin());
+
     //
     assert(is_empty() || begin() == old_begin_next);
     assert(size() == (old_size - 1));
@@ -515,6 +472,7 @@ void List<T>::pop_back()
     // Hint: delegate in remove.
 
     remove(end().prev());
+
     //
     assert(is_empty() || end().prev() == old_end_prev_prev);
     assert(size() == (old_size - 1));
@@ -535,6 +493,7 @@ typename List<T>::iterator List<T>::find(T const &it, List<T>::iterator const &f
             break;
         }
     }
+
     //
     assert(ret_v == end() || ret_v.item() == it);
     return ret_v;
@@ -593,7 +552,6 @@ void List<T>::splice(iterator const &pos, Ref list2,
         lastNode->set_prev(prevFirstNode);
     }
 
-    
     //
     assert(size() == (old_size + old_range_size));
     assert(list2->size() == (old_l2_size - old_range_size));
@@ -608,7 +566,9 @@ void List<T>::splice(iterator const &pos, Ref list2)
 #endif
     // TODO
     // Hint: Delegate in splice the list2 range [begin, end).
+
     splice(pos, list2, list2->begin(), list2->end());
+
     //
     assert(size() == (old_size + old_list2_size));
     assert(list2->size() == 0);
@@ -624,7 +584,9 @@ void List<T>::splice(iterator const &pos, Ref list2, iterator const &i)
 #endif
     // TODO
     // Hint: Delegate in splice the list2 range [i, i.next()).
+
     splice(pos, list2, i, i.next());
+
     //
     assert(size() == (old_size + 1));
     assert(list2->size() == (old_list2_size - 1));
@@ -654,6 +616,7 @@ void List<T>::merge(List<T>::Ref other, Compare comp)
     if (it2 != other->end()){
         splice(it1, other);
     }
+
     //
 }
 
@@ -694,9 +657,9 @@ bool ListIterator<T>::is_valid() const
     bool ret_v = false;
     // TODO
     // Remember: To Invoke node() here will provoque an infinite recursion!!.
-    if (node_ != nullptr){
-        ret_v = true;
-    }
+
+    ret_v = node_ != nullptr;
+
     //
     return ret_v;
 }
@@ -704,7 +667,9 @@ template <class T>
 ListIterator<T>::ListIterator()
 {
     // TODO
+
     node_ = nullptr;
+
     //
     assert(!is_valid());
 };
@@ -713,7 +678,9 @@ template <class T>
 ListIterator<T>::ListIterator(typename DNode<T>::Ref const &n)
 {
     // TODO
+
     node_ = n;
+
     //
     assert(n != nullptr || !is_valid());
 };
@@ -724,7 +691,9 @@ T ListIterator<T>::item() const
     assert(is_valid());
     T ret_v;
     // TODO
+
     ret_v = node_->item();
+
     //
     return ret_v;
 }
@@ -735,6 +704,7 @@ ListIterator<T> ListIterator<T>::next(size_t dist) const
     assert(is_valid());
     ListIterator<T> ret_v;
     // TODO
+
     auto n = DNode<T>::create();
     n = node_->next();
 
@@ -744,8 +714,8 @@ ListIterator<T> ListIterator<T>::next(size_t dist) const
         }
     }
 
-/*     std::cout << "VALOR NEXT: " << n << std::endl; */
     ret_v = ListIterator(n);
+
     //
     return ret_v;
 }
@@ -756,6 +726,7 @@ ListIterator<T> ListIterator<T>::prev(size_t dist) const
     assert(is_valid());
     ListIterator<T> ret_v;
     // TODO
+
     auto n = DNode<T>::create();
     n = node_->prev();
 
@@ -764,8 +735,9 @@ ListIterator<T> ListIterator<T>::prev(size_t dist) const
             n = n->prev();
         }
     }
-  /*   std::cout << "VALOR PREV: " << n << std::endl; */
+
     ret_v = ListIterator(n);
+
     //
     return ret_v;
 }
@@ -777,11 +749,13 @@ size_t ListIterator<T>::distance(ListIterator<T> const &other) const
     assert(other.is_valid());
     size_t ret_v = 0;
     // TODO
+
     auto it = *this;
     while(it != other){
         ++ret_v;
         it.goto_next();
     } 
+
     //
     return ret_v;
 }
@@ -793,9 +767,9 @@ bool ListIterator<T>::operator==(ListIterator<T> const &o) const
 
     // TODO
     // Remember: two iterators are equal if both point to the same node.
-    if (this->node() == o.node()){
-        ret_v = true;
-    }
+
+    ret_v = node() == o.node();
+
     //
     return ret_v;
 }
@@ -807,9 +781,9 @@ bool ListIterator<T>::operator!=(ListIterator<T> const &o) const
 
     // TODO
     // Remember: two iterators are equal if both point to the same node.
-    if (this->node() != o.node()){
-        ret_v = true;
-    }
+
+    ret_v = node() != o.node();
+
     //
     return ret_v;
 }
@@ -819,7 +793,9 @@ void ListIterator<T>::set_item(T const &it)
 {
     assert(is_valid());
     // TODO
+
     node_->set_item(it);
+
     //
     assert(it == item());
 }
@@ -829,7 +805,9 @@ void ListIterator<T>::goto_next(size_t dist)
 {
     assert(is_valid());
     // TODO
+
     node_ = next(dist).node();
+
     //
 }
 
@@ -838,7 +816,9 @@ void ListIterator<T>::goto_prev(size_t dist)
 {
     assert(is_valid());
     // TODO
+
     node_ = prev(dist).node();
+
     //
 }
 
@@ -847,7 +827,9 @@ typename DNode<T>::Ref ListIterator<T>::node() const
 {
     typename DNode<T>::Ref ret_v;
     // TODO
+
     ret_v = node_;
+    
     //
     return ret_v;
 }
@@ -856,7 +838,9 @@ template <class T>
 void ListIterator<T>::set_node(typename DNode<T>::Ref const &n)
 {
     // TODO
+
     node_ = n;
+
     //
     assert(node() == n);
 }
