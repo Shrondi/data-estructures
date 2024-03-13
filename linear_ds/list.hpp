@@ -24,14 +24,6 @@ public:
    */
   typedef std::shared_ptr<DNode<T>> Ref;
 
-  /**
-   * @brief Define a shared reference to a data item.
-   * Manages the storage of a pointer, providing a limited garbage-collection
-   * facility, possibly sharing that management with other objects.
-   * @see http://www.cplusplus.com/reference/memory/shared_ptr/
-   */
-  typedef std::shared_ptr<T> ItemRef;
-
   /** @name Life cycle.*/
   /** @{*/
 
@@ -108,10 +100,10 @@ public:
   /** @}*/
 
 protected:
-  // TODO: give a representation
-  DNode<T>::ItemRef _item;
-  DNode<T>::Ref _prev;
-  DNode<T>::Ref _next;
+  // TODO: Give a representation.
+  // Hint: We will need a node with no data, also known as a "dummy node", so
+  // a smart pointer can be useful here.
+
   //
 };
 
@@ -140,7 +132,8 @@ public:
   /** @{*/
 
   /**
-   * @brief Is the iterator pointing to a node?
+   * @brief Is the iterator pointing to a valid list node?
+   * A valid list node is a node other than the dummy node.
    */
   bool is_valid() const;
 
@@ -227,7 +220,7 @@ protected:
   ListIterator();
 
   /**
-   * @brief Construct a new List Iterator points to list node.
+   * @brief Construct a new List Iterator points to a list node.
    *
    * @param node the node pointed by this iterator.
    */
@@ -250,7 +243,8 @@ protected:
   void set_node(typename DNode<T>::Ref const &n);
 
   // TODO: give a representation.
-  typename DNode<T>::Ref node_;
+  // Remember: a list iterator points to a list's node.
+
   //
 };
 
@@ -355,11 +349,11 @@ public:
    * @brief Find an item in the list.
    * If the item is not found, the end iterator will be returned.
    * @param it is the value to be found.
-   * @param from is the position from starting to find out.
+   * @param from is the position from which to start searching.
    * @return an iterator to the first found position or end iterator if it was not found.
    * @post ret_val==end() || ret_val->item()==it
    */
-  iterator find(T const &it, iterator const &from = begin()) const;
+  iterator find(T const &it, iterator const &from) const;
 
   /**@}*/
 
