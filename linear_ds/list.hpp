@@ -103,7 +103,9 @@ protected:
   // TODO: Give a representation.
   // Hint: We will need a node with no data, also known as a "dummy node", so
   // a smart pointer can be useful here.
-
+  std::shared_ptr<T> _item;
+  DNode<T>::Ref _prev;
+  DNode<T>::Ref _next;
   //
 };
 
@@ -244,7 +246,7 @@ protected:
 
   // TODO: give a representation.
   // Remember: a list iterator points to a list's node.
-
+  typename DNode<T>::Ref node_;
   //
 };
 
