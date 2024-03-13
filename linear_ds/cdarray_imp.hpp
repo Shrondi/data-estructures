@@ -16,11 +16,13 @@ CDArray<T>::CDArray(size_t cap)
 {
     assert(cap > 0);
     // TODO
+
     cap_ = cap;
     tam_ = 0;
     front_ = 0;
     back_ = 0;
     data_ = std::shared_ptr<T>(new T[cap]);
+
     //
     assert(capacity() == cap);
     assert(is_empty());
@@ -100,9 +102,9 @@ bool CDArray<T>::is_empty() const
 {
     bool ret_v = false;
     // TODO
-    if (tam_ == 0){
-        ret_v = true;
-    }
+
+    ret_v = tam_ == 0;
+
     //
     return ret_v;
 }
@@ -112,9 +114,9 @@ bool CDArray<T>::is_full() const
 {
     bool ret_v = false;
     // TODO
-    if (tam_ == cap_){
-        ret_v = true;
-    }
+
+    ret_v = tam_ == cap_;
+
     //
     assert(!ret_v || size() == capacity());
     return ret_v;
@@ -126,7 +128,9 @@ CDArray<T>::capacity() const
 {
     size_t ret_v = 0;
     // TODO
+
     ret_v = cap_;
+
     //
     return ret_v;
 }
@@ -137,7 +141,9 @@ CDArray<T>::size() const
 {
     size_t ret_v = 0;
     // TODO
+
     ret_v = tam_;
+
     //
     return ret_v;
 }
@@ -174,7 +180,9 @@ T CDArray<T>::get(size_t pos) const
 {
     T ret_v;
     // TODO
+
     ret_v = data_.get()[(front_ + (int)pos) % cap_];
+
     //
     return ret_v;
 }
@@ -183,7 +191,9 @@ template <class T>
 void CDArray<T>::set(size_t pos, T const &new_v)
 {
     // TODO
+
     data_.get()[(front_ + (int)pos)%cap_] = new_v;
+
     //
     assert(new_v == get(pos));
 }
@@ -192,7 +202,9 @@ size_t cInc(size_t v, size_t size)
 {
     size_t ret_v;
     // TODO
+
     ret_v = ((int)v + 1) % size;
+
     //
     return ret_v;
 }
@@ -205,7 +217,9 @@ size_t cDec(size_t v, size_t size)
     size_t ret_v;
     // TODO
     // Remember: v is a unsigned value, so you must cast to signed before decrementing
+
     ret_v = (static_cast<int>(v) - 1 + size) % size;
+
     //
     assert(old_v == cInc(ret_v, size));
     return ret_v;
@@ -220,6 +234,7 @@ void CDArray<T>::push_front(T const &new_it)
     T old_front = is_empty() ? T() : get(0);
 #endif
     // TODO
+
     if (is_empty()){
         front_ = 0;
         back_ = 0;
@@ -229,17 +244,13 @@ void CDArray<T>::push_front(T const &new_it)
             grow();
         }
 
-        front_ = cDec(front_, cap_);
-        
+        front_ = cDec(front_, cap_);  
     }
 
     data_.get()[front_] = new_it;
 
     ++tam_;
 
-    /* for (int i = 0; i < cap_; i++){
-        std::cout << "VALOR: " << data_.get()[i] << std::endl;
-    } */
     //
     assert(size() == old_size + 1);
     assert(get(0) == new_it);
@@ -255,15 +266,12 @@ void CDArray<T>::push_back(T const &new_it)
     T old_back = is_empty() ? T() : get(size() - 1);
 #endif
     // TODO
-    if (is_empty())
-    {
+
+    if (is_empty()){
         front_ = 0;
         back_ = 0;
-    }
-    else
-    {
-        if (is_full())
-        {
+    }else{
+        if (is_full()){
             grow();
         }
 
@@ -273,6 +281,7 @@ void CDArray<T>::push_back(T const &new_it)
     data_.get()[back_] = new_it;
 
     ++tam_;
+
     //
     assert(size() == old_size + 1);
     assert(get(size() - 1) == new_it);
@@ -287,8 +296,10 @@ void CDArray<T>::pop_front()
     T old_next_front = size() > 1 ? get(1) : T();
 #endif
     // TODO
+
     front_ = cInc(front_, cap_);
     --tam_;
+
     //
     assert(size() == old_size - 1);
     assert(is_empty() || get(0) == old_next_front);
@@ -302,8 +313,10 @@ void CDArray<T>::pop_back()
     T old_prev_back = size() > 1 ? get(size() - 2) : T();
 #endif
     // TODO
+
     back_ = cDec(back_, cap_);
     --tam_;
+
     //
     assert(size() == old_size - 1);
     assert(is_empty() || get(size() - 1) == old_prev_back);
@@ -321,8 +334,10 @@ void CDArray<T>::insert(size_t pos, T const &v)
     // TODO
     // Hint: if pos==0, delegate in push_front.
     // Remember: back_ needs to be updated too.
+
     if (pos == 0){
         push_front(v);
+
     }else{
         if (is_full()){
             grow();
@@ -338,6 +353,7 @@ void CDArray<T>::insert(size_t pos, T const &v)
 
         back_ = cInc(back_, cap_);
     }
+
     //
     assert(size() == old_size + 1);
     assert(get(pos) == v);
@@ -355,12 +371,14 @@ void CDArray<T>::remove(size_t pos)
 #endif
     // TODO
     // Remember: back_ needs to be updated.
+
     for (int i=pos; i < tam_; ++i){
         set(i, get(i + 1));
     }
 
     back_ = cDec(back_, tam_);
     --tam_;
+
     //
     assert(size() == old_size - 1);
     assert(pos == size() || get(pos) == old_next_pos_v);
@@ -373,6 +391,7 @@ void CDArray<T>::grow()
     size_t old_capacity = capacity();
 #endif
     // TODO
+
     auto tmp = std::shared_ptr<T>(new T[(cap_ * 2)]);
     for (int i = 0; i < tam_; ++i){
         tmp.get()[i] = get(i);
@@ -382,6 +401,7 @@ void CDArray<T>::grow()
     back_ = tam_ - 1;
     data_ = tmp;
     cap_ *= 2;
+    
     //
     assert(capacity() == 2 * old_capacity);
 }
