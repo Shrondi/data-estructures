@@ -21,7 +21,7 @@ CDArray<T>::CDArray(size_t cap)
     tam_ = 0;
     front_ = 0;
     back_ = 0;
-    data_ = std::shared_ptr<T>(new T[cap]);
+    data_ = std::shared_ptr<T[]>(new T[cap], std::default_delete<T[]>());
 
     //
     assert(capacity() == cap);
@@ -181,7 +181,7 @@ T CDArray<T>::get(size_t pos) const
     T ret_v;
     // TODO
 
-    ret_v = data_.get()[(front_ + (int)pos) % cap_];
+    ret_v = data_[(front_ + (int)pos) % cap_];
 
     //
     return ret_v;
@@ -192,7 +192,7 @@ void CDArray<T>::set(size_t pos, T const &new_v)
 {
     // TODO
 
-    data_.get()[(front_ + (int)pos)%cap_] = new_v;
+    data_[(front_ + (int)pos)%cap_] = new_v;
 
     //
     assert(new_v == get(pos));
@@ -247,7 +247,7 @@ void CDArray<T>::push_front(T const &new_it)
         front_ = cDec(front_, cap_);  
     }
 
-    data_.get()[front_] = new_it;
+    data_[front_] = new_it;
 
     ++tam_;
 
@@ -278,7 +278,7 @@ void CDArray<T>::push_back(T const &new_it)
         back_ = cInc(back_, cap_);
     }
 
-    data_.get()[back_] = new_it;
+    data_[back_] = new_it;
 
     ++tam_;
 
@@ -392,16 +392,17 @@ void CDArray<T>::grow()
 #endif
     // TODO
 
-    auto tmp = std::shared_ptr<T>(new T[(cap_ * 2)]);
+    auto tmp = std::shared_ptr<T[]>(new T[capacity() * 2], std::default_delete<T[]>());
+    
     for (int i = 0; i < tam_; ++i){
-        tmp.get()[i] = get(i);
+        tmp[i] = get(i);
     }
     
     front_ = 0;
     back_ = tam_ - 1;
     data_ = tmp;
     cap_ *= 2;
-    
+
     //
     assert(capacity() == 2 * old_capacity);
 }
