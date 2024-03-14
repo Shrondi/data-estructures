@@ -186,7 +186,7 @@ protected:
     // Give a representation.
     // Hint: use std::shared_ptr<T> to manage the block of allocated memory.
 
-    std::shared_ptr<T[]> data_;
+    std::shared_ptr<T> data_;
     int cap_;
     int tam_;
     int front_;
