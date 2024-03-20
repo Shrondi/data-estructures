@@ -269,7 +269,7 @@ protected:
 
   //TODO
   //Give a representation.
-
+  typename BTNode<T>::Ref root_;
 };
 
 #include "btree_imp.hpp"
