@@ -86,8 +86,8 @@ infix_process(typename BTree<T>::Ref tree, Processor& p)
     // to specialize the call.
 
     if (!tree->is_empty()){
-        retVal = retVal && infix_process<T>(tree->left(), p);
-        retVal = p(tree->item());
+        retVal = infix_process<T>(tree->left(), p);
+        retVal = retVal && p(tree->item());
         retVal = retVal && infix_process<T>(tree->right(), p);
     }
 
@@ -106,9 +106,9 @@ postfix_process(typename BTree<T>::Ref tree, Processor& p)
     // to specialize the call.
 
     if (!tree->is_empty()){
-        retVal = retVal && postfix_process<T>(tree->left(), p);
+        retVal = postfix_process<T>(tree->left(), p);
         retVal = retVal && postfix_process<T>(tree->right(), p);
-        retVal = p(tree->item());
+        retVal = retVal && p(tree->item());
     }
 
     //
