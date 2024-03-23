@@ -23,6 +23,16 @@ int compute_height (typename BTree<T>::Ref t)
     int height = 0;
     //TODO
 
+    height = -1;
+
+    if (!(t->is_empty())){
+
+        int heightLeft = compute_height<T>(t->left());
+        int heightRight = compute_height<T>(t->right());
+
+        height = 1 + ((heightLeft > heightRight) ? heightLeft : heightRight);
+    }
+
     //
     return height;
 }
@@ -35,6 +45,11 @@ size_t compute_size (typename BTree<T>::Ref t)
     //TODO
     //Hint: when you call a template into other template maybe you need
     // to specialize the call.
+
+    if (!(t->is_empty())){
+
+        ret_val = 1 + compute_size<T>(t->left()) + compute_size<T>(t->right());
+    }
 
     //
     return ret_val;
