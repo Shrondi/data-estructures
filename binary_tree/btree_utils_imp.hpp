@@ -65,6 +65,12 @@ prefix_process(typename BTree<T>::Ref tree, Processor& p)
     //Hint: when you call a template into other template maybe you need
     // to specialize the call.
 
+    if (!tree->is_empty()){
+        retVal = p(tree->item());
+        retVal = retVal && prefix_process<T>(tree->left(), p);
+        retVal = retVal && prefix_process<T>(tree->right(), p);
+    }
+
     //
     return retVal;
 }
@@ -79,6 +85,12 @@ infix_process(typename BTree<T>::Ref tree, Processor& p)
     //Hint: when you call a template into other template maybe you need
     // to specialize the call.
 
+    if (!tree->is_empty()){
+        retVal = retVal && infix_process<T>(tree->left(), p);
+        retVal = p(tree->item());
+        retVal = retVal && infix_process<T>(tree->right(), p);
+    }
+
     //
     return retVal;
 }
@@ -92,6 +104,12 @@ postfix_process(typename BTree<T>::Ref tree, Processor& p)
     //TODO
     //Hint: when you call a template into other template maybe you need
     // to specialize the call.
+
+    if (!tree->is_empty()){
+        retVal = retVal && postfix_process<T>(tree->left(), p);
+        retVal = retVal && postfix_process<T>(tree->right(), p);
+        retVal = p(tree->item());
+    }
 
     //
     return retVal;
@@ -121,6 +139,10 @@ print_prefix(std::ostream& out, typename BTree<T>::Ref tree)
     //  use a prefix_process to process the tree with this lambda.
     //Remember: the lambda must return true.
 
+    auto lambda = [&out](T item){ out << item << " "; return true; };
+
+    prefix_process<T>(tree, lambda);
+
     //
     return out;
 }
@@ -134,6 +156,10 @@ print_infix(std::ostream& out, typename BTree<T>::Ref tree)
     //  use an infix_process to process the tree with this lambda.
     //Remember: the lambda must return true.
 
+    auto lambda = [&out](T item){ out << item << " "; return true; };
+
+    infix_process<T>(tree, lambda);
+
     //
     return out;
 }
@@ -146,6 +172,10 @@ print_postfix(std::ostream& out, typename BTree<T>::Ref tree)
     //You must create a lambda function with a parameter to be printed and
     //  use a postfix_process to process the tree with this lambda.
     //Remember: the lambda must return true.
+
+    auto lambda = [&out](T item){ out << item << " "; return true; };
+
+    postfix_process<T>(tree, lambda);
 
     //
     return out;
