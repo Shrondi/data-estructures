@@ -126,6 +126,22 @@ breadth_first_process(typename BTree<T>::Ref tree, Processor& p)
     //Hint: think about which data structure can help you to do this kind 
     //  of traversal.
 
+    auto subtree = BTree<T>::create();
+
+    std::queue<typename BTree<T>::Ref> q;
+    q.push(tree);
+
+    while (!q.empty() && go_on){
+        subtree = q.front();
+        q.pop();
+
+        if (!subtree->is_empty()){
+            go_on = p(subtree->item());
+            q.push(subtree->left());
+            q.push(subtree->right());
+        }
+    }
+
     //
     return go_on;
 }
@@ -189,6 +205,10 @@ print_breadth_first(std::ostream& out, typename BTree<T>::Ref tree)
     //You must create a lambda function with a parameter to be printed and
     //  use a breadth_first_process to process the tree with this lambda.
     //Remember: the lambda must return true.
+
+    auto lambda = [&out](T item){ out << item << " "; return true; };
+
+    breadth_first_process<T>(tree, lambda);
 
     //
     return out;
