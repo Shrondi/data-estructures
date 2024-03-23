@@ -226,6 +226,14 @@ bool search_prefix(typename BTree<T>::Ref tree, const T& it, size_t& count)
     //Remember: Also, the lambda must update the count variable and
     //must return True/False.
 
+
+    // Traversing the tree counting the nodes and 
+    // if the item is not the search, the lambda function returns true to continue the search and not stop the prefix_process
+    auto lambda = [&count, &it](T item){ ++count; return item != it; };
+
+    // prefix_process returns false when the item is found. Should be changed to the opposite!
+    found = !prefix_process<T>(tree, lambda);
+
     //
     return found;
 }
@@ -241,6 +249,10 @@ bool search_infix(typename BTree<T>::Ref tree, const T& it, size_t& count)
     // Use the lambda with the infix_process.
     //Remember: Also, the lambda must update the count variable and
     //must return True/False.
+
+    auto lambda = [&count, &it](T item){ ++count; return item != it; };
+
+    found = !infix_process<T>(tree, lambda);
 
     //
     return found;
@@ -258,6 +270,10 @@ bool search_postfix(typename BTree<T>::Ref tree, const T& it, size_t& count)
     //Remember: Also, the lambda must update the count variable and
     //must return True/False.
 
+    auto lambda = [&count, &it](T item){ ++count; return item != it; };
+
+    found = !postfix_process<T>(tree, lambda);
+
     //
     return found;
 }
@@ -273,6 +289,10 @@ bool search_breadth_first(typename BTree<T>::Ref tree, const T& it, size_t& coun
     // Use the lambda with the breadth_first_process.
     //Remember: Also, the lambda must update the count variable and
     //must return True/False.
+
+    auto lambda = [&count, &it](T item){ ++count; return item != it; };
+
+    found = !breadth_first_process<T>(tree, lambda);
 
     //
     return found;
