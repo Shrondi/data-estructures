@@ -115,9 +115,7 @@ BTree<T>::BTree ()
     {
         //TODO
 
-        root_->set_item(it);
-        root_->set_left(nullptr);
-        root_->set_right(nullptr);
+        root_ = BTNode<T>::create(it);
 
         //
         assert(!is_empty());
