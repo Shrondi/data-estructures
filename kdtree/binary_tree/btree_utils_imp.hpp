@@ -23,6 +23,16 @@ int compute_height (typename BTree<T>::Ref t)
     int height = 0;
     //TODO
 
+    height = -1;
+
+    if (!t->is_empty()){
+
+        int heightLeft = compute_height<T>(t->left());
+        int heightRight = compute_height<T>(t->right());
+
+        height = 1 + ((heightLeft > heightRight) ? heightLeft : heightRight);
+    }
+
     //
     return height;
 }
@@ -35,6 +45,11 @@ size_t compute_size (typename BTree<T>::Ref t)
     //TODO
     //Hint: when you call a template into other template maybe you need
     // to specialize the call.
+
+    if (!t->is_empty()){
+
+        ret_val = 1 + compute_size<T>(t->left()) + compute_size<T>(t->right());
+    }
 
     //
     return ret_val;
@@ -50,6 +65,12 @@ prefix_process(typename BTree<T>::Ref tree, Processor& p)
     //Hint: when you call a template into other template maybe you need
     // to specialize the call.
 
+    if (!tree->is_empty()){
+        retVal = p(tree->item());
+        retVal = retVal && prefix_process<T>(tree->left(), p);
+        retVal = retVal && prefix_process<T>(tree->right(), p);
+    }
+
     //
     return retVal;
 }
@@ -64,6 +85,12 @@ infix_process(typename BTree<T>::Ref tree, Processor& p)
     //Hint: when you call a template into other template maybe you need
     // to specialize the call.
 
+    if (!tree->is_empty()){
+        retVal = infix_process<T>(tree->left(), p);
+        retVal = retVal && p(tree->item());
+        retVal = retVal && infix_process<T>(tree->right(), p);
+    }
+
     //
     return retVal;
 }
@@ -77,6 +104,12 @@ postfix_process(typename BTree<T>::Ref tree, Processor& p)
     //TODO
     //Hint: when you call a template into other template maybe you need
     // to specialize the call.
+
+    if (!tree->is_empty()){
+        retVal = postfix_process<T>(tree->left(), p);
+        retVal = retVal && postfix_process<T>(tree->right(), p);
+        retVal = retVal && p(tree->item());
+    }
 
     //
     return retVal;
@@ -93,6 +126,22 @@ breadth_first_process(typename BTree<T>::Ref tree, Processor& p)
     //Hint: think about which data structure can help you to do this kind 
     //  of traversal.
 
+    auto subtree = BTree<T>::create();
+
+    std::queue<typename BTree<T>::Ref> q;
+    q.push(tree);
+
+    while (!q.empty() && go_on){
+        subtree = q.front();
+        q.pop();
+
+        if (!subtree->is_empty()){
+            go_on = p(subtree->item());
+            q.push(subtree->left());
+            q.push(subtree->right());
+        }
+    }
+
     //
     return go_on;
 }
@@ -105,6 +154,10 @@ print_prefix(std::ostream& out, typename BTree<T>::Ref tree)
     //You must create a lambda function with a parameter to be printed and
     //  use a prefix_process to process the tree with this lambda.
     //Remember: the lambda must return true.
+
+    auto lambda = [&out](T item){ out << item << " "; return true; };
+
+    prefix_process<T>(tree, lambda);
 
     //
     return out;
@@ -119,6 +172,10 @@ print_infix(std::ostream& out, typename BTree<T>::Ref tree)
     //  use an infix_process to process the tree with this lambda.
     //Remember: the lambda must return true.
 
+    auto lambda = [&out](T item){ out << item << " "; return true; };
+
+    infix_process<T>(tree, lambda);
+
     //
     return out;
 }
@@ -132,6 +189,10 @@ print_postfix(std::ostream& out, typename BTree<T>::Ref tree)
     //  use a postfix_process to process the tree with this lambda.
     //Remember: the lambda must return true.
 
+    auto lambda = [&out](T item){ out << item << " "; return true; };
+
+    postfix_process<T>(tree, lambda);
+
     //
     return out;
 }
@@ -144,6 +205,10 @@ print_breadth_first(std::ostream& out, typename BTree<T>::Ref tree)
     //You must create a lambda function with a parameter to be printed and
     //  use a breadth_first_process to process the tree with this lambda.
     //Remember: the lambda must return true.
+
+    auto lambda = [&out](T item){ out << item << " "; return true; };
+
+    breadth_first_process<T>(tree, lambda);
 
     //
     return out;
@@ -161,6 +226,14 @@ bool search_prefix(typename BTree<T>::Ref tree, const T& it, size_t& count)
     //Remember: Also, the lambda must update the count variable and
     //must return True/False.
 
+
+    // Traversing the tree counting the nodes and 
+    // if the item is not the search, the lambda function returns true to continue the search and not stop the prefix_process
+    auto lambda = [&count, &it](T item){ ++count; return item != it; };
+
+    // prefix_process returns false when the item is found. Should be changed to the opposite!
+    found = !prefix_process<T>(tree, lambda);
+
     //
     return found;
 }
@@ -176,6 +249,10 @@ bool search_infix(typename BTree<T>::Ref tree, const T& it, size_t& count)
     // Use the lambda with the infix_process.
     //Remember: Also, the lambda must update the count variable and
     //must return True/False.
+
+    auto lambda = [&count, &it](T item){ ++count; return item != it; };
+
+    found = !infix_process<T>(tree, lambda);
 
     //
     return found;
@@ -193,6 +270,10 @@ bool search_postfix(typename BTree<T>::Ref tree, const T& it, size_t& count)
     //Remember: Also, the lambda must update the count variable and
     //must return True/False.
 
+    auto lambda = [&count, &it](T item){ ++count; return item != it; };
+
+    found = !postfix_process<T>(tree, lambda);
+
     //
     return found;
 }
@@ -209,6 +290,10 @@ bool search_breadth_first(typename BTree<T>::Ref tree, const T& it, size_t& coun
     //Remember: Also, the lambda must update the count variable and
     //must return True/False.
 
+    auto lambda = [&count, &it](T item){ ++count; return item != it; };
+
+    found = !breadth_first_process<T>(tree, lambda);
+
     //
     return found;
 }
@@ -222,7 +307,18 @@ bool check_btree_in_order(typename BTree<T>::Ref const& tree)
     //Hint: You can create a lambda function with a parameter to compare it with
     // the last the value seen.
     // Use the lambda with the infix_process.
-    
+
+    T last = T{};
+    auto lambda = [&last](T item){
+        if (item > last || last == T{}){
+            last = item; 
+            return true;
+        } 
+            return false; 
+    };
+
+    ret_val = infix_process<T>(tree, lambda);
+
     //
     return ret_val;
 }
@@ -234,6 +330,19 @@ bool has_in_order(typename BTree<T>::Ref tree, T const& v)
     bool ret_val = false;
     //TODO
 
+    if (!tree->is_empty()){
+
+        if (v < tree->item()){
+            ret_val = has_in_order(tree->left(), v);
+
+        }else if (v > tree->item()){
+            ret_val = has_in_order(tree->right(), v);
+
+        }else{
+            ret_val = true;
+        }
+    }
+
     //
     return ret_val;
 }
@@ -243,6 +352,28 @@ void insert_in_order(typename BTree<T>::Ref tree, T const& v)
 {
     assert(check_btree_in_order<T>(tree));
     //TODO
+
+    if (tree->is_empty()){
+        tree->create_root(v);
+
+    }else if (v < tree->item()){
+
+        if (tree->left()->is_empty()){
+            tree->set_left(BTree<T>::create(v));
+
+        }else{
+            insert_in_order(tree->left(), v);
+        }
+
+    }else if (v > tree->item()){
+
+        if (tree->right()->is_empty()){
+            tree->set_right(BTree<T>::create(v));
+            
+        }else{
+            insert_in_order(tree->right(), v);
+        }
+    }
 
     //
     assert(has_in_order<T>(tree, v));
