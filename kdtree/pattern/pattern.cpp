@@ -274,9 +274,7 @@ Pattern::Pattern(std::istream &input) noexcept(false)
         throw std::runtime_error("wrong input format");
     }
 
-    input >> token;
-    std::istringstream convert(token);
-    convert >> cl;
+    input >> cl;
 
     input >> token;
     if (token != "["){
