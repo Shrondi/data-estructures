@@ -295,7 +295,7 @@ Pattern::Pattern(std::istream &input) noexcept(false)
         throw std::runtime_error("wrong input format");
     }
 
-    _values = std::make_shared<std::valarray<float>>(std::valarray<float>(values.data(), values.size()));
+    _values = std::make_shared<std::valarray<float>>(values.data(), values.size());
     _class_label = cl;
 
     //
