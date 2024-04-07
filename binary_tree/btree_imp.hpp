@@ -150,14 +150,10 @@ template<class T>
       in >> token;
 
       if (token == "["){
+        
+        in >> item;
 
-        in >> token;
-
-        std::istringstream convert(token);
-
-        convert >> item;
-
-        if (convert.fail()){
+        if (in.fail()){
           throw std::runtime_error("Wrong input format.");
         }
 
