@@ -344,29 +344,18 @@ load_dataset(std::istream& input,
     // <p_num_patterns-1>
     // "
 
-    std::string token;
     Pattern p;
     size_t num_patterns, pattern_dimensions;
 
-    input >> token;
-
-    std::istringstream convert(token);
-    convert >> num_patterns;
-
-    input >> token;
-
-    std::istringstream convert2(token);
-    convert2 >> pattern_dimensions;
+    input >> num_patterns;
+    input >> pattern_dimensions;
 
     for (size_t i = 0; i < num_patterns; ++i){
-        try{
-            input >> p;
-        }catch (std::runtime_error &e){
-            throw std::runtime_error("wrong input format");
-        }
+
+        input >> p;
 
         if (p.dim() != pattern_dimensions){
-            throw std::runtime_error("wrong input format");
+            throw std::runtime_error("wrong format");
         }
 
         dts.push_back(p);
