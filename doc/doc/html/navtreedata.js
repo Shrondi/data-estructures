@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "data-estructures", "index.html", [
+    [ "Objetivo", "index.html#objetivo", null ],
     [ "TAD \"KDTree\"", "db/de1/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2kdtree_2README.html", [
       [ "Objetivos", "db/de1/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2kdtree_2README.html#objetivos", null ],
       [ "Descripción", "db/de1/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2kdtree_2README.html#descripción", null ]
