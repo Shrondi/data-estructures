@@ -17,7 +17,7 @@
 Pattern::Pattern(const size_t d, const int cl)
 {
     // TODO
-    _values = std::make_shared<std::valarray<float>>(std::valarray<float>(d));
+    _values = std::make_shared<std::valarray<float>>(d);
     _class_label = cl;
     //
     assert(dim() == d);
@@ -28,7 +28,7 @@ Pattern::Pattern(const float values[], const size_t size, const int cl)
 {
     assert(size>0);
     // TODO
-    _values = std::make_shared<std::valarray<float>>(std::valarray<float>(values, size));
+    _values = std::make_shared<std::valarray<float>>(values, size);
     _class_label = cl;
     //
     assert(dim() == size);
@@ -39,7 +39,7 @@ Pattern::Pattern(const std::vector<float>& values, const int cl)
 {
     assert(values.size()>0);
     // TODO
-    _values = std::make_shared<std::valarray<float>>(std::valarray<float>(values.data(), values.size()));
+    _values = std::make_shared<std::valarray<float>>(values.data(), values.size());
     _class_label = cl;
     //
     assert(dim() == values.size());
