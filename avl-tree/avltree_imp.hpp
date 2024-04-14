@@ -691,6 +691,19 @@ void AVLTree<T>::remove()
     // TODO
     //  Check which of cases 0,1,2,3 we have (see theorical class slides).
 
+    if (curr_->left() == nullptr && curr_->right() == nullptr){
+        subtree = nullptr;
+
+    }else if (curr_->right() == nullptr){
+        subtree = curr_->left();
+
+    }else if (curr_->left() == nullptr){
+        subtree = curr_->right();
+    
+    }else{
+        replace_with_subtree = false;
+    }
+
     //
 
     if (replace_with_subtree)
@@ -698,6 +711,26 @@ void AVLTree<T>::remove()
         // TODO
         // Manage cases 0,1,2
         // Remember: update subtree to parent links too.
+
+        if (parent_ == nullptr){
+            root_ = subtree;
+
+        }else if (parent_->right() == curr_){
+            parent_->set_right(subtree);
+
+            if (subtree != nullptr){
+                parent_->right()->set_parent(parent_);
+            }
+        
+        }else{
+            parent_->set_left(subtree);
+
+            if (subtree != nullptr){
+                parent_->left()->set_parent(parent_);
+            }
+        }
+
+        curr_ = nullptr;
 
         //
         assert(check_parent_chains());
@@ -708,6 +741,14 @@ void AVLTree<T>::remove()
     {
         // TODO
         // Manage case 3.
+
+        auto tmp = curr_;
+
+        find_inorder_sucessor();
+
+        tmp->set_item(curr_->item());
+
+        remove();
 
         //
     }
@@ -844,6 +885,14 @@ void AVLTree<T>::find_inorder_sucessor()
     T old_curr = current();
 #endif
     // TODO
+
+    parent_ = curr_;
+    curr_ = curr_->right();
+
+    while (curr_->left() != nullptr){
+        parent_ = curr_;
+        curr_ = curr_->left();
+    }
 
     //
     assert(current_exists() && current_node()->left() == nullptr);
