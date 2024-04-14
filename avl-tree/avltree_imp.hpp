@@ -635,10 +635,21 @@ void AVLTree<T>::insert(T const &k)
 
     // TODO
     // Remember: after inserting you must balance the tree using make_balanced()
-    if (!search(k))
-    {
-        // TODO
+    
+    if (is_empty()){
+        create_root(k);
+        curr_ = root_;
+        parent_ = nullptr;
 
+    }else if (!search(k)){
+        // TODO
+        curr_ = AVLTNode<T>::create(k, parent_, nullptr, nullptr);
+
+        if (parent_->item() > k){
+            parent_->set_left(curr_);
+        }else{
+            parent_->set_right(curr_);
+        }
         //
         assert(check_parent_chains());
         make_balanced();
