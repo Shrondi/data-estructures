@@ -325,6 +325,15 @@ void create_inserting_median(std::vector<T> const &data,
     //  else, insert the median in the tree and (recursively) process
     //  the two sub sequences [begin, median_idx) and [median_idx+1, end)
 
+    if (end != begin){
+
+        size_t median_idx = (int) begin + (end-begin)/2;
+        tree.insert(data.at(median_idx));
+
+        create_inserting_median(data, begin, median_idx, tree);
+        create_inserting_median(data, median_idx + 1, end, tree);
+    }
+
     //
 }
 
@@ -338,6 +347,12 @@ create_perfectly_balanced_bstree(std::vector<T> &data)
     // Remember: first, an ordered sequence (using < order) of values is needed.
     // Then you should use the above create_inserting_median function
     // on a empty tree to recursively create the perfectly balanced bstree.
+
+    tree = AVLTree<T>();
+
+    std::sort(data.begin(), data.end());
+
+    create_inserting_median(data, 0, data.size(), tree);
 
     //
     return tree;
