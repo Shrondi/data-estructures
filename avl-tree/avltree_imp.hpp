@@ -371,6 +371,19 @@ std::ostream &AVLTree<T>::fold(std::ostream &out) const
 {
     // TODO
 
+    if (is_empty()){
+        out << "[]";
+
+    }else{
+        out << "[ ";
+        out << item();
+        out << " ";
+        left().fold(out);
+        out << " ";
+        right().fold(out);
+        out << " ]";
+    }
+
     //
     return out;
 }
