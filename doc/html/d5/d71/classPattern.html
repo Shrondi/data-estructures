@@ -115,91 +115,91 @@ $(function(){initNavTree('d5/d71/classPattern.html','../../'); initResizable(); 
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a169b2aca553aab1bfbcd2a4a26206ae1" id="r_a169b2aca553aab1bfbcd2a4a26206ae1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">typedef</a> std::function&lt; <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a>(<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">a</a>, <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">b</a>)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a169b2aca553aab1bfbcd2a4a26206ae1">distance_function_t</a>)</td></tr>
+<tr class="memitem:a169b2aca553aab1bfbcd2a4a26206ae1" id="r_a169b2aca553aab1bfbcd2a4a26206ae1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d7c/classAVLTree.html">typedef</a> <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::function</a>&lt; <a class="el" href="../../d6/d7c/classAVLTree.html">float</a>(<a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;<a class="el" href="../../d6/d7c/classAVLTree.html">a</a>, <a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;<a class="el" href="../../d6/d7c/classAVLTree.html">b</a>)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a169b2aca553aab1bfbcd2a4a26206ae1">distance_function_t</a>)</td></tr>
 <tr class="memdesc:a169b2aca553aab1bfbcd2a4a26206ae1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type for functions that compute distances between patterns.  <br /></td></tr>
 <tr class="separator:a169b2aca553aab1bfbcd2a4a26206ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2e39a59d3810d0e2564dd8622858513" id="r_ac2e39a59d3810d0e2564dd8622858513"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">typedef</a> std::shared_ptr&lt; <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2e39a59d3810d0e2564dd8622858513">Ref</a></td></tr>
+<tr class="memitem:ac2e39a59d3810d0e2564dd8622858513" id="r_ac2e39a59d3810d0e2564dd8622858513"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d7c/classAVLTree.html">typedef</a> <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::shared_ptr</a>&lt; <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2e39a59d3810d0e2564dd8622858513">Ref</a></td></tr>
 <tr class="memdesc:ac2e39a59d3810d0e2564dd8622858513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a shared reference to a <a class="el" href="../../d5/d71/classPattern.html" title="ADT Pattern. Models a pattern for Machine Learning.">Pattern</a>. Manages the storage of a pointer, providing a limited garbage-collection facility, possibly sharing that management with other objects.  <br /></td></tr>
 <tr class="separator:ac2e39a59d3810d0e2564dd8622858513"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Life cycle.</div></td></tr>
-<tr class="memitem:aab17ceb6dbf79c542807ff8b18a6bdfb" id="r_aab17ceb6dbf79c542807ff8b18a6bdfb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab17ceb6dbf79c542807ff8b18a6bdfb">Pattern</a> (<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">size_t</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">d</a>=0, <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">int</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">cl</a>=-1)</td></tr>
+<tr class="memitem:aab17ceb6dbf79c542807ff8b18a6bdfb" id="r_aab17ceb6dbf79c542807ff8b18a6bdfb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab17ceb6dbf79c542807ff8b18a6bdfb">Pattern</a> (<a class="el" href="../../d6/d7c/classAVLTree.html">size_t</a> <a class="el" href="../../d6/d7c/classAVLTree.html">d</a>=0, <a class="el" href="../../d6/d7c/classAVLTree.html">int</a> <a class="el" href="../../d6/d7c/classAVLTree.html">cl</a>=-1)</td></tr>
 <tr class="memdesc:aab17ceb6dbf79c542807ff8b18a6bdfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a pattern.  <br /></td></tr>
 <tr class="separator:aab17ceb6dbf79c542807ff8b18a6bdfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac589c28decce2832c902f388c868bb6d" id="r_ac589c28decce2832c902f388c868bb6d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac589c28decce2832c902f388c868bb6d">Pattern</a> (<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a> <a class="el" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>[], <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">size_t</a> size, <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">int</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">cl</a>=-1)</td></tr>
+<tr class="memitem:ac589c28decce2832c902f388c868bb6d" id="r_ac589c28decce2832c902f388c868bb6d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac589c28decce2832c902f388c868bb6d">Pattern</a> (<a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html">float</a> <a class="el" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>[], <a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html">size_t</a> size, <a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html">int</a> <a class="el" href="../../d6/d7c/classAVLTree.html">cl</a>=-1)</td></tr>
 <tr class="memdesc:ac589c28decce2832c902f388c868bb6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a pattern.  <br /></td></tr>
 <tr class="separator:ac589c28decce2832c902f388c868bb6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23325f1b0146ff25ef8e647cb484d972" id="r_a23325f1b0146ff25ef8e647cb484d972"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23325f1b0146ff25ef8e647cb484d972">Pattern</a> (<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> std::vector&lt; <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a> &gt; &amp;<a class="el" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>, <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">int</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">cl</a>=-1)</td></tr>
+<tr class="memitem:a23325f1b0146ff25ef8e647cb484d972" id="r_a23325f1b0146ff25ef8e647cb484d972"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23325f1b0146ff25ef8e647cb484d972">Pattern</a> (<a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::vector</a>&lt; <a class="el" href="../../d6/d7c/classAVLTree.html">float</a> &gt; &amp;<a class="el" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>, <a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html">int</a> <a class="el" href="../../d6/d7c/classAVLTree.html">cl</a>=-1)</td></tr>
 <tr class="memdesc:a23325f1b0146ff25ef8e647cb484d972"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a pattern.  <br /></td></tr>
 <tr class="separator:a23325f1b0146ff25ef8e647cb484d972"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bd16a0c82493c93dd54f6cfb1933e63" id="r_a1bd16a0c82493c93dd54f6cfb1933e63"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bd16a0c82493c93dd54f6cfb1933e63">Pattern</a> (<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> std::valarray&lt; <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a> &gt; &amp;<a class="el" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>, <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">int</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">cl</a>=-1)</td></tr>
+<tr class="memitem:a1bd16a0c82493c93dd54f6cfb1933e63" id="r_a1bd16a0c82493c93dd54f6cfb1933e63"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bd16a0c82493c93dd54f6cfb1933e63">Pattern</a> (<a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::valarray</a>&lt; <a class="el" href="../../d6/d7c/classAVLTree.html">float</a> &gt; &amp;<a class="el" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>, <a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html">int</a> <a class="el" href="../../d6/d7c/classAVLTree.html">cl</a>=-1)</td></tr>
 <tr class="memdesc:a1bd16a0c82493c93dd54f6cfb1933e63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a pattern.  <br /></td></tr>
 <tr class="separator:a1bd16a0c82493c93dd54f6cfb1933e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a8a45304597aad56d4f676cd38c6a82" id="r_a5a8a45304597aad56d4f676cd38c6a82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a8a45304597aad56d4f676cd38c6a82">Pattern</a> (std::istream &amp;<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">in</a>) <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">noexcept</a>(<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">false</a>)</td></tr>
+<tr class="memitem:a5a8a45304597aad56d4f676cd38c6a82" id="r_a5a8a45304597aad56d4f676cd38c6a82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a8a45304597aad56d4f676cd38c6a82">Pattern</a> (<a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::istream</a> &amp;<a class="el" href="../../d6/d7c/classAVLTree.html">in</a>) <a class="el" href="../../d6/d7c/classAVLTree.html">noexcept</a>(<a class="el" href="../../d6/d7c/classAVLTree.html">false</a>)</td></tr>
 <tr class="memdesc:a5a8a45304597aad56d4f676cd38c6a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a pattern unfolding from an intput stream. Input format: [ &lt;class_label&gt; [ &lt;dim_0&gt; ... &lt;dim_n-1&gt; ] ].  <br /></td></tr>
 <tr class="separator:a5a8a45304597aad56d4f676cd38c6a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e8b9388bbd39934e9f9534b974d7498" id="r_a6e8b9388bbd39934e9f9534b974d7498"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e8b9388bbd39934e9f9534b974d7498">~Pattern</a> ()</td></tr>
 <tr class="memdesc:a6e8b9388bbd39934e9f9534b974d7498"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a pattern.  <br /></td></tr>
 <tr class="separator:a6e8b9388bbd39934e9f9534b974d7498"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Observers</div></td></tr>
-<tr class="memitem:ac738df64348f83666e1c2c6a533f4403" id="r_ac738df64348f83666e1c2c6a533f4403"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac738df64348f83666e1c2c6a533f4403">dim</a> () <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a></td></tr>
+<tr class="memitem:ac738df64348f83666e1c2c6a533f4403" id="r_ac738df64348f83666e1c2c6a533f4403"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d7c/classAVLTree.html">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac738df64348f83666e1c2c6a533f4403">dim</a> () <a class="el" href="../../d6/d7c/classAVLTree.html">const</a></td></tr>
 <tr class="memdesc:ac738df64348f83666e1c2c6a533f4403"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the pattern's dimension.  <br /></td></tr>
 <tr class="separator:ac738df64348f83666e1c2c6a533f4403"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade84f7f916939bdcb10009bfcbdece42" id="r_ade84f7f916939bdcb10009bfcbdece42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade84f7f916939bdcb10009bfcbdece42">class_label</a> () <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a></td></tr>
+<tr class="memitem:ade84f7f916939bdcb10009bfcbdece42" id="r_ade84f7f916939bdcb10009bfcbdece42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d7c/classAVLTree.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade84f7f916939bdcb10009bfcbdece42">class_label</a> () <a class="el" href="../../d6/d7c/classAVLTree.html">const</a></td></tr>
 <tr class="memdesc:ade84f7f916939bdcb10009bfcbdece42"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the class label  <br /></td></tr>
 <tr class="separator:ade84f7f916939bdcb10009bfcbdece42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0274d9b4fe4c006d6079558e3a53c97" id="r_aa0274d9b4fe4c006d6079558e3a53c97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0274d9b4fe4c006d6079558e3a53c97">operator==</a> (<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">o</a>)</td></tr>
+<tr class="memitem:aa0274d9b4fe4c006d6079558e3a53c97" id="r_aa0274d9b4fe4c006d6079558e3a53c97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d7c/classAVLTree.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0274d9b4fe4c006d6079558e3a53c97">operator==</a> (<a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;<a class="el" href="../../d6/d7c/classAVLTree.html">o</a>)</td></tr>
 <tr class="memdesc:aa0274d9b4fe4c006d6079558e3a53c97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equality comparison between patterns.  <br /></td></tr>
 <tr class="separator:aa0274d9b4fe4c006d6079558e3a53c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62557641b1e5036badf757fc19160260" id="r_a62557641b1e5036badf757fc19160260"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62557641b1e5036badf757fc19160260">operator[]</a> (<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">size_t</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">idx</a>) <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a></td></tr>
+<tr class="memitem:a62557641b1e5036badf757fc19160260" id="r_a62557641b1e5036badf757fc19160260"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d7c/classAVLTree.html">float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62557641b1e5036badf757fc19160260">operator[]</a> (<a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html">size_t</a> <a class="el" href="../../d6/d7c/classAVLTree.html">idx</a>) <a class="el" href="../../d6/d7c/classAVLTree.html">const</a></td></tr>
 <tr class="memdesc:a62557641b1e5036badf757fc19160260"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the n-dimension  <br /></td></tr>
 <tr class="separator:a62557641b1e5036badf757fc19160260"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9165d5c6bfac7f0c7518444558a98d5" id="r_ad9165d5c6bfac7f0c7518444558a98d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9165d5c6bfac7f0c7518444558a98d5">sum</a> () <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a></td></tr>
+<tr class="memitem:ad9165d5c6bfac7f0c7518444558a98d5" id="r_ad9165d5c6bfac7f0c7518444558a98d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d7c/classAVLTree.html">float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9165d5c6bfac7f0c7518444558a98d5">sum</a> () <a class="el" href="../../d6/d7c/classAVLTree.html">const</a></td></tr>
 <tr class="memdesc:ad9165d5c6bfac7f0c7518444558a98d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the sum of all values.  <br /></td></tr>
 <tr class="separator:ad9165d5c6bfac7f0c7518444558a98d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f676dac9a5d7fea6c6a3257fe4364da" id="r_a2f676dac9a5d7fea6c6a3257fe4364da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f676dac9a5d7fea6c6a3257fe4364da">max</a> () <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a></td></tr>
+<tr class="memitem:a2f676dac9a5d7fea6c6a3257fe4364da" id="r_a2f676dac9a5d7fea6c6a3257fe4364da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d7c/classAVLTree.html">float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f676dac9a5d7fea6c6a3257fe4364da">max</a> () <a class="el" href="../../d6/d7c/classAVLTree.html">const</a></td></tr>
 <tr class="memdesc:a2f676dac9a5d7fea6c6a3257fe4364da"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the maximum of all values.  <br /></td></tr>
 <tr class="separator:a2f676dac9a5d7fea6c6a3257fe4364da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c10367932410d96b79ed2660ceac34f" id="r_a2c10367932410d96b79ed2660ceac34f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c10367932410d96b79ed2660ceac34f">min</a> () <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a></td></tr>
+<tr class="memitem:a2c10367932410d96b79ed2660ceac34f" id="r_a2c10367932410d96b79ed2660ceac34f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d7c/classAVLTree.html">float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c10367932410d96b79ed2660ceac34f">min</a> () <a class="el" href="../../d6/d7c/classAVLTree.html">const</a></td></tr>
 <tr class="memdesc:a2c10367932410d96b79ed2660ceac34f"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the minimum of all values.  <br /></td></tr>
 <tr class="separator:a2c10367932410d96b79ed2660ceac34f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6382b2e9fb7201e7e4583bd8fc5f8e96" id="r_a6382b2e9fb7201e7e4583bd8fc5f8e96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d71/classPattern.html">Pattern</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6382b2e9fb7201e7e4583bd8fc5f8e96">copy</a> () <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a></td></tr>
+<tr class="memitem:a6382b2e9fb7201e7e4583bd8fc5f8e96" id="r_a6382b2e9fb7201e7e4583bd8fc5f8e96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d71/classPattern.html">Pattern</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6382b2e9fb7201e7e4583bd8fc5f8e96">copy</a> () <a class="el" href="../../d6/d7c/classAVLTree.html">const</a></td></tr>
 <tr class="memdesc:a6382b2e9fb7201e7e4583bd8fc5f8e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a deep copy of this. *.  <br /></td></tr>
 <tr class="separator:a6382b2e9fb7201e7e4583bd8fc5f8e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac134c8a8a8e2468bc663c4819b8b1942" id="r_ac134c8a8a8e2468bc663c4819b8b1942"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac134c8a8a8e2468bc663c4819b8b1942">fold</a> (std::ostream &amp;<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">out</a>) <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a></td></tr>
+<tr class="memitem:ac134c8a8a8e2468bc663c4819b8b1942" id="r_ac134c8a8a8e2468bc663c4819b8b1942"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::ostream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac134c8a8a8e2468bc663c4819b8b1942">fold</a> (<a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::ostream</a> &amp;<a class="el" href="../../d6/d7c/classAVLTree.html">out</a>) <a class="el" href="../../d6/d7c/classAVLTree.html">const</a></td></tr>
 <tr class="memdesc:ac134c8a8a8e2468bc663c4819b8b1942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fold a pattern into the output stream. Format: [ class_label [ v0 v1 v2 .. vn-1 ] ].  <br /></td></tr>
 <tr class="separator:ac134c8a8a8e2468bc663c4819b8b1942"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31d49cac4a468164c2d3da4e43c1846b" id="r_a31d49cac4a468164c2d3da4e43c1846b"><td class="memItemLeft" align="right" valign="top">std::valarray&lt; <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a> () <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a></td></tr>
+<tr class="memitem:a31d49cac4a468164c2d3da4e43c1846b" id="r_a31d49cac4a468164c2d3da4e43c1846b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::valarray</a>&lt; <a class="el" href="../../d6/d7c/classAVLTree.html">float</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a> () <a class="el" href="../../d6/d7c/classAVLTree.html">const</a></td></tr>
 <tr class="memdesc:a31d49cac4a468164c2d3da4e43c1846b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the values of the pattern dimensions.  <br /></td></tr>
 <tr class="separator:a31d49cac4a468164c2d3da4e43c1846b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Modifiers</div></td></tr>
-<tr class="memitem:a6c01684d3560a9d2994ebbaf4d28d418" id="r_a6c01684d3560a9d2994ebbaf4d28d418"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c01684d3560a9d2994ebbaf4d28d418">set_dim</a> (<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">size_t</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">new_dim</a>)</td></tr>
+<tr class="memitem:a6c01684d3560a9d2994ebbaf4d28d418" id="r_a6c01684d3560a9d2994ebbaf4d28d418"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d7c/classAVLTree.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c01684d3560a9d2994ebbaf4d28d418">set_dim</a> (<a class="el" href="../../d6/d7c/classAVLTree.html">size_t</a> <a class="el" href="../../d6/d7c/classAVLTree.html">new_dim</a>)</td></tr>
 <tr class="memdesc:a6c01684d3560a9d2994ebbaf4d28d418"><td class="mdescLeft">&#160;</td><td class="mdescRight">set pattern's dimension resizing the pattern.  <br /></td></tr>
 <tr class="separator:a6c01684d3560a9d2994ebbaf4d28d418"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab12cc95cfacebd05c03e23af3a556ca6" id="r_ab12cc95cfacebd05c03e23af3a556ca6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab12cc95cfacebd05c03e23af3a556ca6">set_class_label</a> (<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">int</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">new_label</a>)</td></tr>
+<tr class="memitem:ab12cc95cfacebd05c03e23af3a556ca6" id="r_ab12cc95cfacebd05c03e23af3a556ca6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d7c/classAVLTree.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab12cc95cfacebd05c03e23af3a556ca6">set_class_label</a> (<a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html">int</a> <a class="el" href="../../d6/d7c/classAVLTree.html">new_label</a>)</td></tr>
 <tr class="memdesc:ab12cc95cfacebd05c03e23af3a556ca6"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the class label.  <br /></td></tr>
 <tr class="separator:ab12cc95cfacebd05c03e23af3a556ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac73d1812fea036c997b5d0f75650bbcd" id="r_ac73d1812fea036c997b5d0f75650bbcd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac73d1812fea036c997b5d0f75650bbcd">set_value</a> (<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">size_t</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">idx</a>, <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">new_val</a>)</td></tr>
+<tr class="memitem:ac73d1812fea036c997b5d0f75650bbcd" id="r_ac73d1812fea036c997b5d0f75650bbcd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d7c/classAVLTree.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac73d1812fea036c997b5d0f75650bbcd">set_value</a> (<a class="el" href="../../d6/d7c/classAVLTree.html">size_t</a> <a class="el" href="../../d6/d7c/classAVLTree.html">idx</a>, <a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html">float</a> <a class="el" href="../../d6/d7c/classAVLTree.html">new_val</a>)</td></tr>
 <tr class="memdesc:ac73d1812fea036c997b5d0f75650bbcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set i-n dimension value.  <br /></td></tr>
 <tr class="separator:ac73d1812fea036c997b5d0f75650bbcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0139c4d57e69b7b585db8628ffe2801d" id="r_a0139c4d57e69b7b585db8628ffe2801d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0139c4d57e69b7b585db8628ffe2801d">operator+=</a> (<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">other</a>)</td></tr>
+<tr class="memitem:a0139c4d57e69b7b585db8628ffe2801d" id="r_a0139c4d57e69b7b585db8628ffe2801d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0139c4d57e69b7b585db8628ffe2801d">operator+=</a> (<a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;<a class="el" href="../../d6/d7c/classAVLTree.html">other</a>)</td></tr>
 <tr class="memdesc:a0139c4d57e69b7b585db8628ffe2801d"><td class="mdescLeft">&#160;</td><td class="mdescRight">add other pattern to this.  <br /></td></tr>
 <tr class="separator:a0139c4d57e69b7b585db8628ffe2801d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2f4d194594f65bf695678d1a90addda" id="r_af2f4d194594f65bf695678d1a90addda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2f4d194594f65bf695678d1a90addda">operator-=</a> (<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">other</a>)</td></tr>
+<tr class="memitem:af2f4d194594f65bf695678d1a90addda" id="r_af2f4d194594f65bf695678d1a90addda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2f4d194594f65bf695678d1a90addda">operator-=</a> (<a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;<a class="el" href="../../d6/d7c/classAVLTree.html">other</a>)</td></tr>
 <tr class="memdesc:af2f4d194594f65bf695678d1a90addda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract other pattern to this.  <br /></td></tr>
 <tr class="separator:af2f4d194594f65bf695678d1a90addda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a075d2185deb048f370536e0f6bcbf509" id="r_a075d2185deb048f370536e0f6bcbf509"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a075d2185deb048f370536e0f6bcbf509">operator*=</a> (<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">other</a>)</td></tr>
+<tr class="memitem:a075d2185deb048f370536e0f6bcbf509" id="r_a075d2185deb048f370536e0f6bcbf509"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a075d2185deb048f370536e0f6bcbf509">operator*=</a> (<a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;<a class="el" href="../../d6/d7c/classAVLTree.html">other</a>)</td></tr>
 <tr class="memdesc:a075d2185deb048f370536e0f6bcbf509"><td class="mdescLeft">&#160;</td><td class="mdescRight">elementwise product.  <br /></td></tr>
 <tr class="separator:a075d2185deb048f370536e0f6bcbf509"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94a1743ff7ef2145948d0c0e8d6dabdd" id="r_a94a1743ff7ef2145948d0c0e8d6dabdd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94a1743ff7ef2145948d0c0e8d6dabdd">operator/=</a> (<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">other</a>)</td></tr>
+<tr class="memitem:a94a1743ff7ef2145948d0c0e8d6dabdd" id="r_a94a1743ff7ef2145948d0c0e8d6dabdd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94a1743ff7ef2145948d0c0e8d6dabdd">operator/=</a> (<a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;<a class="el" href="../../d6/d7c/classAVLTree.html">other</a>)</td></tr>
 <tr class="memdesc:a94a1743ff7ef2145948d0c0e8d6dabdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">elementwise division.  <br /></td></tr>
 <tr class="separator:a94a1743ff7ef2145948d0c0e8d6dabdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ea2c6c317e388b6f596f8da1d164a53" id="r_a6ea2c6c317e388b6f596f8da1d164a53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ea2c6c317e388b6f596f8da1d164a53">operator*=</a> (<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">c</a>)</td></tr>
+<tr class="memitem:a6ea2c6c317e388b6f596f8da1d164a53" id="r_a6ea2c6c317e388b6f596f8da1d164a53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ea2c6c317e388b6f596f8da1d164a53">operator*=</a> (<a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html">float</a> <a class="el" href="../../d6/d7c/classAVLTree.html">c</a>)</td></tr>
 <tr class="memdesc:a6ea2c6c317e388b6f596f8da1d164a53"><td class="mdescLeft">&#160;</td><td class="mdescRight">multiply each element by a constant value.  <br /></td></tr>
 <tr class="separator:a6ea2c6c317e388b6f596f8da1d164a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa61b32e98f38d96ef90369b423c70b37" id="r_aa61b32e98f38d96ef90369b423c70b37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa61b32e98f38d96ef90369b423c70b37">operator/=</a> (<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">c</a>)</td></tr>
+<tr class="memitem:aa61b32e98f38d96ef90369b423c70b37" id="r_aa61b32e98f38d96ef90369b423c70b37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa61b32e98f38d96ef90369b423c70b37">operator/=</a> (<a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html">float</a> <a class="el" href="../../d6/d7c/classAVLTree.html">c</a>)</td></tr>
 <tr class="memdesc:aa61b32e98f38d96ef90369b423c70b37"><td class="mdescLeft">&#160;</td><td class="mdescRight">divide each element by a constant value.  <br /></td></tr>
 <tr class="separator:aa61b32e98f38d96ef90369b423c70b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2d1db6571656c1891006140b227a152" id="r_ab2d1db6571656c1891006140b227a152"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2d1db6571656c1891006140b227a152">abs</a> ()</td></tr>
@@ -208,9 +208,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:af10745b6190d4a3141e6574d65c6c39e" id="r_af10745b6190d4a3141e6574d65c6c39e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af10745b6190d4a3141e6574d65c6c39e">_class_label</a></td></tr>
+<tr class="memitem:af10745b6190d4a3141e6574d65c6c39e" id="r_af10745b6190d4a3141e6574d65c6c39e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d7c/classAVLTree.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af10745b6190d4a3141e6574d65c6c39e">_class_label</a></td></tr>
 <tr class="separator:af10745b6190d4a3141e6574d65c6c39e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f9844f372bd4a9db5f89a283729143e" id="r_a5f9844f372bd4a9db5f89a283729143e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; std::valarray&lt; <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a></td></tr>
+<tr class="memitem:a5f9844f372bd4a9db5f89a283729143e" id="r_a5f9844f372bd4a9db5f89a283729143e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::shared_ptr</a>&lt; <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::valarray</a>&lt; <a class="el" href="../../d6/d7c/classAVLTree.html">float</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a></td></tr>
 <tr class="separator:a5f9844f372bd4a9db5f89a283729143e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -228,7 +228,7 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">typedef</a> std::function&lt;<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a>(<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">a</a>, <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">b</a>) Pattern::distance_function_t) </td>
+          <td class="memname"><a class="el" href="../../d6/d7c/classAVLTree.html">typedef</a> <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::function</a>&lt;<a class="el" href="../../d6/d7c/classAVLTree.html">float</a>(<a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;<a class="el" href="../../d6/d7c/classAVLTree.html">a</a>, <a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;<a class="el" href="../../d6/d7c/classAVLTree.html">b</a>) Pattern::distance_function_t) </td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -246,7 +246,7 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">typedef</a> std::shared_ptr&lt;<a class="el" href="../../d5/d71/classPattern.html">Pattern</a>&gt; <a class="el" href="#ac2e39a59d3810d0e2564dd8622858513">Pattern::Ref</a></td>
+          <td class="memname"><a class="el" href="../../d6/d7c/classAVLTree.html">typedef</a> <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::shared_ptr</a>&lt;<a class="el" href="../../d5/d71/classPattern.html">Pattern</a>&gt; <a class="el" href="#ac2e39a59d3810d0e2564dd8622858513">Pattern::Ref</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -268,12 +268,12 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">Pattern::Pattern </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">size_t</a></td>          <td class="paramname"><span class="paramname"><em>d</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>d</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">int</a></td>          <td class="paramname"><span class="paramname"><em>cl</em><span class="paramdefsep"> = </span><span class="paramdefval">-1</span></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html">int</a></td>          <td class="paramname"><span class="paramname"><em>cl</em><span class="paramdefsep"> = </span><span class="paramdefval">-1</span></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -291,13 +291,14 @@ Protected Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="../../dd/d6e/pattern_8cpp_source.html#l00017">17</a> of file <a class="el" href="../../dd/d6e/pattern_8cpp_source.html">pattern.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   18</span>{</div>
 <div class="line"><span class="lineno">   19</span>    <span class="comment">// TODO</span></div>
-<div class="line"><span class="lineno">   20</span>    <a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a> = std::make_shared&lt;std::valarray&lt;float&gt;&gt;(<a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">d</a>);</div>
-<div class="line"><span class="lineno">   21</span>    <a class="code hl_variable" href="#af10745b6190d4a3141e6574d65c6c39e">_class_label</a> = <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">cl</a>;</div>
+<div class="line"><span class="lineno">   20</span>    <a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a> = <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::make_shared&lt;std::valarray&lt;float&gt;</a>&gt;(<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">d</a>);</div>
+<div class="line"><span class="lineno">   21</span>    <a class="code hl_variable" href="#af10745b6190d4a3141e6574d65c6c39e">_class_label</a> = <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">cl</a>;</div>
 <div class="line"><span class="lineno">   22</span>    <span class="comment">//</span></div>
-<div class="line"><span class="lineno">   23</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">assert</a>(<a class="code hl_function" href="#ac738df64348f83666e1c2c6a533f4403">dim</a>() == <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">d</a>);</div>
-<div class="line"><span class="lineno">   24</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">assert</a>(<a class="code hl_function" href="#ade84f7f916939bdcb10009bfcbdece42">class_label</a>() == <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">cl</a>);</div>
+<div class="line"><span class="lineno">   23</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">assert</a>(<a class="code hl_function" href="#ac738df64348f83666e1c2c6a533f4403">dim</a>() == <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">d</a>);</div>
+<div class="line"><span class="lineno">   24</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">assert</a>(<a class="code hl_function" href="#ade84f7f916939bdcb10009bfcbdece42">class_label</a>() == <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">cl</a>);</div>
 <div class="line"><span class="lineno">   25</span>}</div>
-<div class="ttc" id="abtree__utils_8hpp_html_ad61617ff304d328f85464af83e92662d"><div class="ttname"><a href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">compute_height</a></div><div class="ttdeci">int compute_height(typename BTree&lt; T &gt;::Ref t)</div><div class="ttdoc">Compute the height of a tree. The tree's height is the longitude of the longest branch connecting the...</div><div class="ttdef"><b>Definition</b> <a href="../../d4/d7f/btree__utils__imp_8hpp_source.html#l00020">btree_utils_imp.hpp:20</a></div></div>
+<div class="ttc" id="aclassAVLTree_html"><div class="ttname"><a href="../../d6/d7c/classAVLTree.html">AVLTree</a></div><div class="ttdoc">ADT AVLTree. A AVLTree is a binary tree that meets the next two invariants: is_a_binary_search_tree()...</div><div class="ttdef"><b>Definition</b> <a href="../../db/df1/avltree_8hpp_source.html#l00195">avltree.hpp:196</a></div></div>
+<div class="ttc" id="aclassAVLTree_html_a9fab28b32e97ffc5e0f1a4ed3d9823b2"><div class="ttname"><a href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">AVLTree::AVLTree</a></div><div class="ttdeci">AVLTree()</div><div class="ttdoc">Create an empty AVLTree.</div><div class="ttdef"><b>Definition</b> <a href="../../db/dd2/avltree__imp_8hpp_source.html#l00236">avltree_imp.hpp:236</a></div></div>
 <div class="ttc" id="aclassPattern_html_a5f9844f372bd4a9db5f89a283729143e"><div class="ttname"><a href="#a5f9844f372bd4a9db5f89a283729143e">Pattern::_values</a></div><div class="ttdeci">std::shared_ptr&lt; std::valarray&lt; float &gt; &gt; _values</div><div class="ttdef"><b>Definition</b> <a href="../../df/d33/pattern_8hpp_source.html#l00238">pattern.hpp:238</a></div></div>
 <div class="ttc" id="aclassPattern_html_ac738df64348f83666e1c2c6a533f4403"><div class="ttname"><a href="#ac738df64348f83666e1c2c6a533f4403">Pattern::dim</a></div><div class="ttdeci">size_t dim() const</div><div class="ttdoc">get the pattern's dimension.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d6e/pattern_8cpp_source.html#l00083">pattern.cpp:83</a></div></div>
 <div class="ttc" id="aclassPattern_html_ade84f7f916939bdcb10009bfcbdece42"><div class="ttname"><a href="#ade84f7f916939bdcb10009bfcbdece42">Pattern::class_label</a></div><div class="ttdeci">int class_label() const</div><div class="ttdoc">get the class label</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d6e/pattern_8cpp_source.html#l00114">pattern.cpp:114</a></div></div>
@@ -314,17 +315,17 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">Pattern::Pattern </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a></td>          <td class="paramname"><span class="paramname"><em>values</em>[], </span></td>
+          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html">float</a></td>          <td class="paramname"><span class="paramname"><em>values</em>[], </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">size_t</a></td>          <td class="paramname"><span class="paramname"><em>size</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>size</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">int</a></td>          <td class="paramname"><span class="paramname"><em>cl</em><span class="paramdefsep"> = </span><span class="paramdefval">-1</span></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html">int</a></td>          <td class="paramname"><span class="paramname"><em>cl</em><span class="paramdefsep"> = </span><span class="paramdefval">-1</span></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -337,13 +338,13 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d6e/pattern_8cpp_source.html#l00027">27</a> of file <a class="el" href="../../dd/d6e/pattern_8cpp_source.html">pattern.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   28</span>{</div>
-<div class="line"><span class="lineno">   29</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">assert</a>(size&gt;0);</div>
+<div class="line"><span class="lineno">   29</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">assert</a>(size&gt;0);</div>
 <div class="line"><span class="lineno">   30</span>    <span class="comment">// TODO</span></div>
-<div class="line"><span class="lineno">   31</span>    <a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a> = std::make_shared&lt;std::valarray&lt;float&gt;&gt;(<a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>, size);</div>
-<div class="line"><span class="lineno">   32</span>    <a class="code hl_variable" href="#af10745b6190d4a3141e6574d65c6c39e">_class_label</a> = <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">cl</a>;</div>
+<div class="line"><span class="lineno">   31</span>    <a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a> = <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::make_shared&lt;std::valarray&lt;float&gt;</a>&gt;(<a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>, size);</div>
+<div class="line"><span class="lineno">   32</span>    <a class="code hl_variable" href="#af10745b6190d4a3141e6574d65c6c39e">_class_label</a> = <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">cl</a>;</div>
 <div class="line"><span class="lineno">   33</span>    <span class="comment">//</span></div>
-<div class="line"><span class="lineno">   34</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">assert</a>(<a class="code hl_function" href="#ac738df64348f83666e1c2c6a533f4403">dim</a>() == size);</div>
-<div class="line"><span class="lineno">   35</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">assert</a>(<a class="code hl_function" href="#ade84f7f916939bdcb10009bfcbdece42">class_label</a>() == <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">cl</a>);</div>
+<div class="line"><span class="lineno">   34</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">assert</a>(<a class="code hl_function" href="#ac738df64348f83666e1c2c6a533f4403">dim</a>() == size);</div>
+<div class="line"><span class="lineno">   35</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">assert</a>(<a class="code hl_function" href="#ade84f7f916939bdcb10009bfcbdece42">class_label</a>() == <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">cl</a>);</div>
 <div class="line"><span class="lineno">   36</span>}</div>
 <div class="ttc" id="aclassPattern_html_a31d49cac4a468164c2d3da4e43c1846b"><div class="ttname"><a href="#a31d49cac4a468164c2d3da4e43c1846b">Pattern::values</a></div><div class="ttdeci">std::valarray&lt; float &gt; values() const</div><div class="ttdoc">Get the values of the pattern dimensions.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d6e/pattern_8cpp_source.html#l00061">pattern.cpp:61</a></div></div>
 </div><!-- fragment -->
@@ -358,12 +359,12 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">Pattern::Pattern </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> std::vector&lt; <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>values</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::vector</a>&lt; <a class="el" href="../../d6/d7c/classAVLTree.html">float</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>values</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">int</a></td>          <td class="paramname"><span class="paramname"><em>cl</em><span class="paramdefsep"> = </span><span class="paramdefval">-1</span></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html">int</a></td>          <td class="paramname"><span class="paramname"><em>cl</em><span class="paramdefsep"> = </span><span class="paramdefval">-1</span></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -375,14 +376,15 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d6e/pattern_8cpp_source.html#l00038">38</a> of file <a class="el" href="../../dd/d6e/pattern_8cpp_source.html">pattern.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   39</span>{</div>
-<div class="line"><span class="lineno">   40</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">assert</a>(<a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>.size()&gt;0);</div>
+<div class="line"><span class="lineno">   40</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">assert</a>(<a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>.size()&gt;0);</div>
 <div class="line"><span class="lineno">   41</span>    <span class="comment">// TODO</span></div>
-<div class="line"><span class="lineno">   42</span>    <a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a> = std::make_shared&lt;std::valarray&lt;float&gt;&gt;(<a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>.data(), <a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>.size());</div>
-<div class="line"><span class="lineno">   43</span>    <a class="code hl_variable" href="#af10745b6190d4a3141e6574d65c6c39e">_class_label</a> = <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">cl</a>;</div>
+<div class="line"><span class="lineno">   42</span>    <a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a> = <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::make_shared&lt;std::valarray&lt;float&gt;</a>&gt;(<a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>.data(), <a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>.size());</div>
+<div class="line"><span class="lineno">   43</span>    <a class="code hl_variable" href="#af10745b6190d4a3141e6574d65c6c39e">_class_label</a> = <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">cl</a>;</div>
 <div class="line"><span class="lineno">   44</span>    <span class="comment">//</span></div>
-<div class="line"><span class="lineno">   45</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">assert</a>(<a class="code hl_function" href="#ac738df64348f83666e1c2c6a533f4403">dim</a>() == <a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>.size());</div>
-<div class="line"><span class="lineno">   46</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">assert</a>(<a class="code hl_function" href="#ade84f7f916939bdcb10009bfcbdece42">class_label</a>() == <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">cl</a>);</div>
+<div class="line"><span class="lineno">   45</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">assert</a>(<a class="code hl_function" href="#ac738df64348f83666e1c2c6a533f4403">dim</a>() == <a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>.<a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a8965aaf5d107cab6ae317f7a575cdebc">size</a>());</div>
+<div class="line"><span class="lineno">   46</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">assert</a>(<a class="code hl_function" href="#ade84f7f916939bdcb10009bfcbdece42">class_label</a>() == <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">cl</a>);</div>
 <div class="line"><span class="lineno">   47</span>}</div>
+<div class="ttc" id="aclassAVLTree_html_a8965aaf5d107cab6ae317f7a575cdebc"><div class="ttname"><a href="../../d6/d7c/classAVLTree.html#a8965aaf5d107cab6ae317f7a575cdebc">AVLTree::size</a></div><div class="ttdeci">int size() const</div><div class="ttdoc">Return the number of keys stored in the tree.</div><div class="ttdef"><b>Definition</b> <a href="../../db/dd2/avltree__imp_8hpp_source.html#l00446">avltree_imp.hpp:446</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -395,12 +397,12 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">Pattern::Pattern </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> std::valarray&lt; <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>values</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::valarray</a>&lt; <a class="el" href="../../d6/d7c/classAVLTree.html">float</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>values</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">int</a></td>          <td class="paramname"><span class="paramname"><em>cl</em><span class="paramdefsep"> = </span><span class="paramdefval">-1</span></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html">int</a></td>          <td class="paramname"><span class="paramname"><em>cl</em><span class="paramdefsep"> = </span><span class="paramdefval">-1</span></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -412,13 +414,13 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d6e/pattern_8cpp_source.html#l00049">49</a> of file <a class="el" href="../../dd/d6e/pattern_8cpp_source.html">pattern.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   50</span>{</div>
-<div class="line"><span class="lineno">   51</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">assert</a>(<a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>.size()&gt;0);</div>
+<div class="line"><span class="lineno">   51</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">assert</a>(<a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>.size()&gt;0);</div>
 <div class="line"><span class="lineno">   52</span>    <span class="comment">// TODO</span></div>
-<div class="line"><span class="lineno">   53</span>    <a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a> = std::make_shared&lt;std::valarray&lt;float&gt;&gt;(<a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>);</div>
-<div class="line"><span class="lineno">   54</span>    <a class="code hl_variable" href="#af10745b6190d4a3141e6574d65c6c39e">_class_label</a> = <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">cl</a>;</div>
+<div class="line"><span class="lineno">   53</span>    <a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a> = <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::make_shared&lt;std::valarray&lt;float&gt;</a>&gt;(<a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>);</div>
+<div class="line"><span class="lineno">   54</span>    <a class="code hl_variable" href="#af10745b6190d4a3141e6574d65c6c39e">_class_label</a> = <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">cl</a>;</div>
 <div class="line"><span class="lineno">   55</span>    <span class="comment">//</span></div>
-<div class="line"><span class="lineno">   56</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">assert</a>(<a class="code hl_function" href="#ac738df64348f83666e1c2c6a533f4403">dim</a>() == <a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>.size());</div>
-<div class="line"><span class="lineno">   57</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">assert</a>(<a class="code hl_function" href="#ade84f7f916939bdcb10009bfcbdece42">class_label</a>() == <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">cl</a>);</div>
+<div class="line"><span class="lineno">   56</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">assert</a>(<a class="code hl_function" href="#ac738df64348f83666e1c2c6a533f4403">dim</a>() == <a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>.<a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a8965aaf5d107cab6ae317f7a575cdebc">size</a>());</div>
+<div class="line"><span class="lineno">   57</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">assert</a>(<a class="code hl_function" href="#ade84f7f916939bdcb10009bfcbdece42">class_label</a>() == <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">cl</a>);</div>
 <div class="line"><span class="lineno">   58</span>}</div>
 </div><!-- fragment -->
 </div>
@@ -432,7 +434,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">Pattern::Pattern </td>
           <td>(</td>
-          <td class="paramtype">std::istream &amp;</td>          <td class="paramname"><span class="paramname"><em>in</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::istream</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>in</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -445,46 +447,46 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section warning"><dt>Warning</dt><dd>std::runtime_error("wrong input format") was throw if an error happened. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd><a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2" title="Create an empty AVLTree.">std::runtime_error</a>("wrong input format") was throw if an error happened. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d6e/pattern_8cpp_source.html#l00262">262</a> of file <a class="el" href="../../dd/d6e/pattern_8cpp_source.html">pattern.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  263</span>{</div>
 <div class="line"><span class="lineno">  264</span>    <span class="comment">// TODO</span></div>
 <div class="line"><span class="lineno">  265</span>    <span class="comment">// Remember: input format is &quot;[ class_label [ &lt;dim_0&gt; &lt;dim_1&gt; ... &lt;dim_size-1&gt; ] ]&quot;</span></div>
 <div class="line"><span class="lineno">  266</span> </div>
-<div class="line"><span class="lineno">  267</span>    std::string <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">token</a>;</div>
-<div class="line"><span class="lineno">  268</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">cl</a>;</div>
-<div class="line"><span class="lineno">  269</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">value</a>;</div>
-<div class="line"><span class="lineno">  270</span>    std::vector&lt;float&gt; <a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>;</div>
+<div class="line"><span class="lineno">  267</span>    <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::string</a> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">token</a>;</div>
+<div class="line"><span class="lineno">  268</span>    <span class="keywordtype">int</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">cl</a>;</div>
+<div class="line"><span class="lineno">  269</span>    <span class="keywordtype">float</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">value</a>;</div>
+<div class="line"><span class="lineno">  270</span>    <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::vector&lt;float&gt;</a> <a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>;</div>
 <div class="line"><span class="lineno">  271</span> </div>
-<div class="line"><span class="lineno">  272</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">input</a> &gt;&gt; <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">token</a>;</div>
-<div class="line"><span class="lineno">  273</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">token</a> != <span class="stringliteral">&quot;[&quot;</span>){</div>
-<div class="line"><span class="lineno">  274</span>        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;wrong input format&quot;</span>);</div>
+<div class="line"><span class="lineno">  272</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">input</a> &gt;&gt; <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">token</a>;</div>
+<div class="line"><span class="lineno">  273</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">token</a> != <span class="stringliteral">&quot;[&quot;</span>){</div>
+<div class="line"><span class="lineno">  274</span>        <span class="keywordflow">throw</span> <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::runtime_error</a>(<span class="stringliteral">&quot;wrong input format&quot;</span>);</div>
 <div class="line"><span class="lineno">  275</span>    }</div>
 <div class="line"><span class="lineno">  276</span> </div>
-<div class="line"><span class="lineno">  277</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">input</a> &gt;&gt; <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">cl</a>;</div>
+<div class="line"><span class="lineno">  277</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">input</a> &gt;&gt; <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">cl</a>;</div>
 <div class="line"><span class="lineno">  278</span> </div>
-<div class="line"><span class="lineno">  279</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">input</a> &gt;&gt; <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">token</a>;</div>
-<div class="line"><span class="lineno">  280</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">token</a> != <span class="stringliteral">&quot;[&quot;</span>){</div>
-<div class="line"><span class="lineno">  281</span>        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;wrong input format&quot;</span>);</div>
+<div class="line"><span class="lineno">  279</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">input</a> &gt;&gt; <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">token</a>;</div>
+<div class="line"><span class="lineno">  280</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">token</a> != <span class="stringliteral">&quot;[&quot;</span>){</div>
+<div class="line"><span class="lineno">  281</span>        <span class="keywordflow">throw</span> <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::runtime_error</a>(<span class="stringliteral">&quot;wrong input format&quot;</span>);</div>
 <div class="line"><span class="lineno">  282</span>    }</div>
 <div class="line"><span class="lineno">  283</span> </div>
-<div class="line"><span class="lineno">  284</span>    <span class="keywordflow">while</span> (<a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">input</a> &gt;&gt; <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">token</a> &amp;&amp; <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">token</a> != <span class="stringliteral">&quot;]&quot;</span>){</div>
-<div class="line"><span class="lineno">  285</span>        std::istringstream <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">convert</a>(<a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">token</a>);</div>
-<div class="line"><span class="lineno">  286</span>        <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">convert</a> &gt;&gt; <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">value</a>;</div>
+<div class="line"><span class="lineno">  284</span>    <span class="keywordflow">while</span> (<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">input</a> &gt;&gt; <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">token</a> &amp;&amp; <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">token</a> != <span class="stringliteral">&quot;]&quot;</span>){</div>
+<div class="line"><span class="lineno">  285</span>        <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::istringstream</a> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">convert</a>(<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">token</a>);</div>
+<div class="line"><span class="lineno">  286</span>        <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">convert</a> &gt;&gt; <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">value</a>;</div>
 <div class="line"><span class="lineno">  287</span>  </div>
-<div class="line"><span class="lineno">  288</span>        <a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>.push_back(<a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">value</a>);</div>
+<div class="line"><span class="lineno">  288</span>        <a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>.push_back(<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">value</a>);</div>
 <div class="line"><span class="lineno">  289</span>    }</div>
 <div class="line"><span class="lineno">  290</span> </div>
-<div class="line"><span class="lineno">  291</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">token</a>.clear();</div>
+<div class="line"><span class="lineno">  291</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">token</a>.clear();</div>
 <div class="line"><span class="lineno">  292</span> </div>
-<div class="line"><span class="lineno">  293</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">input</a> &gt;&gt; <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">token</a>;</div>
-<div class="line"><span class="lineno">  294</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">token</a> != <span class="stringliteral">&quot;]&quot;</span>){</div>
-<div class="line"><span class="lineno">  295</span>        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;wrong input format&quot;</span>);</div>
+<div class="line"><span class="lineno">  293</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">input</a> &gt;&gt; <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">token</a>;</div>
+<div class="line"><span class="lineno">  294</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">token</a> != <span class="stringliteral">&quot;]&quot;</span>){</div>
+<div class="line"><span class="lineno">  295</span>        <span class="keywordflow">throw</span> <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::runtime_error</a>(<span class="stringliteral">&quot;wrong input format&quot;</span>);</div>
 <div class="line"><span class="lineno">  296</span>    }</div>
 <div class="line"><span class="lineno">  297</span> </div>
-<div class="line"><span class="lineno">  298</span>    <a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a> = std::make_shared&lt;std::valarray&lt;float&gt;&gt;(<a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>.data(), <a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>.size());</div>
-<div class="line"><span class="lineno">  299</span>    <a class="code hl_variable" href="#af10745b6190d4a3141e6574d65c6c39e">_class_label</a> = <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">cl</a>;</div>
+<div class="line"><span class="lineno">  298</span>    <a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a> = <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::make_shared&lt;std::valarray&lt;float&gt;</a>&gt;(<a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>.data(), <a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>.size());</div>
+<div class="line"><span class="lineno">  299</span>    <a class="code hl_variable" href="#af10745b6190d4a3141e6574d65c6c39e">_class_label</a> = <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">cl</a>;</div>
 <div class="line"><span class="lineno">  300</span> </div>
 <div class="line"><span class="lineno">  301</span>    <span class="comment">//</span></div>
 <div class="line"><span class="lineno">  302</span>}</div>
@@ -531,13 +533,13 @@ Protected Attributes</h2></td></tr>
 
 <p>apply absolute value for all dimensions. </p>
 <dl class="section return"><dt>Returns</dt><dd>a reference to updated this. </dd></dl>
-<dl class="section post"><dt>Postcondition</dt><dd>for each dimension i, (*this)[i] == abs( (* old.this)[i]) * <br  />
+<dl class="section post"><dt>Postcondition</dt><dd>for each dimension i, (*this)[i] == abs( (* <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2" title="Create an empty AVLTree.">old.this</a>)[i]) * <br  />
  </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d6e/pattern_8cpp_source.html#l00229">229</a> of file <a class="el" href="../../dd/d6e/pattern_8cpp_source.html">pattern.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  230</span>{</div>
 <div class="line"><span class="lineno">  231</span>    <span class="comment">//TODO</span></div>
-<div class="line"><span class="lineno">  232</span>    <a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a> = std::make_shared&lt;std::valarray&lt;float&gt;&gt;(std::abs(<a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>()));</div>
+<div class="line"><span class="lineno">  232</span>    <a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a> = <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::make_shared&lt;std::valarray&lt;float&gt;</a>&gt;(std::abs(<a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>()));</div>
 <div class="line"><span class="lineno">  233</span>    <span class="comment">//</span></div>
 <div class="line"><span class="lineno">  234</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><span class="lineno">  235</span>}</div>
@@ -551,7 +553,7 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">int</a> Pattern::class_label </td>
+          <td class="memname"><a class="el" href="../../d6/d7c/classAVLTree.html">int</a> Pattern::class_label </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
@@ -563,11 +565,11 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d6e/pattern_8cpp_source.html#l00114">114</a> of file <a class="el" href="../../dd/d6e/pattern_8cpp_source.html">pattern.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  115</span>{</div>
-<div class="line"><span class="lineno">  116</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">cl</a> = -1;</div>
+<div class="line"><span class="lineno">  116</span>    <span class="keywordtype">int</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">cl</a> = -1;</div>
 <div class="line"><span class="lineno">  117</span>    <span class="comment">// TODO</span></div>
-<div class="line"><span class="lineno">  118</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">cl</a> = <a class="code hl_variable" href="#af10745b6190d4a3141e6574d65c6c39e">_class_label</a>;</div>
+<div class="line"><span class="lineno">  118</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">cl</a> = <a class="code hl_variable" href="#af10745b6190d4a3141e6574d65c6c39e">_class_label</a>;</div>
 <div class="line"><span class="lineno">  119</span>    <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">cl</a>;</div>
+<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">cl</a>;</div>
 <div class="line"><span class="lineno">  121</span>}</div>
 </div><!-- fragment -->
 </div>
@@ -592,12 +594,12 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d6e/pattern_8cpp_source.html#l00070">70</a> of file <a class="el" href="../../dd/d6e/pattern_8cpp_source.html">pattern.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   71</span>{</div>
-<div class="line"><span class="lineno">   72</span>    <a class="code hl_class" href="../../d5/d71/classPattern.html">Pattern</a> <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">ret_v</a>;</div>
+<div class="line"><span class="lineno">   72</span>    <a class="code hl_class" href="../../d5/d71/classPattern.html">Pattern</a> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">ret_v</a>;</div>
 <div class="line"><span class="lineno">   73</span>    <span class="comment">// TODO: return a deep copy of this.</span></div>
-<div class="line"><span class="lineno">   74</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">ret_v</a>.<a class="code hl_variable" href="#af10745b6190d4a3141e6574d65c6c39e">_class_label</a> = <a class="code hl_variable" href="#af10745b6190d4a3141e6574d65c6c39e">_class_label</a>;</div>
-<div class="line"><span class="lineno">   75</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">ret_v</a>._values = std::make_shared&lt;std::valarray&lt;float&gt;&gt;(*_values);</div>
+<div class="line"><span class="lineno">   74</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">ret_v</a>._class_label = <a class="code hl_variable" href="#af10745b6190d4a3141e6574d65c6c39e">_class_label</a>;</div>
+<div class="line"><span class="lineno">   75</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">ret_v</a>._values = <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::make_shared&lt;std::valarray&lt;float&gt;</a>&gt;(*_values);</div>
 <div class="line"><span class="lineno">   76</span>    <span class="comment">//</span></div>
-<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">ret_v</a>;    </div>
+<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">ret_v</a>;    </div>
 <div class="line"><span class="lineno">   78</span>}</div>
 <div class="ttc" id="aclassPattern_html"><div class="ttname"><a href="../../d5/d71/classPattern.html">Pattern</a></div><div class="ttdoc">ADT Pattern. Models a pattern for Machine Learning.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d33/pattern_8hpp_source.html#l00023">pattern.hpp:24</a></div></div>
 </div><!-- fragment -->
@@ -610,7 +612,7 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">size_t</a> Pattern::dim </td>
+          <td class="memname"><a class="el" href="../../d6/d7c/classAVLTree.html">size_t</a> Pattern::dim </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
@@ -622,11 +624,11 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d6e/pattern_8cpp_source.html#l00083">83</a> of file <a class="el" href="../../dd/d6e/pattern_8cpp_source.html">pattern.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   84</span>{</div>
-<div class="line"><span class="lineno">   85</span>    <span class="keywordtype">size_t</span> <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">d</a> = 0;</div>
+<div class="line"><span class="lineno">   85</span>    <span class="keywordtype">size_t</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">d</a> = 0;</div>
 <div class="line"><span class="lineno">   86</span>    <span class="comment">// TODO</span></div>
-<div class="line"><span class="lineno">   87</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">d</a> = <a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a>-&gt;size();</div>
+<div class="line"><span class="lineno">   87</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">d</a> = <a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a>-&gt;<a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a8965aaf5d107cab6ae317f7a575cdebc">size</a>();</div>
 <div class="line"><span class="lineno">   88</span>    <span class="comment">//</span></div>
-<div class="line"><span class="lineno">   89</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">d</a>;</div>
+<div class="line"><span class="lineno">   89</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">d</a>;</div>
 <div class="line"><span class="lineno">   90</span>}</div>
 </div><!-- fragment -->
 </div>
@@ -638,9 +640,9 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::ostream &amp; Pattern::fold </td>
+          <td class="memname"><a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::ostream</a> &amp; Pattern::fold </td>
           <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::ostream</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -653,21 +655,21 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>std::ostream&amp; </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2" title="Create an empty AVLTree.">std::ostream</a>&amp; </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d6e/pattern_8cpp_source.html#l00237">237</a> of file <a class="el" href="../../dd/d6e/pattern_8cpp_source.html">pattern.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  238</span>{</div>
 <div class="line"><span class="lineno">  239</span>    <span class="comment">// TODO</span></div>
 <div class="line"><span class="lineno">  240</span>    <span class="comment">// Remember: format &quot;[ class_label [ v0 v1 ... vn-1 ] ]&quot;</span></div>
-<div class="line"><span class="lineno">  241</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">output</a> &lt;&lt; <span class="stringliteral">&quot;[ &quot;</span> &lt;&lt; <a class="code hl_variable" href="#af10745b6190d4a3141e6574d65c6c39e">_class_label</a> &lt;&lt; <span class="stringliteral">&quot; [ &quot;</span>;</div>
+<div class="line"><span class="lineno">  241</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">output</a> &lt;&lt; <span class="stringliteral">&quot;[ &quot;</span> &lt;&lt; <a class="code hl_variable" href="#af10745b6190d4a3141e6574d65c6c39e">_class_label</a> &lt;&lt; <span class="stringliteral">&quot; [ &quot;</span>;</div>
 <div class="line"><span class="lineno">  242</span> </div>
-<div class="line"><span class="lineno">  243</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">i</a> : <a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>()){</div>
-<div class="line"><span class="lineno">  244</span>        <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">output</a> &lt;&lt; <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">i</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno">  243</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">i</a> : <a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>()){</div>
+<div class="line"><span class="lineno">  244</span>        <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">output</a> &lt;&lt; <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">i</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
 <div class="line"><span class="lineno">  245</span>    }</div>
 <div class="line"><span class="lineno">  246</span> </div>
-<div class="line"><span class="lineno">  247</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">output</a> &lt;&lt; <span class="stringliteral">&quot;] ]&quot;</span>;</div>
+<div class="line"><span class="lineno">  247</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">output</a> &lt;&lt; <span class="stringliteral">&quot;] ]&quot;</span>;</div>
 <div class="line"><span class="lineno">  248</span>    <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  249</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">output</a>;</div>
+<div class="line"><span class="lineno">  249</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">output</a>;</div>
 <div class="line"><span class="lineno">  250</span>}</div>
 </div><!-- fragment -->
 </div>
@@ -679,7 +681,7 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a> Pattern::max </td>
+          <td class="memname"><a class="el" href="../../d6/d7c/classAVLTree.html">float</a> Pattern::max </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
@@ -692,11 +694,11 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d6e/pattern_8cpp_source.html#l00142">142</a> of file <a class="el" href="../../dd/d6e/pattern_8cpp_source.html">pattern.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  143</span>{</div>
-<div class="line"><span class="lineno">  144</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">m</a> = 0.0;</div>
+<div class="line"><span class="lineno">  144</span>    <span class="keywordtype">float</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">m</a> = 0.0;</div>
 <div class="line"><span class="lineno">  145</span>    <span class="comment">// TODO</span></div>
-<div class="line"><span class="lineno">  146</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">m</a> = <a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a>-&gt;max();</div>
+<div class="line"><span class="lineno">  146</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">m</a> = <a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a>-&gt;max();</div>
 <div class="line"><span class="lineno">  147</span>    <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  148</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">m</a>;</div>
+<div class="line"><span class="lineno">  148</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">m</a>;</div>
 <div class="line"><span class="lineno">  149</span>}</div>
 </div><!-- fragment -->
 </div>
@@ -708,7 +710,7 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a> Pattern::min </td>
+          <td class="memname"><a class="el" href="../../d6/d7c/classAVLTree.html">float</a> Pattern::min </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
@@ -721,11 +723,11 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d6e/pattern_8cpp_source.html#l00151">151</a> of file <a class="el" href="../../dd/d6e/pattern_8cpp_source.html">pattern.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  152</span>{</div>
-<div class="line"><span class="lineno">  153</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">m</a> = 0.0;</div>
+<div class="line"><span class="lineno">  153</span>    <span class="keywordtype">float</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">m</a> = 0.0;</div>
 <div class="line"><span class="lineno">  154</span>    <span class="comment">// TODO</span></div>
-<div class="line"><span class="lineno">  155</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">m</a> = <a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a>-&gt;min();</div>
+<div class="line"><span class="lineno">  155</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">m</a> = <a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a>-&gt;min();</div>
 <div class="line"><span class="lineno">  156</span>    <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  157</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">m</a>;</div>
+<div class="line"><span class="lineno">  157</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">m</a>;</div>
 <div class="line"><span class="lineno">  158</span>}</div>
 </div><!-- fragment -->
 </div>
@@ -739,7 +741,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp; Pattern::operator*= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html">float</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -752,7 +754,7 @@ Protected Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="../../dd/d6e/pattern_8cpp_source.html#l00213">213</a> of file <a class="el" href="../../dd/d6e/pattern_8cpp_source.html">pattern.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  214</span>{</div>
 <div class="line"><span class="lineno">  215</span>    <span class="comment">// TODO</span></div>
-<div class="line"><span class="lineno">  216</span>    *<a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a> *= <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">c</a>;</div>
+<div class="line"><span class="lineno">  216</span>    *<a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a> *= <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">c</a>;</div>
 <div class="line"><span class="lineno">  217</span>    <span class="comment">//</span></div>
 <div class="line"><span class="lineno">  218</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><span class="lineno">  219</span>}</div>
@@ -768,7 +770,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp; Pattern::operator*= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -777,13 +779,13 @@ Protected Attributes</h2></td></tr>
 <p>elementwise product. </p>
 <dl class="section return"><dt>Returns</dt><dd>a reference to updated this. </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="#ac738df64348f83666e1c2c6a533f4403" title="get the pattern&#39;s dimension.">dim()</a>==other.dim() </dd></dl>
-<dl class="section post"><dt>Postcondition</dt><dd>this == (old.this()*other) </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>this == (<a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2" title="Create an empty AVLTree.">old.this()</a>*other) </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d6e/pattern_8cpp_source.html#l00195">195</a> of file <a class="el" href="../../dd/d6e/pattern_8cpp_source.html">pattern.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  196</span>{</div>
-<div class="line"><span class="lineno">  197</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">assert</a>(<a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">o</a>.dim()==<a class="code hl_function" href="#ac738df64348f83666e1c2c6a533f4403">dim</a>());</div>
+<div class="line"><span class="lineno">  197</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">assert</a>(<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">o</a>.dim()==<a class="code hl_function" href="#ac738df64348f83666e1c2c6a533f4403">dim</a>());</div>
 <div class="line"><span class="lineno">  198</span>    <span class="comment">// TODO</span></div>
-<div class="line"><span class="lineno">  199</span>    *<a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a> *= <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">o</a>.values();</div>
+<div class="line"><span class="lineno">  199</span>    *<a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a> *= <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">o</a>.values();</div>
 <div class="line"><span class="lineno">  200</span>    <span class="comment">//</span></div>
 <div class="line"><span class="lineno">  201</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><span class="lineno">  202</span>}</div>
@@ -799,7 +801,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp; Pattern::operator+= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -808,13 +810,13 @@ Protected Attributes</h2></td></tr>
 <p>add other pattern to this. </p>
 <dl class="section return"><dt>Returns</dt><dd>a reference to updated this. </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="#ac738df64348f83666e1c2c6a533f4403" title="get the pattern&#39;s dimension.">dim()</a>==other.dim() </dd></dl>
-<dl class="section post"><dt>Postcondition</dt><dd>this == (old.this()+other) </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>this == (<a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2" title="Create an empty AVLTree.">old.this()</a>+other) </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d6e/pattern_8cpp_source.html#l00177">177</a> of file <a class="el" href="../../dd/d6e/pattern_8cpp_source.html">pattern.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  178</span>{</div>
-<div class="line"><span class="lineno">  179</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">assert</a>(<a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">o</a>.dim()==<a class="code hl_function" href="#ac738df64348f83666e1c2c6a533f4403">dim</a>());</div>
+<div class="line"><span class="lineno">  179</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">assert</a>(<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">o</a>.dim()==<a class="code hl_function" href="#ac738df64348f83666e1c2c6a533f4403">dim</a>());</div>
 <div class="line"><span class="lineno">  180</span>    <span class="comment">// TODO</span></div>
-<div class="line"><span class="lineno">  181</span>    *<a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a> += <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">o</a>.values();</div>
+<div class="line"><span class="lineno">  181</span>    *<a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a> += <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">o</a>.values();</div>
 <div class="line"><span class="lineno">  182</span>    <span class="comment">//</span></div>
 <div class="line"><span class="lineno">  183</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><span class="lineno">  184</span>}</div>
@@ -830,7 +832,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp; Pattern::operator-= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -839,13 +841,13 @@ Protected Attributes</h2></td></tr>
 <p>Subtract other pattern to this. </p>
 <dl class="section return"><dt>Returns</dt><dd>a reference to updated this. </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="#ac738df64348f83666e1c2c6a533f4403" title="get the pattern&#39;s dimension.">dim()</a>==other.dim() </dd></dl>
-<dl class="section post"><dt>Postcondition</dt><dd>this == (old.this()-other) </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>this == (<a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2" title="Create an empty AVLTree.">old.this()</a>-other) </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d6e/pattern_8cpp_source.html#l00186">186</a> of file <a class="el" href="../../dd/d6e/pattern_8cpp_source.html">pattern.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  187</span>{</div>
-<div class="line"><span class="lineno">  188</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">assert</a>(<a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">o</a>.dim()==<a class="code hl_function" href="#ac738df64348f83666e1c2c6a533f4403">dim</a>());</div>
+<div class="line"><span class="lineno">  188</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">assert</a>(<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">o</a>.dim()==<a class="code hl_function" href="#ac738df64348f83666e1c2c6a533f4403">dim</a>());</div>
 <div class="line"><span class="lineno">  189</span>    <span class="comment">// TODO</span></div>
-<div class="line"><span class="lineno">  190</span>    *<a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a> -= <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">o</a>.values();</div>
+<div class="line"><span class="lineno">  190</span>    *<a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a> -= <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">o</a>.values();</div>
 <div class="line"><span class="lineno">  191</span>    <span class="comment">//</span></div>
 <div class="line"><span class="lineno">  192</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><span class="lineno">  193</span>}</div>
@@ -861,7 +863,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp; Pattern::operator/= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html">float</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -869,12 +871,12 @@ Protected Attributes</h2></td></tr>
 
 <p>divide each element by a constant value. </p>
 <dl class="section return"><dt>Returns</dt><dd>a reference to updated this. </dd></dl>
-<dl class="section post"><dt>Postcondition</dt><dd>for each dimension i, this[i] = old.this[i]/c </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>for each dimension i, this[i] = <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2" title="Create an empty AVLTree.">old.this</a>[i]/c </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d6e/pattern_8cpp_source.html#l00221">221</a> of file <a class="el" href="../../dd/d6e/pattern_8cpp_source.html">pattern.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  222</span>{</div>
 <div class="line"><span class="lineno">  223</span>    <span class="comment">// TODO</span></div>
-<div class="line"><span class="lineno">  224</span>    *<a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a> /= <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">c</a>;</div>
+<div class="line"><span class="lineno">  224</span>    *<a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a> /= <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">c</a>;</div>
 <div class="line"><span class="lineno">  225</span>    <span class="comment">//</span></div>
 <div class="line"><span class="lineno">  226</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><span class="lineno">  227</span>} </div>
@@ -890,7 +892,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp; Pattern::operator/= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -899,13 +901,13 @@ Protected Attributes</h2></td></tr>
 <p>elementwise division. </p>
 <dl class="section return"><dt>Returns</dt><dd>a reference to updated this. </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="#ac738df64348f83666e1c2c6a533f4403" title="get the pattern&#39;s dimension.">dim()</a>==other.dim() </dd></dl>
-<dl class="section post"><dt>Postcondition</dt><dd>this == (old.this()/other) </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>this == (<a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2" title="Create an empty AVLTree.">old.this()</a>/other) </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d6e/pattern_8cpp_source.html#l00204">204</a> of file <a class="el" href="../../dd/d6e/pattern_8cpp_source.html">pattern.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  205</span>{</div>
-<div class="line"><span class="lineno">  206</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">assert</a>(<a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">o</a>.dim()==<a class="code hl_function" href="#ac738df64348f83666e1c2c6a533f4403">dim</a>());</div>
+<div class="line"><span class="lineno">  206</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">assert</a>(<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">o</a>.dim()==<a class="code hl_function" href="#ac738df64348f83666e1c2c6a533f4403">dim</a>());</div>
 <div class="line"><span class="lineno">  207</span>    <span class="comment">// TODO</span></div>
-<div class="line"><span class="lineno">  208</span>    *<a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a> /= <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">o</a>.values();</div>
+<div class="line"><span class="lineno">  208</span>    *<a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a> /= <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">o</a>.values();</div>
 <div class="line"><span class="lineno">  209</span>    <span class="comment">//</span></div>
 <div class="line"><span class="lineno">  210</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><span class="lineno">  211</span>}</div>
@@ -919,9 +921,9 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">bool</a> Pattern::operator== </td>
+          <td class="memname"><a class="el" href="../../d6/d7c/classAVLTree.html">bool</a> Pattern::operator== </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>o</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d5/d71/classPattern.html">Pattern</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>o</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -934,21 +936,21 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if <a class="el" href="#ade84f7f916939bdcb10009bfcbdece42" title="get the class label">class_label()</a>==o.class_label() &amp;&amp; <a class="el" href="#ac738df64348f83666e1c2c6a533f4403" title="get the pattern&#39;s dimension.">dim()</a>==o.dim() &amp;&amp; (this-o).<a class="el" href="#ad9165d5c6bfac7f0c7518444558a98d5" title="get the sum of all values.">sum()</a>==0.0 <br  />
+<dl class="section return"><dt>Returns</dt><dd>true if <a class="el" href="#ade84f7f916939bdcb10009bfcbdece42" title="get the class label">class_label()</a>==o.class_label() &amp;&amp; <a class="el" href="#ac738df64348f83666e1c2c6a533f4403" title="get the pattern&#39;s dimension.">dim()</a>==o.dim() &amp;&amp; (this-o).<a class="el" href="#ad9165d5c6bfac7f0c7518444558a98d5" title="get the sum of all values.">sum()</a>==<a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2" title="Create an empty AVLTree.">0.0</a> <br  />
  </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d6e/pattern_8cpp_source.html#l00092">92</a> of file <a class="el" href="../../dd/d6e/pattern_8cpp_source.html">pattern.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   93</span>{</div>
-<div class="line"><span class="lineno">   94</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">assert</a>( <a class="code hl_function" href="#ac738df64348f83666e1c2c6a533f4403">dim</a>()==<a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">o</a>.dim());</div>
-<div class="line"><span class="lineno">   95</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">ret_val</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   94</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">assert</a>( <a class="code hl_function" href="#ac738df64348f83666e1c2c6a533f4403">dim</a>()==<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">o</a>.dim());</div>
+<div class="line"><span class="lineno">   95</span>    <span class="keywordtype">bool</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">ret_val</a> = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">   96</span>    <span class="comment">// TODO</span></div>
 <div class="line"><span class="lineno">   97</span>    <span class="comment">//ret_val = class_label() == o.class_label() &amp;&amp; (*this - o).abs().sum() == 0.0;</span></div>
-<div class="line"><span class="lineno">   98</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">ret_val</a> = <a class="code hl_function" href="#ade84f7f916939bdcb10009bfcbdece42">class_label</a>() == <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">o</a>.class_label() &amp;&amp; std::abs(<a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>()-<a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">o</a>.values()).sum() == 0.0;</div>
+<div class="line"><span class="lineno">   98</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">ret_val</a> = <a class="code hl_function" href="#ade84f7f916939bdcb10009bfcbdece42">class_label</a>() == <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">o</a>.class_label() &amp;&amp; std::abs(<a class="code hl_function" href="#a31d49cac4a468164c2d3da4e43c1846b">values</a>()-<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">o</a>.values()).sum() == 0.0;</div>
 <div class="line"><span class="lineno">   99</span> </div>
 <div class="line"><span class="lineno">  100</span>    <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  101</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">assert</a>(!<a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">ret_val</a> || <a class="code hl_function" href="#ade84f7f916939bdcb10009bfcbdece42">class_label</a>() == <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">o</a>.class_label());</div>
-<div class="line"><span class="lineno">  102</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">assert</a>(!<a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">ret_val</a> || (*<span class="keyword">this</span>-<a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">o</a>).<a class="code hl_function" href="#ab2d1db6571656c1891006140b227a152">abs</a>().<a class="code hl_function" href="#ad9165d5c6bfac7f0c7518444558a98d5">sum</a>()==0.0);</div>
-<div class="line"><span class="lineno">  103</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">ret_val</a>;    </div>
+<div class="line"><span class="lineno">  101</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">assert</a>(!<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">ret_val</a> || <a class="code hl_function" href="#ade84f7f916939bdcb10009bfcbdece42">class_label</a>() == <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">o</a>.class_label());</div>
+<div class="line"><span class="lineno">  102</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">assert</a>(!<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">ret_val</a> || (*<span class="keyword">this</span>-<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">o</a>).<a class="code hl_function" href="#ab2d1db6571656c1891006140b227a152">abs</a>().<a class="code hl_function" href="#ad9165d5c6bfac7f0c7518444558a98d5">sum</a>()==0.0);</div>
+<div class="line"><span class="lineno">  103</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">ret_val</a>;    </div>
 <div class="line"><span class="lineno">  104</span>}</div>
 <div class="ttc" id="aclassPattern_html_ab2d1db6571656c1891006140b227a152"><div class="ttname"><a href="#ab2d1db6571656c1891006140b227a152">Pattern::abs</a></div><div class="ttdeci">Pattern &amp; abs()</div><div class="ttdoc">apply absolute value for all dimensions.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d6e/pattern_8cpp_source.html#l00229">pattern.cpp:229</a></div></div>
 <div class="ttc" id="aclassPattern_html_ad9165d5c6bfac7f0c7518444558a98d5"><div class="ttname"><a href="#ad9165d5c6bfac7f0c7518444558a98d5">Pattern::sum</a></div><div class="ttdeci">float sum() const</div><div class="ttdoc">get the sum of all values.</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d6e/pattern_8cpp_source.html#l00133">pattern.cpp:133</a></div></div>
@@ -962,25 +964,25 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a> Pattern::operator[] </td>
+          <td class="memname"><a class="el" href="../../d6/d7c/classAVLTree.html">float</a> Pattern::operator[] </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">size_t</a></td>          <td class="paramname"><span class="paramname"><em>idx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>idx</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>get the n-dimension </p>
-<dl class="section pre"><dt>Precondition</dt><dd>0&lt;= idx &lt; <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d" title="Compute the height of a tree. The tree&#39;s height is the longitude of the longest branch connecting the...">dimensions()</a> </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>0&lt;= idx &lt; dimensions() </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d6e/pattern_8cpp_source.html#l00123">123</a> of file <a class="el" href="../../dd/d6e/pattern_8cpp_source.html">pattern.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  124</span>{</div>
-<div class="line"><span class="lineno">  125</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">assert</a>(<a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">idx</a> &lt; <a class="code hl_function" href="#ac738df64348f83666e1c2c6a533f4403">dim</a>());</div>
-<div class="line"><span class="lineno">  126</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">v</a> = 0.0;</div>
+<div class="line"><span class="lineno">  125</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">assert</a>(<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">idx</a> &lt; <a class="code hl_function" href="#ac738df64348f83666e1c2c6a533f4403">dim</a>());</div>
+<div class="line"><span class="lineno">  126</span>    <span class="keywordtype">float</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">v</a> = 0.0;</div>
 <div class="line"><span class="lineno">  127</span>    <span class="comment">// TODO</span></div>
-<div class="line"><span class="lineno">  128</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">v</a> = (*_values)[<a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">idx</a>];</div>
+<div class="line"><span class="lineno">  128</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">v</a> = (*_values)[<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">idx</a>];</div>
 <div class="line"><span class="lineno">  129</span>    <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  130</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">v</a>;</div>
+<div class="line"><span class="lineno">  130</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">v</a>;</div>
 <div class="line"><span class="lineno">  131</span>}</div>
 </div><!-- fragment -->
 </div>
@@ -992,9 +994,9 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">void</a> Pattern::set_class_label </td>
+          <td class="memname"><a class="el" href="../../d6/d7c/classAVLTree.html">void</a> Pattern::set_class_label </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">int</a></td>          <td class="paramname"><span class="paramname"><em>new_label</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html">int</a></td>          <td class="paramname"><span class="paramname"><em>new_label</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1006,9 +1008,9 @@ Protected Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="../../dd/d6e/pattern_8cpp_source.html#l00160">160</a> of file <a class="el" href="../../dd/d6e/pattern_8cpp_source.html">pattern.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  161</span>{</div>
 <div class="line"><span class="lineno">  162</span>    <span class="comment">// TODO</span></div>
-<div class="line"><span class="lineno">  163</span>    <a class="code hl_variable" href="#af10745b6190d4a3141e6574d65c6c39e">_class_label</a> = <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">new_label</a>;</div>
+<div class="line"><span class="lineno">  163</span>    <a class="code hl_variable" href="#af10745b6190d4a3141e6574d65c6c39e">_class_label</a> = <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">new_label</a>;</div>
 <div class="line"><span class="lineno">  164</span>    <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  165</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">assert</a> (<a class="code hl_function" href="#ade84f7f916939bdcb10009bfcbdece42">class_label</a>() == <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">new_label</a>);</div>
+<div class="line"><span class="lineno">  165</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">assert</a> (<a class="code hl_function" href="#ade84f7f916939bdcb10009bfcbdece42">class_label</a>() == <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">new_label</a>);</div>
 <div class="line"><span class="lineno">  166</span>}</div>
 </div><!-- fragment -->
 </div>
@@ -1020,9 +1022,9 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">void</a> Pattern::set_dim </td>
+          <td class="memname"><a class="el" href="../../d6/d7c/classAVLTree.html">void</a> Pattern::set_dim </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">size_t</a></td>          <td class="paramname"><span class="paramname"><em>new_dim</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>new_dim</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1034,9 +1036,9 @@ Protected Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="../../dd/d6e/pattern_8cpp_source.html#l00106">106</a> of file <a class="el" href="../../dd/d6e/pattern_8cpp_source.html">pattern.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  107</span>{</div>
 <div class="line"><span class="lineno">  108</span>    <span class="comment">// TODO</span></div>
-<div class="line"><span class="lineno">  109</span>    <a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a>-&gt;resize(<a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">new_dim</a>);</div>
+<div class="line"><span class="lineno">  109</span>    <a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a>-&gt;resize(<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">new_dim</a>);</div>
 <div class="line"><span class="lineno">  110</span>    <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  111</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">assert</a>(<a class="code hl_function" href="#ac738df64348f83666e1c2c6a533f4403">dim</a>()==<a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">new_dim</a>);</div>
+<div class="line"><span class="lineno">  111</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">assert</a>(<a class="code hl_function" href="#ac738df64348f83666e1c2c6a533f4403">dim</a>()==<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">new_dim</a>);</div>
 <div class="line"><span class="lineno">  112</span>}</div>
 </div><!-- fragment -->
 </div>
@@ -1048,14 +1050,14 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">void</a> Pattern::set_value </td>
+          <td class="memname"><a class="el" href="../../d6/d7c/classAVLTree.html">void</a> Pattern::set_value </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">size_t</a></td>          <td class="paramname"><span class="paramname"><em>idx</em>, </span></td>
+          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html">size_t</a></td>          <td class="paramname"><span class="paramname"><em>idx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">const</a> <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a></td>          <td class="paramname"><span class="paramname"><em>new_val</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html">float</a></td>          <td class="paramname"><span class="paramname"><em>new_val</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1066,11 +1068,11 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d6e/pattern_8cpp_source.html#l00168">168</a> of file <a class="el" href="../../dd/d6e/pattern_8cpp_source.html">pattern.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  169</span>{</div>
-<div class="line"><span class="lineno">  170</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">assert</a>(<a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">idx</a> &lt; <a class="code hl_function" href="#ac738df64348f83666e1c2c6a533f4403">dim</a>());</div>
+<div class="line"><span class="lineno">  170</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">assert</a>(<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">idx</a> &lt; <a class="code hl_function" href="#ac738df64348f83666e1c2c6a533f4403">dim</a>());</div>
 <div class="line"><span class="lineno">  171</span>    <span class="comment">// TODO</span></div>
-<div class="line"><span class="lineno">  172</span>    (*_values)[<a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">idx</a>] = <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">new_val</a>;</div>
+<div class="line"><span class="lineno">  172</span>    (*_values)[<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">idx</a>] = <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">new_val</a>;</div>
 <div class="line"><span class="lineno">  173</span>    <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  174</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">assert</a>((*<span class="keyword">this</span>)[<a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">idx</a>]==<a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">new_val</a>);</div>
+<div class="line"><span class="lineno">  174</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">assert</a>((*<span class="keyword">this</span>)[<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">idx</a>]==<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">new_val</a>);</div>
 <div class="line"><span class="lineno">  175</span>}</div>
 </div><!-- fragment -->
 </div>
@@ -1082,7 +1084,7 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a> Pattern::sum </td>
+          <td class="memname"><a class="el" href="../../d6/d7c/classAVLTree.html">float</a> Pattern::sum </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
@@ -1094,11 +1096,11 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d6e/pattern_8cpp_source.html#l00133">133</a> of file <a class="el" href="../../dd/d6e/pattern_8cpp_source.html">pattern.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  134</span>{</div>
-<div class="line"><span class="lineno">  135</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">s</a> = 0.0;</div>
+<div class="line"><span class="lineno">  135</span>    <span class="keywordtype">float</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">s</a> = 0.0;</div>
 <div class="line"><span class="lineno">  136</span>    <span class="comment">// TODO</span></div>
-<div class="line"><span class="lineno">  137</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">s</a> = <a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a>-&gt;sum();</div>
+<div class="line"><span class="lineno">  137</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">s</a> = <a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a>-&gt;sum();</div>
 <div class="line"><span class="lineno">  138</span>    <span class="comment">//</span></div>
-<div class="line"><span class="lineno">  139</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">s</a>;</div>
+<div class="line"><span class="lineno">  139</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">s</a>;</div>
 <div class="line"><span class="lineno">  140</span>}</div>
 </div><!-- fragment -->
 </div>
@@ -1110,7 +1112,7 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::valarray&lt; <a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a> &gt; Pattern::values </td>
+          <td class="memname"><a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::valarray</a>&lt; <a class="el" href="../../d6/d7c/classAVLTree.html">float</a> &gt; Pattern::values </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
@@ -1123,11 +1125,11 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../dd/d6e/pattern_8cpp_source.html#l00061">61</a> of file <a class="el" href="../../dd/d6e/pattern_8cpp_source.html">pattern.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   62</span>{</div>
-<div class="line"><span class="lineno">   63</span>    std::valarray&lt;float&gt; <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">vs</a>;</div>
+<div class="line"><span class="lineno">   63</span>    <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::valarray&lt;float&gt;</a> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">vs</a>;</div>
 <div class="line"><span class="lineno">   64</span>    <span class="comment">// TODO</span></div>
-<div class="line"><span class="lineno">   65</span>    <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">vs</a> = *<a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a>;</div>
+<div class="line"><span class="lineno">   65</span>    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">vs</a> = *<a class="code hl_variable" href="#a5f9844f372bd4a9db5f89a283729143e">_values</a>;</div>
 <div class="line"><span class="lineno">   66</span>    <span class="comment">//</span></div>
-<div class="line"><span class="lineno">   67</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">vs</a>;</div>
+<div class="line"><span class="lineno">   67</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">vs</a>;</div>
 <div class="line"><span class="lineno">   68</span>}</div>
 </div><!-- fragment -->
 </div>
@@ -1143,7 +1145,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">int</a> Pattern::_class_label</td>
+          <td class="memname"><a class="el" href="../../d6/d7c/classAVLTree.html">int</a> Pattern::_class_label</td>
         </tr>
       </table>
   </td>
@@ -1167,7 +1169,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt;std::valarray&lt;<a class="el" href="../../dc/d0e/btree__utils_8hpp.html#ad61617ff304d328f85464af83e92662d">float</a>&gt; &gt; Pattern::_values</td>
+          <td class="memname"><a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::shared_ptr</a>&lt;<a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::valarray</a>&lt;<a class="el" href="../../d6/d7c/classAVLTree.html">float</a>&gt; &gt; Pattern::_values</td>
         </tr>
       </table>
   </td>

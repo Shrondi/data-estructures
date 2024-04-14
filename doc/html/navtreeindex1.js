@@ -1,5 +1,13 @@
 var NAVTREEINDEX1 =
 {
+"d7/d56/classQueue.html#a2c9284e527796c07f4d1c3dd6ddcdc68":[7,0,10,8],
+"d7/d56/classQueue.html#a354902adb7468d07891ba04a4003fc6d":[7,0,10,6],
+"d7/d56/classQueue.html#a8554e7c5797d5a73fc2c4854a2d57b99":[7,0,10,5],
+"d7/d56/classQueue.html#a91cbd71c4aeb13c6c7b6a9c8939636e3":[7,0,10,7],
+"d7/d56/classQueue.html#aa7eef1b427e24555780505de20e9acbc":[7,0,10,1],
+"d7/d56/classQueue.html#aaba78599153780af0f4919793d463b35":[7,0,10,4],
+"d7/d56/classQueue.html#acdf4b7ced62c0616a67809178495e6fc":[7,0,10,3],
+"d7/d56/classQueue.html#af3d0b97363f6418a0350bde54d7344ff":[7,0,10,2],
 "d7/d56/classQueue.html#af73bb29c868f7b37f369c668f114bd9f":[7,0,10,0],
 "d7/d7b/kdtree_8cpp.html":[8,0,2,1],
 "d7/d7b/kdtree_8cpp.html#a0df7cd91b4448cb5f23331f7b2d2c80e":[8,0,2,1,1],

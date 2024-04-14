@@ -34,5 +34,8 @@ var classAVLTree =
     [ "set_parent_node", "d6/d7c/classAVLTree.html#a6f3dfc3b3619335ef1d0d26b8f18d2a1", null ],
     [ "set_right", "d6/d7c/classAVLTree.html#a2571a5819f8c1464ef4968d5496b8c4a", null ],
     [ "set_root_node", "d6/d7c/classAVLTree.html#a734b932867545b50a03b6d1f4150526c", null ],
-    [ "size", "d6/d7c/classAVLTree.html#a8965aaf5d107cab6ae317f7a575cdebc", null ]
+    [ "size", "d6/d7c/classAVLTree.html#a8965aaf5d107cab6ae317f7a575cdebc", null ],
+    [ "curr_", "d6/d7c/classAVLTree.html#a6590391851e2348882b37307cd528c33", null ],
+    [ "parent_", "d6/d7c/classAVLTree.html#a57958c7329822c4dbce60175c5bfc58b", null ],
+    [ "root_", "d6/d7c/classAVLTree.html#a978f67c7afb82048159351c9499e42a3", null ]
 ];

@@ -2,7 +2,7 @@ var searchData=
 [
   ['l_5f_0',['l_',['../d4/dc1/classStack.html#a50cabd81313397ddb7214851d94d5499',1,'Stack']]],
   ['left_1',['left',['../dc/d3d/classBTNode.html#ac5e9c9c3249b80fbbbeaafae5f6aa98b',1,'BTNode::left()'],['../d1/db7/classBTree.html#a707050923d13b80c2a088931e1c5617c',1,'BTree::left()'],['../d4/db2/classAVLTNode.html#a82afcdfd899caed1a94ac7b13d28997a',1,'AVLTNode::left()'],['../d6/d7c/classAVLTree.html#a6c645016d6c329d9bcac3f8837734d91',1,'AVLTree::left()']]],
-  ['left_5f_2',['left_',['../dc/d3d/classBTNode.html#ad2e19305786cac8a27ddb5bd4a58bba3',1,'BTNode']]],
+  ['left_5f_2',['left_',['../dc/d3d/classBTNode.html#ad2e19305786cac8a27ddb5bd4a58bba3',1,'BTNode::left_'],['../d4/db2/classAVLTNode.html#a88754a7a30c2c4db8861c769dab0bcb5',1,'AVLTNode::left_']]],
   ['lineales_3',['Estructuras de datos lineales',['../d2/d39/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2linear__ds_2README.html',1,'']]],
   ['list_4',['List',['../d6/da9/classList.html',1,'List&lt; T &gt;'],['../d6/da9/classList.html#a5c5e27671b21b3815d4e25b953c69454',1,'List::List()']]],
   ['list_2ehpp_5',['list.hpp',['../dc/d1d/list_8hpp.html',1,'']]],

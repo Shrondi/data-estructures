@@ -5,9 +5,9 @@ var searchData=
   ['referencias_2',['Referencias',['..//home/carlos/Escritorio/ED/Prácticas/data-estructures/kdtree/README.md#referencias',1,'']]],
   ['remove_3',['remove',['../d4/d16/classCDArray.html#a4e6f65be6078c00bccbb9539c2d70760',1,'CDArray::remove()'],['../d6/da9/classList.html#a8ad979e98e9fa62e08dc1c0a0923c6b2',1,'List::remove()'],['../d6/d7c/classAVLTree.html#abbd53b95663f1962fd81a8cf2b48b2c5',1,'AVLTree::remove()']]],
   ['right_4',['right',['../dc/d3d/classBTNode.html#ab70e0b115ab492dbe5fa39b54ca483be',1,'BTNode::right()'],['../d1/db7/classBTree.html#ab499ec738b63d1f8d977e2bacd063e1e',1,'BTree::right()'],['../d4/db2/classAVLTNode.html#a0f8dd644cf79d5ab33f1a7f99c110d9b',1,'AVLTNode::right()'],['../d6/d7c/classAVLTree.html#a930219874eb78e6635b87e0f0154a8e5',1,'AVLTree::right()']]],
-  ['right_5f_5',['right_',['../dc/d3d/classBTNode.html#a884bca0f0b548a39ecca9d8542a4b5d6',1,'BTNode']]],
+  ['right_5f_5',['right_',['../dc/d3d/classBTNode.html#a884bca0f0b548a39ecca9d8542a4b5d6',1,'BTNode::right_'],['../d4/db2/classAVLTNode.html#ab97ab03d5cfddd94b4779f0aa3a443d6',1,'AVLTNode::right_']]],
   ['root_6',['root',['../d1/db7/classBTree.html#a8b67cfe1beb8e5034f38d80435d6fa35',1,'BTree']]],
-  ['root_5f_7',['root_',['../d1/db7/classBTree.html#a253d3d267cd0583d6ad7afdda0a92ab3',1,'BTree']]],
+  ['root_5f_7',['root_',['../d1/db7/classBTree.html#a253d3d267cd0583d6ad7afdda0a92ab3',1,'BTree::root_'],['../d6/d7c/classAVLTree.html#a978f67c7afb82048159351c9499e42a3',1,'AVLTree::root_']]],
   ['root_5fnode_8',['root_node',['../d6/d7c/classAVLTree.html#a874c3f36e87a93a217c003a2c5525be5',1,'AVLTree']]],
   ['rotate_9',['rotate',['../d6/d7c/classAVLTree.html#afb182b73f90059138968b37cd46fb6f9',1,'AVLTree']]]
 ];
