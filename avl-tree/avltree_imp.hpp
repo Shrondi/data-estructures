@@ -518,6 +518,12 @@ bool infix_process(typename AVLTNode<T>::Ref node, Processor &p)
     // TODO
     // Remember: if node is nullptr return true.
 
+    if (node != nullptr){
+        retVal = infix_process<T>(node->left(), p);
+        retVal = retVal && p(node->item());
+        retVal = retVal && infix_process<T>(node->right(), p);
+    }
+
     //
     return retVal;
 }
@@ -535,6 +541,17 @@ bool AVLTree<T>::is_a_binary_search_tree() const
     // Remember: use a lambda function with signature '(T v) -> bool' to
     //  implement the Processor.
     //
+
+    T last = T{};
+    auto lambda = [&last](T item){
+        if (item > last || last == T{}){
+            last = item; 
+            return true;
+        } 
+            return false; 
+    };
+
+    is_bst = infix_process<T>(root_node(), lambda);
 
     //
     return is_bst;
