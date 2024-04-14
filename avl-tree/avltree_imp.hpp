@@ -494,6 +494,12 @@ bool AVLTree<T>::has(const T &k) const
     //       need to use "const_cast" to remove constness of "this" and
     //       save/restore the old state of current before returning.
 
+    auto old_curr = curr_;
+
+    found = const_cast<AVLTree<T> *>(this)->search(k);
+
+    const_cast<AVLTree<T> *>(this)->set_current_node(old_curr);
+
     //
 
 #ifndef NDEBUG
@@ -594,6 +600,25 @@ bool AVLTree<T>::search(T const &k)
 {
     bool found = false;
     // TODO
+
+    curr_ = root_;
+    parent_ = nullptr;
+
+    while (curr_ != nullptr && !found){
+        if (curr_->item() == k){
+            found = true;
+        
+        }else{
+            parent_ = curr_;
+
+            if (curr_->item() > k){
+                curr_ = curr_->left();
+
+            }else{
+                curr_ = curr_->right();     
+            }
+        }
+    }
 
     //
     assert(!found || current() == k);
