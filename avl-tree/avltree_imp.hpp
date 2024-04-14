@@ -236,7 +236,9 @@ template <class T>
 AVLTree<T>::AVLTree()
 {
     // TODO
-
+    root_ = nullptr;
+    curr_ = nullptr;
+    parent_ = nullptr;
     //
     assert(is_a_binary_search_tree());
     assert(is_a_balanced_tree());
@@ -247,7 +249,9 @@ template <class T>
 AVLTree<T>::AVLTree(T const &item)
 {
     // TODO
-
+    root_ = AVLTNode<T>::create(item);
+    curr_ = nullptr;
+    parent_ = nullptr;
     //
     assert(is_a_binary_search_tree());
     assert(is_a_balanced_tree());
@@ -258,6 +262,35 @@ template <class T>
 AVLTree<T>::AVLTree(std::istream &in) noexcept(false)
 {
     // TODO
+
+    std::string token;
+    T item;
+
+    in >> token;
+    if (token == "["){
+        
+        in >> item;
+
+        if (in.fail()){
+        throw std::runtime_error("Wrong input format.");
+        }
+
+        create_root(item);
+
+        auto treeLeft = AVLTree<T>(in);
+        auto treeRight = AVLTree<T>(in);
+
+        set_left(treeLeft);
+        set_right(treeRight);
+
+        in >> token;
+        if (token != "]"){
+        throw std::runtime_error("Wrong input format.");
+        }
+
+    }else if (token != "[]"){
+        throw std::runtime_error("Wrong input format.");
+    }
 
     //
 
@@ -633,7 +666,9 @@ template <class T>
 AVLTree<T>::AVLTree(typename AVLTNode<T>::Ref const &root_node)
 {
     // TODO
-
+    root_ = root_node;
+    parent_ = nullptr;
+    curr_ = nullptr;
     //
     assert(!current_exists());
 }
