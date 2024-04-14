@@ -21,7 +21,11 @@ template <class T>
 AVLTNode<T>::AVLTNode(T const &it)
 {
     // TODO
-
+    item_ = it;
+    height_ = 0;
+    parent_ = nullptr;
+    left_ = nullptr;
+    right_ = nullptr;
     //
     assert(check_height_invariant());
 }
@@ -37,7 +41,11 @@ AVLTNode<T>::AVLTNode(T const &it, AVLTNode<T>::Ref parent,
                       AVLTNode<T>::Ref left, AVLTNode<T>::Ref right)
 {
     // TODO
-
+    item_ = it;
+    height_ = 0;
+    parent_ = parent;
+    left_ = left;
+    right_ = right;
     //
     assert(check_height_invariant());
 }
@@ -56,7 +64,7 @@ T AVLTNode<T>::item() const
 {
     T value = T();
     // TODO
-
+    value = item_;
     //
     return value;
 }
@@ -66,7 +74,7 @@ int AVLTNode<T>::height() const
 {
     int height = 0;
     // TODO
-
+    height = height_;
     //
     return height;
 }
@@ -77,6 +85,11 @@ int AVLTNode<T>::balance_factor() const
     int bf = 0;
     // TODO
 
+    int heightLeft = left() != nullptr ? left()->height() : -1;
+    int heightRight = right() != nullptr ? right()->height() : -1;
+
+    bf = heightRight - heightLeft;
+
     //
     return bf;
 }
@@ -86,7 +99,7 @@ typename AVLTNode<T>::Ref AVLTNode<T>::parent() const
 {
     AVLTNode<T>::Ref node;
     // TODO
-
+    node = parent_;
     //
     return node;
 }
@@ -97,7 +110,7 @@ typename AVLTNode<T>::Ref AVLTNode<T>::child(int dir) const
     assert(dir == 0 || dir == 1);
     AVLTNode<T>::Ref node;
     // TODO
-
+    node = (dir == 0) ? left_ : right_;
     //
     return node;
 }
@@ -107,7 +120,7 @@ typename AVLTNode<T>::Ref AVLTNode<T>::left() const
 {
     AVLTNode<T>::Ref node;
     // TODO
-
+    node = left_;
     //
     assert(node == child(0));
     return node;
@@ -118,7 +131,7 @@ typename AVLTNode<T>::Ref AVLTNode<T>::right() const
 {
     AVLTNode<T>::Ref node;
     // TODO
-
+    node = right_;
     //
     assert(node == child(1));
     return node;
@@ -130,6 +143,11 @@ bool AVLTNode<T>::check_height_invariant() const
     bool ret_val = false;
     // TODO
 
+    int heightLeft = left() != nullptr ? left()->height() : -1;
+    int heightRight = right() != nullptr ? right()->height() : -1;
+
+    ret_val = height() == 1 + (heightLeft > heightRight ? heightLeft : heightRight);
+
     //
     return ret_val;
 }
@@ -138,7 +156,7 @@ template <class T>
 void AVLTNode<T>::set_item(const T &new_it)
 {
     // TODO
-
+    item_ = new_it;
     //
     assert(item() == new_it);
 }
@@ -147,7 +165,7 @@ template <class T>
 void AVLTNode<T>::set_parent(AVLTNode<T>::Ref new_parent)
 {
     // TODO
-
+    parent_ = new_parent;
     //
     assert(parent() == new_parent);
 }
@@ -158,6 +176,8 @@ void AVLTNode<T>::set_child(int dir, Ref new_child)
     assert(dir == 0 || dir == 1);
     // TODO
     // Remember to update the height property.
+
+    (dir == 0) ? set_left(new_child) : set_right(new_child);
 
     //
     assert(check_height_invariant());
@@ -171,6 +191,9 @@ void AVLTNode<T>::set_left(Ref new_child)
     // TODO
     // Remember to update the height property.
 
+    left_ = new_child;
+    update_height();
+
     //
     assert(check_height_invariant());
     assert(left() == new_child);
@@ -181,6 +204,9 @@ void AVLTNode<T>::set_right(AVLTNode<T>::Ref new_child)
 {
     // TODO
     // Remember to update the height property.
+    
+    right_ = new_child;
+    update_height();
 
     //
     assert(check_height_invariant());
@@ -192,6 +218,11 @@ void AVLTNode<T>::update_height()
 {
     // TODO
     // Remember: we want O(1) here.
+
+    int heightLeft = left() != nullptr ? left()->height() : -1;
+    int heightRight = right() != nullptr ? right()->height() : -1;
+
+    height_ = 1 + (heightLeft > heightRight ? heightLeft : heightRight);
 
     //
     assert(check_height_invariant());
