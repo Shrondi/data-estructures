@@ -349,7 +349,7 @@ bool AVLTree<T>::is_empty() const
 {
     bool empty = false;
     // TODO
-
+    empty = root_ == nullptr;
     //
     return empty;
 }
@@ -360,6 +360,7 @@ T AVLTree<T>::item() const
     assert(!is_empty());
     T value;
     // TODO
+    value = root_->item();
 
     //
     return value;
@@ -379,7 +380,7 @@ bool AVLTree<T>::current_exists() const
 {
     bool exists = false;
     // TODO
-
+    exists = curr_ != nullptr;
     //
     return exists;
 }
@@ -390,7 +391,7 @@ T AVLTree<T>::current() const
     assert(current_exists());
     T value;
     // TODO
-
+    value = curr_->item();
     //
     return value;
 }
@@ -412,7 +413,7 @@ AVLTree<T> AVLTree<T>::left() const
     assert(!is_empty());
     AVLTree<T> subtree;
     // TODO
-
+    subtree = AVLTree<T>(root_->left());
     //
     return subtree;
 }
@@ -423,7 +424,7 @@ AVLTree<T> AVLTree<T>::right() const
     assert(!is_empty());
     AVLTree<T> subtree;
     // TODO
-
+    subtree = AVLTree<T>(root_->right());
     //
     return subtree;
 }
@@ -550,7 +551,7 @@ void AVLTree<T>::create_root(T const &v)
 {
     assert(is_empty());
     // TODO
-
+    root_ = AVLTNode<T>::create(v);
     //
     assert(is_a_binary_search_tree());
     assert(is_a_balanced_tree());
@@ -680,6 +681,13 @@ void AVLTree<T>::set_left(AVLTree<T> &subtree)
     // TODO
     // Remember to set parent's link of the subtree root to this.
 
+    root_->set_left(subtree.root_node());
+
+    if (!subtree.is_empty()){
+    
+        root_->left()->set_parent(root_);
+    }
+
     //
     assert(subtree.is_empty() || left().item() == subtree.item());
     assert(!subtree.is_empty() || left().is_empty());
@@ -692,6 +700,12 @@ void AVLTree<T>::set_right(AVLTree<T> &subtree)
     // TODO
     // Remember to set parent's link of the subtree root to this.
 
+    root_->set_right(subtree.root_node());
+
+    if (!subtree.is_empty()){
+
+        root_->right()->set_parent(root_);
+    }
     //
     assert(subtree.is_empty() || right().item() == subtree.item());
     assert(!subtree.is_empty() || right().is_empty());
@@ -702,7 +716,7 @@ typename AVLTNode<T>::Ref AVLTree<T>::current_node() const
 {
     typename AVLTNode<T>::Ref node;
     // TODO
-
+    node = curr_;
     //
     return node;
 }
@@ -711,7 +725,7 @@ template <class T>
 void AVLTree<T>::set_current_node(typename AVLTNode<T>::Ref const &new_c)
 {
     // TODO
-
+    curr_ = new_c;
     //
     assert(current_node() == new_c);
 }
@@ -721,7 +735,7 @@ typename AVLTNode<T>::Ref AVLTree<T>::root_node() const
 {
     typename AVLTNode<T>::Ref node;
     // TODO
-
+    node = root_;
     //
     return node;
 }
@@ -730,7 +744,7 @@ template <class T>
 void AVLTree<T>::set_root_node(typename AVLTNode<T>::Ref const &new_root)
 {
     // TODO
-
+    root_ = new_root;
     //
     assert(root_node() == new_root);
 }
@@ -740,7 +754,7 @@ typename AVLTNode<T>::Ref AVLTree<T>::parent_node() const
 {
     typename AVLTNode<T>::Ref node;
     // TODO
-
+    node = parent_;
     //
     return node;
 }
@@ -749,7 +763,7 @@ template <class T>
 void AVLTree<T>::set_parent_node(typename AVLTNode<T>::Ref const &new_p)
 {
     // TODO
-
+    parent_ = new_p;
     //
     assert(parent_node() == new_p);
 }
