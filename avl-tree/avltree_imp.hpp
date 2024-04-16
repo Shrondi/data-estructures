@@ -486,7 +486,7 @@ int AVLTree<T>::balance_factor() const
 #else
     int bf = 0;
     // TODO
-
+    bf = root_->balance_factor();
     //
     return bf;
 #endif
@@ -591,6 +591,10 @@ bool AVLTree<T>::is_a_balanced_tree() const
     // Remember: A non empty tree is balanced if both children are balanced
     // and the absolute value of the balance factor of the tree is less or
     // equal to one.
+
+    if (root_ != nullptr){
+        is_balanced = std::abs(root_->balance_factor()) <= 1;
+    }
 
     //
     return is_balanced;
