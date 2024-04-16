@@ -946,6 +946,34 @@ typename AVLTNode<T>::Ref AVLTree<T>::rotate(typename AVLTNode<T>::Ref P, int di
     // Remember update links to parents.
     // Hint: you can see wikipedia: https://en.wikipedia.org/wiki/Tree_rotation
 
+    typename AVLTNode<T>::Ref G;
+    typename AVLTNode<T>::Ref CN;
+    int gpDir;
+
+    G = P->parent();
+    N = P->child(1 - dir);
+    CN = N->child(dir);
+
+    P->set_child(1 - dir, CN);
+
+    if (CN != nullptr){
+        CN->set_parent(P);
+    }
+
+    N->set_child(dir, P);
+    P->set_parent(N);
+
+    if (G != nullptr){
+    
+        gpDir = (G->child(0) == P) ? 0 : 1;
+        G->set_child(gpDir, N);
+
+    }else{
+        set_root_node(N);
+    }
+
+    N->set_parent(G);
+
     //
     return N;
 }
@@ -963,6 +991,26 @@ void AVLTree<T>::make_balanced()
         // TODO
         // Checks the subtrees balance factors to do rotations if needed.
         // Remember: first update the height of the subtree root node.
+
+        typename AVLTNode<T>::Ref N;
+        int bfP, bfN, dir;
+
+        P->update_height();
+
+        bfP = P->balance_factor();
+
+        if (std::abs(bfP) > 1){
+            dir = (bfP < 0) ? 0 : 1;
+            N = P->child(dir);
+            bfN = N->balance_factor();
+
+            if (bfP*bfN >= 0){
+                P = rotate(P, 1 - dir);
+            }else{
+                rotate(N, dir);
+                P = rotate(P, 1 - dir);
+            }
+        }
 
         //
 
