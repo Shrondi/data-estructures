@@ -431,6 +431,13 @@ int AVLTree<T>::current_level() const
     int level = 0;
     // TODO
 
+    auto aux = curr_->parent();
+    while (aux != nullptr){
+
+        ++level;
+        aux = aux->parent();
+    }
+
     //
     return level;
 }
@@ -463,6 +470,10 @@ int AVLTree<T>::size() const
     int s = 0;
     // TODO
 
+    if (!is_empty){
+        s = right()->size() + left()->size() + 1;
+    }
+
     //
     return s;
 }
@@ -473,7 +484,7 @@ int AVLTree<T>::height() const
     int h = 0;
     // TODO
     // Remember: we want O(1) here.
-
+    h = root_->height();
     //
     return h;
 }
