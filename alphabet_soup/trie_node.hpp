@@ -168,6 +168,8 @@ public:
 protected:
   // TODO
   // Hint: use std::map to implement the dictionary for next symbols.
-
+  bool _is_key;
+  std::map<char, Ref> _childs;
+  std::map<char, Ref>::iterator _current;
   //
 };
