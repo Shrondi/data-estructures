@@ -50,6 +50,13 @@ var NAVTREE =
       [ "Descripción", "d3/d56/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2avl-tree_2README.html#descripción-4", null ],
       [ "Evaluación", "d3/d56/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2avl-tree_2README.html#evaluación-3", null ]
     ] ],
+    [ "Sopa de letras", "db/d1f/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2alphabet__soup_2README.html", [
+      [ "Objetivos", "db/d1f/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2alphabet__soup_2README.html#objetivos-5", null ],
+      [ "Descripción", "db/d1f/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2alphabet__soup_2README.html#descripción-5", null ],
+      [ "Detalles de implementación.", "db/d1f/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2alphabet__soup_2README.html#detalles-de-implementación", null ],
+      [ "Evaluación", "db/d1f/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2alphabet__soup_2README.html#evaluación-4", null ],
+      [ "Referencias", "db/d1f/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2alphabet__soup_2README.html#referencias-1", null ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -65,7 +72,8 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ]
+        [ "Functions", "globals_func.html", null ],
+        [ "Typedefs", "globals_type.html", null ]
       ] ]
     ] ]
   ] ]
@@ -74,7 +82,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d7/d56/classQueue.html#a2c9284e527796c07f4d1c3dd6ddcdc68"
+"d6/d7c/classAVLTree.html#a978f67c7afb82048159351c9499e42a3",
+"df/d33/pattern_8hpp.html#aee03c5bce55702a30ac80f582ea5569e"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

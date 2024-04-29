@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['cap_5f_0',['cap_',['../d4/d16/classCDArray.html#a7b0d3247b6cd4551e2e48b1f64257446',1,'CDArray']]],
-  ['curr_5f_1',['curr_',['../d6/d7c/classAVLTree.html#a6590391851e2348882b37307cd528c33',1,'AVLTree']]]
+  ['back_5f_0',['back_',['../d4/d16/classCDArray.html#a833639f987b3b503cc45dbbab48d7107',1,'CDArray']]]
 ];

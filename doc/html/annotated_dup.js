@@ -1,5 +1,6 @@
 var annotated_dup =
 [
+    [ "AlphabetSoup", "d2/d31/classAlphabetSoup.html", "d2/d31/classAlphabetSoup" ],
     [ "AVLTNode", "d4/db2/classAVLTNode.html", "d4/db2/classAVLTNode" ],
     [ "AVLTree", "d6/d7c/classAVLTree.html", "d6/d7c/classAVLTree" ],
     [ "BTNode", "dc/d3d/classBTNode.html", "dc/d3d/classBTNode" ],
@@ -12,5 +13,7 @@ var annotated_dup =
     [ "Pattern", "d5/d71/classPattern.html", "d5/d71/classPattern" ],
     [ "Queue", "d7/d56/classQueue.html", "d7/d56/classQueue" ],
     [ "Stack", "d4/dc1/classStack.html", "d4/dc1/classStack" ],
+    [ "Trie", "dc/d09/classTrie.html", "dc/d09/classTrie" ],
+    [ "TrieNode", "d1/dc6/classTrieNode.html", "d1/dc6/classTrieNode" ],
     [ "Vector2D", "dc/d8c/classVector2D.html", "dc/d8c/classVector2D" ]
 ];

@@ -11,5 +11,6 @@ var searchData=
   ['_7elistiterator_8',['~ListIterator',['../dd/d55/classListIterator.html#a9981a7c30c49dc35edefaa6772212b6e',1,'ListIterator']]],
   ['_7epattern_9',['~Pattern',['../d5/d71/classPattern.html#a6e8b9388bbd39934e9f9534b974d7498',1,'Pattern']]],
   ['_7equeue_10',['~Queue',['../d7/d56/classQueue.html#aa7eef1b427e24555780505de20e9acbc',1,'Queue']]],
-  ['_7estack_11',['~Stack',['../d4/dc1/classStack.html#a9e7a00875aefbdac560ab189b7bc61d1',1,'Stack']]]
+  ['_7estack_11',['~Stack',['../d4/dc1/classStack.html#a9e7a00875aefbdac560ab189b7bc61d1',1,'Stack']]],
+  ['_7etrienode_12',['~TrieNode',['../d1/dc6/classTrieNode.html#a2c338a9960c601bbe654668cbe4f18a5',1,'TrieNode']]]
 ];

@@ -9,12 +9,11 @@ var searchData=
   ['breadth_5ffirst_5fprocess_6',['breadth_first_process',['../dc/d0e/btree__utils_8hpp.html#af6901921f3429f3b2c1f8fcdf4d9e9e8',1,'breadth_first_process(typename BTree&lt; T &gt;::Ref tree, Processor &amp;p):&#160;btree_utils_imp.hpp'],['../d4/d7f/btree__utils__imp_8hpp.html#af6901921f3429f3b2c1f8fcdf4d9e9e8',1,'breadth_first_process(typename BTree&lt; T &gt;::Ref tree, Processor &amp;p):&#160;btree_utils_imp.hpp']]],
   ['btnode_7',['BTNode',['../dc/d3d/classBTNode.html',1,'BTNode&lt; T &gt;'],['../dc/d3d/classBTNode.html#a6a5b458b9125257a40f7e3c29e7a8389',1,'BTNode::BTNode()']]],
   ['btnode_3c_20pattern_20_3e_8',['BTNode&lt; Pattern &gt;',['../dc/d3d/classBTNode.html',1,'']]],
-  ['btree_9',['BTree',['../d1/db7/classBTree.html',1,'']]],
+  ['btree_9',['BTree',['../d1/db7/classBTree.html',1,'BTree&lt; T &gt;'],['../d1/db7/classBTree.html#a4da1ce5db120e3002726ae8a6ce5847a',1,'BTree::BTree()'],['../d1/db7/classBTree.html#a48792251ac8c133c6b26afa6829d15a4',1,'BTree::BTree(const T &amp;item)'],['../d1/db7/classBTree.html#a73c7a3fc7f416a7c1b0236f7afb309e3',1,'BTree::BTree(typename BTNode&lt; T &gt;::Ref root)']]],
   ['btree_10',['btree',['../df/d3f/classKDTree.html#ac71866d6fa2db70ba03dd678e2a9359a',1,'KDTree']]],
-  ['btree_11',['BTree',['../d1/db7/classBTree.html#a4da1ce5db120e3002726ae8a6ce5847a',1,'BTree::BTree()'],['../d1/db7/classBTree.html#a48792251ac8c133c6b26afa6829d15a4',1,'BTree::BTree(const T &amp;item)'],['../d1/db7/classBTree.html#a73c7a3fc7f416a7c1b0236f7afb309e3',1,'BTree::BTree(typename BTNode&lt; T &gt;::Ref root)']]],
-  ['btree_2ehpp_12',['btree.hpp',['../dc/d6d/btree_8hpp.html',1,'']]],
-  ['btree_3c_20pattern_20_3e_13',['BTree&lt; Pattern &gt;',['../d1/db7/classBTree.html',1,'']]],
-  ['btree_5fimp_2ehpp_14',['btree_imp.hpp',['../d4/d4e/btree__imp_8hpp.html',1,'']]],
-  ['btree_5futils_2ehpp_15',['btree_utils.hpp',['../dc/d0e/btree__utils_8hpp.html',1,'']]],
-  ['btree_5futils_5fimp_2ehpp_16',['btree_utils_imp.hpp',['../d4/d7f/btree__utils__imp_8hpp.html',1,'']]]
+  ['btree_2ehpp_11',['btree.hpp',['../dc/d6d/btree_8hpp.html',1,'']]],
+  ['btree_3c_20pattern_20_3e_12',['BTree&lt; Pattern &gt;',['../d1/db7/classBTree.html',1,'']]],
+  ['btree_5fimp_2ehpp_13',['btree_imp.hpp',['../d4/d4e/btree__imp_8hpp.html',1,'']]],
+  ['btree_5futils_2ehpp_14',['btree_utils.hpp',['../dc/d0e/btree__utils_8hpp.html',1,'']]],
+  ['btree_5futils_5fimp_2ehpp_15',['btree_utils_imp.hpp',['../d4/d7f/btree__utils__imp_8hpp.html',1,'']]]
 ];
