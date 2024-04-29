@@ -211,6 +211,7 @@ protected:
 
     // TODO Give a representation.
     // Remember: you need represent the prefix associated to this trie.
-
+    TrieNode::Ref _root;
+    std::string _prefix;
     //
 };
