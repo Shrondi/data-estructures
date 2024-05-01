@@ -214,7 +214,7 @@ Trie Trie::current() const
     assert(current_exists());
     Trie ret_v;
     // TODO
-    ret_v = Trie(root(), prefix() + current_symbol());
+    ret_v = Trie(root()->current_node(), prefix() + current_symbol());
     //
     return ret_v;
 }
