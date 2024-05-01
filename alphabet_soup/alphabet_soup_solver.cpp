@@ -45,6 +45,41 @@ void scan_cell(int row, int col, int dy, int dx, AlphabetSoup const &soup,
     //     (row,col) into the second item of scan_result (the stack of
     //     coordinates).
 
+    if (trie.is_key()){
+        scan_result.first = trie.prefix();
+        return;
+
+    }else if (row < 0 || row >= soup.rows() || col < 0 || col >= soup.cols()){
+        return;
+
+    }else if (trie.find_symbol(soup.cell(row, col))){
+
+        auto subtrie = trie.current();
+
+        if (dx == 0 && dy == 0){
+
+            for (int i = -1; i <= 1; i++){
+                for (int j = -1; j <= 1; j++){
+
+                    if (i != 0 || j != 0){
+                        scan_cell(row + i, col + j, i, j, soup, subtrie, scan_result);
+                    }
+
+                    if (scan_result.first != ""){
+                        scan_result.second.push({row, col});
+                        return;
+                    }
+                }
+            }
+
+        }else if (dx != 0 || dy != 0){
+            scan_cell(row + dy, col + dx, dy, dx, soup, subtrie, scan_result);
+        }
+
+        if (scan_result.first != ""){
+            scan_result.second.push({row, col});
+        }
+    }
     //
 }
 
