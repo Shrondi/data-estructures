@@ -48,7 +48,7 @@ Trie::Trie(std::istream &in) noexcept(false)
         while (in >> token && token != "\""){
             try{
                 _prefix += static_cast<char>(std::stoi(token, nullptr, 16));
-            }catch(...){
+            }catch (...){
                 throw std::runtime_error("Wrong input format");
             }
         }
@@ -64,7 +64,7 @@ Trie::Trie(std::istream &in) noexcept(false)
             throw std::runtime_error("Wrong input format");
         }
 
-    }else if(token == "[]"){
+    }else if (token == "[]"){
         _prefix = "";
         _root = nullptr;
 
@@ -288,7 +288,7 @@ Trie::fold(std::ostream &out) const
 
     if (is_empty()){
         out << "[ ]";
-
+        
     }else{
 
         out << "[ \" ";
