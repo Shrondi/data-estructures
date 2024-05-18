@@ -28,7 +28,7 @@ uniform()
     // TODO
     // Hint: Use std::uniform_real_distribution<double>
     // Remember: use Generator as random bit generator.
-
+    ret_v = std::uniform_real_distribution<double>(0.0l, 1.0l)(Generator);
     //
     assert(0.0l <= ret_v && ret_v < 1.0l);
     return ret_v;
@@ -41,7 +41,7 @@ pick_at_random(std::uint64_t const &a, std::uint64_t const &b)
     std::uint64_t ret_v = 0;
     // TODO
     // Hint: Use std::uniform_int_distribution<std::uint64_t>
-
+    ret_v = std::uniform_int_distribution<std::uint64_t>(a, b)(Generator);
     //
     assert(a <= ret_v && ret_v <= b);
     return ret_v;
@@ -132,7 +132,7 @@ UHash::operator()(std::uint64_t k) const
 
     // TODO
     // Hint: use static_cast to static type conversions.
-
+    hash = static_cast<size_t>(((a()*k+b())%p())%m());
     //
 
     assert(hash < m());
@@ -216,6 +216,15 @@ LPHash::operator()(uint64_t k, size_t iter) const
     // Hint: you could save the first value in a static variable to avoid recompute it when
     //       a collision happened.
 
+    static size_t k0;
+
+    if (iter == 0){
+        k0 = hash()(k);
+        ret_v = k0;
+    }else{
+        ret_v = (k0+iter)%m();
+    }
+
     //
     return ret_v;
 }
@@ -253,6 +262,15 @@ QPHash::operator()(std::uint64_t k, size_t iter) const
     // Hint: you could save the first value to avoid recompute it when
     //       a collision happened.
     // Remember: m is two power and c1= c2 = 1/2.
+
+    static size_t k0;
+
+    if (iter == 0){
+        k0 = hash()(k);
+        ret_v = k0;
+    }else{
+        ret_v = static_cast<size_t>(k0+0.5*iter+0.5*iter*iter)%m();
+    }
 
     //
     return ret_v;
@@ -311,6 +329,15 @@ RPHash::operator()(std::uint64_t k, size_t iter) const
     //         regarding the collision algorithm.
     // Hint: you could save the first value to avoid recompute it when
     //      a collision happened.
+    
+    static size_t k0;
+
+    if (iter == 0){
+        k0 = hash()(k);
+        ret_v = k0;
+    }else{
+        ret_v = (k0+c()*iter)%m();
+    }
 
     //
 
@@ -365,6 +392,16 @@ RHash::operator()(std::uint64_t k, size_t iter) const
     // Remember: if iter == 0 (first attempt), compute the hash value using
     // the hash_fs()[0], iter==1 using hash_fs()[1], ..., for iter>=hash_fs().size()
     // use linear probing from the last hash value.
+
+    if (iter == 0){
+        ret_v = hash()(k);
+
+    }else if (iter < hash_fs_.size()){
+        ret_v = hash_fs()[iter](k);
+
+    }else{
+        ret_v = (hash_fs()[hash_fs().size()-1](k)+iter-hash_fs().size())%m();
+    }
 
     //
 
