@@ -104,7 +104,7 @@ UHash::UHash(size_t M, std::uint64_t P, std::uint64_t A,
     assert(B == b());
 }
 
-UHash::Ref UHash::create(size_t m, std::uint64_t p, std::uint64_t a,
+UHash::Ref UHash::create(std::uint64_t m, std::uint64_t p, std::uint64_t a,
                          std::uint64_t b)
 {
     return std::make_shared<UHash>(m, p, a, b);
