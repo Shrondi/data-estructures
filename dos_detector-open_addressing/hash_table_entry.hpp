@@ -119,7 +119,8 @@ protected:
     };
 
     // TODO
-
+    std::pair<K,V> _data;
+    EntryState _state;
     //
 };
 
