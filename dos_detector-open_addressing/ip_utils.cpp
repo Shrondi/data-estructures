@@ -37,7 +37,10 @@ operator<<(std::ostream &out, const IP &ip)
 {
     // TODO
     // Remember: we want to output the ascii code, not the char.
-
+    out << static_cast<int>(ip.bytes[0]) << "." <<
+           static_cast<int>(ip.bytes[1]) << "." <<
+           static_cast<int>(ip.bytes[2]) << "." <<
+           static_cast<int>(ip.bytes[3]);
     //
     return out;
 }
@@ -49,6 +52,32 @@ operator>>(std::istream &in, IP &ip) noexcept(false)
     // Hint: you can use a std::istringstream to convert from text to uint8_t.
     // Hint: you can use the std::replace algorithm to replace '.' by ' '.
     // Remember: if a wrong format is detected, throw an runtime_error exception.
+
+    std::string direction;
+    in >> direction;
+
+    if(!in){
+        throw std::runtime_error("Ip: wrong input format.");
+    }
+
+    std::replace(direction.begin(), direction.end(), '.', ' ');
+    
+    std::istringstream convert(direction);
+    int vector[4];
+
+    if (!convert){
+        throw std::runtime_error("Ip: wrong input format.");
+    }
+
+    for(int i = 0; i < 4; i++){
+        convert >> vector[i];
+
+        if(convert.fail() || vector[i] < 0 || vector[i] > 255){
+            throw std::runtime_error("Invalid IP");
+        }else{
+            ip.bytes[i] = static_cast<uint8_t>(vector[i]);
+        }
+    }
 
     //
     return in;
