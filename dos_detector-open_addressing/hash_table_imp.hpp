@@ -27,7 +27,10 @@ HashTable<K, V>::HashTable(size_t m,
 {
     assert(m == hash->m());
     // TODO
-
+    table_.resize(m);
+    key_to_int_ = key_to_int;
+    hash_ = hash;
+    used_entries_ = 0;
     //
     assert(size() == m);
 }
@@ -38,7 +41,7 @@ HashTable<K, V>::size() const
 {
     size_t ret_v = 0;
     // TODO
-
+    ret_v = table_.size();
     //
     return ret_v;
 }
@@ -48,7 +51,7 @@ float HashTable<K, V>::load_factor() const
 {
     float ret_v = 0.0f;
     // TODO
-
+    ret_v =  static_cast<float>(used_entries_) / static_cast<float>(size());
     //
     return ret_v;
 }
@@ -59,6 +62,10 @@ bool HashTable<K, V>::has(K const &k) const
     bool ret_v = false;
     // TODO
     //  Hint: use the find method.
+
+    int idx = find(k);
+
+    return table_[idx].is_valid() && table_[idx].key() == k;
 
     //
     return ret_v;
@@ -71,6 +78,12 @@ size_t HashTable<K, V>::find(K const &k) const
     size_t idx = 0;
     // TODO
 
+    int probe = 0;
+    do{
+        idx = hash_->operator()(key_to_int_(k), probe);
+        ++probe;
+
+    }while(!(table_[idx].is_empty() || table_[idx].key() == k));
     //
     assert(0 <= idx && idx < size());
     return idx;
@@ -84,6 +97,18 @@ size_t HashTable<K, V>::insert(K const &k, V const &v)
     // TODO
     // Remember: increment the number of used entries only when an
     // empty entry was used.
+
+    idx = find(k);
+
+    if (table_[idx].is_empty()){
+        ++used_entries_;
+    }
+
+    table_[idx].set(k, v);
+
+    rehash();
+   
+    idx = find(k); // Actualizar el indice (solo cambia si se ha hecho rehash)
 
     //
     assert(idx < size());
@@ -104,6 +129,8 @@ void HashTable<K, V>::remove(size_t idx)
     // TODO
     // Remember: we are using a mark to sign "deleted".
 
+    table_[idx].set_deleted();
+
     //
     assert(!entry(idx).is_valid());
     assert(!has(old_k));
@@ -119,6 +146,23 @@ size_t HashTable<K, V>::rehash()
     // Remember: reset the number of used entries to zero before inserting the old valid
     // entries in the new table.
 
+    if (load_factor() > 0.5f){
+        auto oldT = table_;
+        size_t newSize = table_.size()*2;
+
+        table_ = std::vector<HashTableEntry<K, V>>(newSize);
+
+        hash_ = hash_->pick_at_new(newSize);
+
+        used_entries_ = 0;
+
+        for (auto e : oldT){
+            if (e.is_valid()){
+                insert(e.key(), e.value());
+            }
+        }
+    }
+
     //
     assert(load_factor() <= 0.5);
     return size();
@@ -129,8 +173,10 @@ HashTableEntry<K, V> const &HashTable<K, V>::entry(size_t idx) const
 {
     assert(idx < size());
     // TODO: recode according to your representation.
-    HashTableEntry<K, V> aux;
-    return aux;
+    //HashTableEntry<K, V> aux;
+    //return aux;
+
+    return table_[idx];
     //
 }
 
@@ -139,8 +185,10 @@ HashTableEntry<K, V> &HashTable<K, V>::entry(size_t idx)
 {
     assert(idx < size());
     // TODO: recode according to your representation.
-    HashTableEntry<K, V> aux;
-    return aux;
+    //HashTableEntry<K, V> aux;
+    //return aux;
+
+    return table_[idx];
     //
 }
 
@@ -149,8 +197,10 @@ V const &HashTable<K, V>::operator[](K const &k) const
 {
     assert(has(k));
     // TODO: recode according to your representation.
-    V aux;
-    return aux;
+    //V aux;
+    //return aux;
+
+    return table_[k].value();
     //
 }
 
@@ -160,7 +210,14 @@ V &HashTable<K, V>::operator[](K const &k)
     // TODO: recode according to your representation.
     // Remember: if an entry exits for the key, return a reference to its value,
     // else insert a new entry pair <k, _> and return a reference to its value.
-    V aux;
-    return aux;
+    //V aux;
+    //return aux;
+
+    if (has(k)){
+        return table_[k].value();
+    }else{
+        return insert(k, V{});
+    }
+
     //
 }
