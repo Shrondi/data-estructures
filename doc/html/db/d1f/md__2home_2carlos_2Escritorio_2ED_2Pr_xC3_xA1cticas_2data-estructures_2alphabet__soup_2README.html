@@ -103,15 +103,15 @@ $(function(){initNavTree('db/d1f/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1ct
   <div class="headertitle"><div class="title">Sopa de letras</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="sopa-de-letras"></a> *© <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2" title="Create an empty AVLTree.">F.J</a>. Madrid Cuevas (<a href="#" onclick="location.href='mai'+'lto:'+'fjm'+'ad'+'rid'+'@u'+'co.'+'es'; return false;">fjmad<span class="obfuscator">.nosp@m.</span>rid@<span class="obfuscator">.nosp@m.</span>uco.e<span class="obfuscator">.nosp@m.</span>s</a>) Estructuras de Datos. Grado de Ingeniería Informática. Universidad de Córdoba. España*</p>
+<div class="textblock"><p><a class="anchor" id="sopa-de-letras"></a> *© F.J. Madrid Cuevas (<a href="#" onclick="location.href='mai'+'lto:'+'fjm'+'ad'+'rid'+'@u'+'co.'+'es'; return false;">fjmad<span class="obfuscator">.nosp@m.</span>rid@<span class="obfuscator">.nosp@m.</span>uco.e<span class="obfuscator">.nosp@m.</span>s</a>) Estructuras de Datos. Grado de Ingeniería Informática. Universidad de Córdoba. España*</p>
 <h1><a class="anchor" id="objetivos-5"></a>
 Objetivos</h1>
 <ul>
 <li>Aprender a implementar el TAD <a class="el" href="../../dc/d09/classTrie.html" title="Represents a Trie. A Trie is a m-path tree to store keys based on prefixes.">Trie</a>.</li>
 <li>Aprender a usar un <a class="el" href="../../dc/d09/classTrie.html" title="Represents a Trie. A Trie is a m-path tree to store keys based on prefixes.">Trie</a> para resolver una sopa de letras.</li>
-<li>Aprender a usar el tipo <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2" title="Create an empty AVLTree.">std::map</a></li>
-<li>Aprender a usar el tipo <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2" title="Create an empty AVLTree.">std::pair</a></li>
-<li>Aprender a usar el tipo <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2" title="Create an empty AVLTree.">std::stack</a></li>
+<li>Aprender a usar el tipo std::map</li>
+<li>Aprender a usar el tipo std::pair</li>
+<li>Aprender a usar el tipo std::stack</li>
 </ul>
 <h1><a class="anchor" id="descripción-5"></a>
 Descripción</h1>
@@ -142,7 +142,7 @@ Descripción</h1>
             margin-right: auto;
             width: 90%"> Algorithm scanCell(row:Int, col:Int, dx:Int, dy:Int, trie:Trie, 
                         soup:AlphabetSoup, result:Pair[String, 
-                        Stack[Pair[Int,Int]]]) //1. If the trie's prefix is a key then // a word is found. Save the key as the first item of the scan_result // pair and return from this level of recursion. //2. Else, we can two cases: //2.<a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2" title="Create an empty AVLTree.">1.1</a> (dx==dy==0) The cell (row,col) is the first letter of a word. // If there is a sub-trie whose prefix is this symbol, start a new // recursive scanning of the 3x3 neighborhood from this position // using this sub-trie. //2.<a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2" title="Create an empty AVLTree.">1.2</a> (dx!=0 or dy!=0) The cell (row,col) is the next letter of a // started scanning following the direction (dx,dy). If there is a // sub-trie whose prefix is this symbol, continue the scanning // following the direction (dx,dy) recursively. //2.2 After recursion comes back, if a word was found (first item of // the scan_result pair != ""), push the current cell's coordinates // (row,col) into the second item of scan_result (the stack of // coordinates).</div><div style="border: solid;
+                        Stack[Pair[Int,Int]]]) //1. If the trie's prefix is a key then // a word is found. Save the key as the first item of the scan_result // pair and return from this level of recursion. //2. Else, we can two cases: //2.1.1 (dx==dy==0) The cell (row,col) is the first letter of a word. // If there is a sub-trie whose prefix is this symbol, start a new // recursive scanning of the 3x3 neighborhood from this position // using this sub-trie. //2.1.2 (dx!=0 or dy!=0) The cell (row,col) is the next letter of a // started scanning following the direction (dx,dy). If there is a // sub-trie whose prefix is this symbol, continue the scanning // following the direction (dx,dy) recursively. //2.2 After recursion comes back, if a word was found (first item of // the scan_result pair != ""), push the current cell's coordinates // (row,col) into the second item of scan_result (the stack of // coordinates).</div><div style="border: solid;
             margin-left: auto;
             margin-right: auto;
             width: 90%"></div><p>Así si utilizamos la sopa de la Figura 1, cuando estudiemos la celda (9,5) con valor ‘e’, el <a class="el" href="../../dc/d09/classTrie.html" title="Represents a Trie. A Trie is a m-path tree to store keys based on prefixes.">Trie</a> dirá que hay un prefijo ‘e’ (prefijo de clave ‘ecuador’) y pasaremos a llamar a nuestro algoritmo de escaneo del entorno de la celda (dy=0, dx=0) y usando el sub-trie con prefijo “e”. De esta forma (como (dy=0, dx=0)) se procederá a escanear ahora para el rango rows={8,9,5} x cols={4,5,6} (salvo la central (9,5)).</p>
@@ -150,8 +150,8 @@ Descripción</h1>
 <p>Observa cómo a partir de la segunda letra encontrada (“c”), la dirección (dy=0,dx=1) indica ya la dirección a seguir para el resto de la palabra, es decir, en el resto de llamadas recursivas ya sólo se estudiarán las celdas (9+dy=9, 6+dx=7)=”u”. (9+dy=9, 7+dx=8)=”a”, … , y se repite el proceso hasta que se llega a un trie cuyo prefijo es clave (“ecuador”) pasando a inicializar el primer item del Par scan_result a “ecuador” indicando esto que se ha encontrado una palabra. Ahora antes de retornar de un nivel de recursión si se ha encontrado una palabra hay que apilar las coordenadas (row,col) de este nivel en la pila almacenada como segundo item del Par scan_result.</p>
 <h1><a class="anchor" id="detalles-de-implementación"></a>
 Detalles de implementación.</h1>
-<p>Para representar el diccionario que asocia símbolo con nodo hijo vamos a utilizar el tipo <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2" title="Create an empty AVLTree.">std::map</a> [2].</p>
-<p>Para devolver el resultado de un escaneo de una palabra usaremos el tipo <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2" title="Create an empty AVLTree.">std::pair</a> [3] de una cadena <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2" title="Create an empty AVLTree.">std::string</a> y una pila <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2" title="Create an empty AVLTree.">std::stack</a> [4]. La pila almacena a su vez pares (<a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2" title="Create an empty AVLTree.">std::pair</a>) de enteros (fila,columna) con las coordenadas de la rejilla para cada letra de la palabra encontrada.</p>
+<p>Para representar el diccionario que asocia símbolo con nodo hijo vamos a utilizar el tipo std::map [2].</p>
+<p>Para devolver el resultado de un escaneo de una palabra usaremos el tipo std::pair [3] de una cadena std::string y una pila std::stack [4]. La pila almacena a su vez pares (std::pair) de enteros (fila,columna) con las coordenadas de la rejilla para cada letra de la palabra encontrada.</p>
 <p>Para plegar/desplegar el símbolo que asocia un nodo padre con un nodo hijo vamos a utilizar una codificación en hexadecimal [5] codificando el código del símbolo con un entero sin signo de 16 bits [6].</p>
 <h1><a class="anchor" id="evaluación-4"></a>
 Evaluación</h1>
@@ -181,9 +181,9 @@ Evaluación</h1>
 Referencias</h1>
 <ul>
 <li>[1] <a class="el" href="../../dc/d09/classTrie.html" title="Represents a Trie. A Trie is a m-path tree to store keys based on prefixes.">Trie</a>: <a href="http://en.wikipedia.org/wiki/Trie">http://en.wikipedia.org/wiki/Trie</a></li>
-<li>[2] <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2" title="Create an empty AVLTree.">std::map:</a> <a href="http://www.cplusplus.com/reference/map/map/">http://www.cplusplus.com/reference/map/map/</a></li>
-<li>[3] <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2" title="Create an empty AVLTree.">std::pair:</a> <a href="https://www.cplusplus.com/reference/utility/pair/pair/">https://www.cplusplus.com/reference/utility/pair/pair/</a></li>
-<li>[4] <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2" title="Create an empty AVLTree.">std::stack:</a> <a href="http://www.cplusplus.com/reference/stack/stack/">http://www.cplusplus.com/reference/stack/stack/</a></li>
+<li>[2] std::map: <a href="http://www.cplusplus.com/reference/map/map/">http://www.cplusplus.com/reference/map/map/</a></li>
+<li>[3] std::pair: <a href="https://www.cplusplus.com/reference/utility/pair/pair/">https://www.cplusplus.com/reference/utility/pair/pair/</a></li>
+<li>[4] std::stack: <a href="http://www.cplusplus.com/reference/stack/stack/">http://www.cplusplus.com/reference/stack/stack/</a></li>
 <li>[5] Manipuladores de flujo: <a href="https://www.cplusplus.com/reference/library/manipulators/">https://www.cplusplus.com/reference/library/manipulators/</a></li>
 <li>[6] Tipos estándar para enteros: <a href="https://www.cplusplus.com/reference/cstdint/">https://www.cplusplus.com/reference/cstdint/</a> </li>
 </ul>

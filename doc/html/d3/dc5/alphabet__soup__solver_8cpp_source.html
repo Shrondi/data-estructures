@@ -135,47 +135,87 @@ $(function(){initNavTree('d3/dc5/alphabet__soup__solver_8cpp_source.html','../..
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">//     (row,col) into the second item of scan_result (the stack of</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">//     coordinates).</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">//</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
-</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>std::vector&lt;ScanResult&gt;</div>
-<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="../../d3/dc5/alphabet__soup__solver_8cpp.html#a378eee06ecd21084a247db94b4e2e2c4">   52</a></span><a class="code hl_function" href="../../d3/dc5/alphabet__soup__solver_8cpp.html#a378eee06ecd21084a247db94b4e2e2c4">alphabet_soup_solver</a>(<a class="code hl_class" href="../../d2/d31/classAlphabetSoup.html">AlphabetSoup</a> &amp;soup, std::vector&lt;std::string&gt; <span class="keyword">const</span> &amp;words)</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>{</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    std::vector&lt;ScanResult&gt; results;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_class" href="../../dc/d09/classTrie.html">Trie</a> trie;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">if</span> (trie.<a class="code hl_function" href="../../dc/d09/classTrie.html#af3e632326736b7e2ac305e61edc5fd6d">is_key</a>()){</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        scan_result.first = trie.<a class="code hl_function" href="../../dc/d09/classTrie.html#a9d798461fb35bfa614b1453d0dd95330">prefix</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (row &lt; 0 || row &gt;= soup.<a class="code hl_function" href="../../d2/d31/classAlphabetSoup.html#a874b93f94d5b299231cb9ce905e908c1">rows</a>() || col &lt; 0 || col &gt;= soup.<a class="code hl_function" href="../../d2/d31/classAlphabetSoup.html#a0a6593003271b54f4ca069c365959b3d">cols</a>()){</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (trie.<a class="code hl_function" href="../../dc/d09/classTrie.html#acdc475786d695afddb8072bddd4a1ad5">find_symbol</a>(soup.<a class="code hl_function" href="../../d2/d31/classAlphabetSoup.html#aa52b2f2929c3dc044da88612b9701d2b">cell</a>(row, col))){</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">// Generate a trie with the words to be found as keys.</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; words.size(); ++i)</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        trie.<a class="code hl_function" href="../../dc/d09/classTrie.html#a5dff6df08077d6f3fcb495c8916da06d">insert</a>(words[i]);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">auto</span> subtrie = trie.<a class="code hl_function" href="../../dc/d09/classTrie.html#a907dd15cfadb2851deba2451c740c440">current</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">if</span> (dx == 0 &amp;&amp; dy == 0){</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">// We scan all the soup to find a first letter of any key.</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> row = 0; row &lt; soup.<a class="code hl_function" href="../../d2/d31/classAlphabetSoup.html#a874b93f94d5b299231cb9ce905e908c1">rows</a>(); ++row)</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> col = 0; col &lt; soup.<a class="code hl_function" href="../../d2/d31/classAlphabetSoup.html#a0a6593003271b54f4ca069c365959b3d">cols</a>(); ++col)</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="keyword">auto</span> scan_result = std::make_pair(std::string(<span class="stringliteral">&quot;&quot;</span>),</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                                              std::stack&lt;std::pair&lt;int, int&gt;&gt;());</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="comment">// Scan from this cell. This is the first letter so dx==dy==0.</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <a class="code hl_function" href="../../d3/dc5/alphabet__soup__solver_8cpp.html#a59a09ba788ff5cf95a70e48e5347f052">scan_cell</a>(row, col, 0, 0, soup, trie, scan_result);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordflow">if</span> (scan_result.first != <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                <span class="comment">// A word was found so save it into the results.</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                results.push_back(scan_result);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordflow">return</span> results;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = -1; i &lt;= 1; i++){</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = -1; j &lt;= 1; j++){</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                    <span class="keywordflow">if</span> (i != 0 || j != 0){</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                        <a class="code hl_function" href="../../d3/dc5/alphabet__soup__solver_8cpp.html#a59a09ba788ff5cf95a70e48e5347f052">scan_cell</a>(row + i, col + j, i, j, soup, subtrie, scan_result);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                    }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                    <span class="keywordflow">if</span> (scan_result.first != <span class="stringliteral">&quot;&quot;</span>){</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                        scan_result.second.push({row, col});</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                    }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (dx != 0 || dy != 0){</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <a class="code hl_function" href="../../d3/dc5/alphabet__soup__solver_8cpp.html#a59a09ba788ff5cf95a70e48e5347f052">scan_cell</a>(row + dy, col + dx, dy, dx, soup, subtrie, scan_result);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">if</span> (scan_result.first != <span class="stringliteral">&quot;&quot;</span>){</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            scan_result.second.push({row, col});</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="comment">//</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>}</div>
 </div>
-<div class="ttc" id="aalphabet__soup__solver_8cpp_html_a378eee06ecd21084a247db94b4e2e2c4"><div class="ttname"><a href="../../d3/dc5/alphabet__soup__solver_8cpp.html#a378eee06ecd21084a247db94b4e2e2c4">alphabet_soup_solver</a></div><div class="ttdeci">std::vector&lt; ScanResult &gt; alphabet_soup_solver(AlphabetSoup &amp;soup, std::vector&lt; std::string &gt; const &amp;words)</div><div class="ttdoc">Solve a alphabet soup.</div><div class="ttdef"><b>Definition</b> <a href="#l00052">alphabet_soup_solver.cpp:52</a></div></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>std::vector&lt;ScanResult&gt;</div>
+<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="../../d3/dc5/alphabet__soup__solver_8cpp.html#a378eee06ecd21084a247db94b4e2e2c4">   87</a></span><a class="code hl_function" href="../../d3/dc5/alphabet__soup__solver_8cpp.html#a378eee06ecd21084a247db94b4e2e2c4">alphabet_soup_solver</a>(<a class="code hl_class" href="../../d2/d31/classAlphabetSoup.html">AlphabetSoup</a> &amp;soup, std::vector&lt;std::string&gt; <span class="keyword">const</span> &amp;words)</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>{</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    std::vector&lt;ScanResult&gt; results;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <a class="code hl_class" href="../../dc/d09/classTrie.html">Trie</a> trie;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="comment">// Generate a trie with the words to be found as keys.</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; words.size(); ++i)</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        trie.<a class="code hl_function" href="../../dc/d09/classTrie.html#a5dff6df08077d6f3fcb495c8916da06d">insert</a>(words[i]);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="comment">// We scan all the soup to find a first letter of any key.</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> row = 0; row &lt; soup.<a class="code hl_function" href="../../d2/d31/classAlphabetSoup.html#a874b93f94d5b299231cb9ce905e908c1">rows</a>(); ++row)</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> col = 0; col &lt; soup.<a class="code hl_function" href="../../d2/d31/classAlphabetSoup.html#a0a6593003271b54f4ca069c365959b3d">cols</a>(); ++col)</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <span class="keyword">auto</span> scan_result = std::make_pair(std::string(<span class="stringliteral">&quot;&quot;</span>),</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                                              std::stack&lt;std::pair&lt;int, int&gt;&gt;());</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <span class="comment">// Scan from this cell. This is the first letter so dx==dy==0.</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <a class="code hl_function" href="../../d3/dc5/alphabet__soup__solver_8cpp.html#a59a09ba788ff5cf95a70e48e5347f052">scan_cell</a>(row, col, 0, 0, soup, trie, scan_result);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="keywordflow">if</span> (scan_result.first != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                <span class="comment">// A word was found so save it into the results.</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                results.push_back(scan_result);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordflow">return</span> results;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>}</div>
+</div>
+<div class="ttc" id="aalphabet__soup__solver_8cpp_html_a378eee06ecd21084a247db94b4e2e2c4"><div class="ttname"><a href="../../d3/dc5/alphabet__soup__solver_8cpp.html#a378eee06ecd21084a247db94b4e2e2c4">alphabet_soup_solver</a></div><div class="ttdeci">std::vector&lt; ScanResult &gt; alphabet_soup_solver(AlphabetSoup &amp;soup, std::vector&lt; std::string &gt; const &amp;words)</div><div class="ttdoc">Solve a alphabet soup.</div><div class="ttdef"><b>Definition</b> <a href="#l00087">alphabet_soup_solver.cpp:87</a></div></div>
 <div class="ttc" id="aalphabet__soup__solver_8cpp_html_a59a09ba788ff5cf95a70e48e5347f052"><div class="ttname"><a href="../../d3/dc5/alphabet__soup__solver_8cpp.html#a59a09ba788ff5cf95a70e48e5347f052">scan_cell</a></div><div class="ttdeci">void scan_cell(int row, int col, int dy, int dx, AlphabetSoup const &amp;soup, Trie &amp;trie, ScanResult &amp;scan_result)</div><div class="ttdoc">scan a cell looking for the next letter of a word.</div><div class="ttdef"><b>Definition</b> <a href="#l00026">alphabet_soup_solver.cpp:26</a></div></div>
 <div class="ttc" id="aalphabet__soup__solver_8hpp_html"><div class="ttname"><a href="../../d0/da3/alphabet__soup__solver_8hpp.html">alphabet_soup_solver.hpp</a></div></div>
 <div class="ttc" id="aalphabet__soup__solver_8hpp_html_ab29c7ccef32f0d59d1d59b97f743a342"><div class="ttname"><a href="../../d0/da3/alphabet__soup__solver_8hpp.html#ab29c7ccef32f0d59d1d59b97f743a342">ScanResult</a></div><div class="ttdeci">std::pair&lt; std::string, std::stack&lt; std::pair&lt; int, int &gt; &gt; &gt; ScanResult</div><div class="ttdoc">Define the result of a scanning process. It is a pair &lt;first-item, second-item&gt;. The first item is th...</div><div class="ttdef"><b>Definition</b> <a href="../../d0/da3/alphabet__soup__solver_8hpp_source.html#l00030">alphabet_soup_solver.hpp:30</a></div></div>
 <div class="ttc" id="aclassAlphabetSoup_html"><div class="ttname"><a href="../../d2/d31/classAlphabetSoup.html">AlphabetSoup</a></div><div class="ttdoc">Models an alfabet soup.</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d2a/alphabet__soup_8hpp_source.html#l00020">alphabet_soup.hpp:21</a></div></div>
 <div class="ttc" id="aclassAlphabetSoup_html_a0a6593003271b54f4ca069c365959b3d"><div class="ttname"><a href="../../d2/d31/classAlphabetSoup.html#a0a6593003271b54f4ca069c365959b3d">AlphabetSoup::cols</a></div><div class="ttdeci">int cols() const</div><div class="ttdoc">how many columns there are?</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d2a/alphabet__soup_8hpp_source.html#l00045">alphabet_soup.hpp:45</a></div></div>
 <div class="ttc" id="aclassAlphabetSoup_html_a874b93f94d5b299231cb9ce905e908c1"><div class="ttname"><a href="../../d2/d31/classAlphabetSoup.html#a874b93f94d5b299231cb9ce905e908c1">AlphabetSoup::rows</a></div><div class="ttdeci">int rows() const</div><div class="ttdoc">how many rows there are?</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d2a/alphabet__soup_8hpp_source.html#l00039">alphabet_soup.hpp:39</a></div></div>
+<div class="ttc" id="aclassAlphabetSoup_html_aa52b2f2929c3dc044da88612b9701d2b"><div class="ttname"><a href="../../d2/d31/classAlphabetSoup.html#aa52b2f2929c3dc044da88612b9701d2b">AlphabetSoup::cell</a></div><div class="ttdeci">char cell(int r, int c) const</div><div class="ttdoc">Get the contents of a cell.</div><div class="ttdef"><b>Definition</b> <a href="../../d8/d2a/alphabet__soup_8hpp_source.html#l00054">alphabet_soup.hpp:54</a></div></div>
 <div class="ttc" id="aclassTrie_html"><div class="ttname"><a href="../../dc/d09/classTrie.html">Trie</a></div><div class="ttdoc">Represents a Trie. A Trie is a m-path tree to store keys based on prefixes.</div><div class="ttdef"><b>Definition</b> <a href="../../d9/dab/trie_8hpp_source.html#l00024">trie.hpp:25</a></div></div>
 <div class="ttc" id="aclassTrie_html_a5dff6df08077d6f3fcb495c8916da06d"><div class="ttname"><a href="../../dc/d09/classTrie.html#a5dff6df08077d6f3fcb495c8916da06d">Trie::insert</a></div><div class="ttdeci">void insert(std::string const &amp;k)</div><div class="ttdoc">Insert the key prefix()+k into the trie.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/d5a/trie_8cpp_source.html#l00232">trie.cpp:232</a></div></div>
+<div class="ttc" id="aclassTrie_html_a907dd15cfadb2851deba2451c740c440"><div class="ttname"><a href="../../dc/d09/classTrie.html#a907dd15cfadb2851deba2451c740c440">Trie::current</a></div><div class="ttdeci">Trie current() const</div><div class="ttdoc">Gets the current subtrie. This subtrie represents the keys with prefix prefix()+current_symbol()</div><div class="ttdef"><b>Definition</b> <a href="../../d6/d5a/trie_8cpp_source.html#l00212">trie.cpp:212</a></div></div>
+<div class="ttc" id="aclassTrie_html_a9d798461fb35bfa614b1453d0dd95330"><div class="ttname"><a href="../../dc/d09/classTrie.html#a9d798461fb35bfa614b1453d0dd95330">Trie::prefix</a></div><div class="ttdeci">std::string prefix() const</div><div class="ttdoc">Get the prefix represented by the trie's root.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/d5a/trie_8cpp_source.html#l00087">trie.cpp:87</a></div></div>
+<div class="ttc" id="aclassTrie_html_acdc475786d695afddb8072bddd4a1ad5"><div class="ttname"><a href="../../dc/d09/classTrie.html#acdc475786d695afddb8072bddd4a1ad5">Trie::find_symbol</a></div><div class="ttdeci">bool find_symbol(char symbol)</div><div class="ttdoc">Move current to the subtree representing the prefix prefix()+symbol.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/d5a/trie_8cpp_source.html#l00311">trie.cpp:311</a></div></div>
+<div class="ttc" id="aclassTrie_html_af3e632326736b7e2ac305e61edc5fd6d"><div class="ttname"><a href="../../dc/d09/classTrie.html#af3e632326736b7e2ac305e61edc5fd6d">Trie::is_key</a></div><div class="ttdeci">bool is_key() const</div><div class="ttdoc">Is the prefix also a key?</div><div class="ttdef"><b>Definition</b> <a href="../../d6/d5a/trie_8cpp_source.html#l00104">trie.cpp:104</a></div></div>
 <div class="ttc" id="atrie_8hpp_html"><div class="ttname"><a href="../../d9/dab/trie_8hpp.html">trie.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

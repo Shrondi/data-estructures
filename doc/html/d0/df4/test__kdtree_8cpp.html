@@ -120,7 +120,7 @@ $(function(){initNavTree('d0/df4/test__kdtree_8cpp.html','../../'); initResizabl
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac0f2228420376f4db7e1274f2b41667c" id="r_ac0f2228420376f4db7e1274f2b41667c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d7c/classAVLTree.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0f2228420376f4db7e1274f2b41667c">main</a> (<a class="el" href="../../d6/d7c/classAVLTree.html">int</a> <a class="el" href="../../d6/d7c/classAVLTree.html">argc</a>, <a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html">char</a> *<a class="el" href="../../d6/d7c/classAVLTree.html">argv</a>[])</td></tr>
+<tr class="memitem:ac0f2228420376f4db7e1274f2b41667c" id="r_ac0f2228420376f4db7e1274f2b41667c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0f2228420376f4db7e1274f2b41667c">main</a> (int argc, const char *argv[])</td></tr>
 <tr class="separator:ac0f2228420376f4db7e1274f2b41667c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -131,134 +131,130 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/d7c/classAVLTree.html">int</a> main </td>
+          <td class="memname">int main </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html">int</a></td>          <td class="paramname"><span class="paramname"><em>argc</em>, </span></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html">const</a> <a class="el" href="../../d6/d7c/classAVLTree.html">char</a> *</td>          <td class="paramname"><span class="paramname"><em>argv</em>[]</span>&#160;)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>argv</em>[]</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/df4/test__kdtree_8cpp_source.html#l00014">14</a> of file <a class="el" href="../../d0/df4/test__kdtree_8cpp_source.html">test_kdtree.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   15</span>{</div>
-<div class="line"><span class="lineno">   16</span>    <span class="keywordtype">int</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">exit_code</a> = <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">EXIT_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">   16</span>    <span class="keywordtype">int</span> exit_code = EXIT_SUCCESS;</div>
 <div class="line"><span class="lineno">   17</span>    <span class="keywordflow">try</span></div>
 <div class="line"><span class="lineno">   18</span>    {</div>
-<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">argc</a> != 2)</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">if</span> (argc != 2)</div>
 <div class="line"><span class="lineno">   20</span>        {</div>
-<div class="line"><span class="lineno">   21</span>            <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::cerr</a> &lt;&lt; <span class="stringliteral">&quot;Usage: &quot;</span> &lt;&lt; <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">argv</a>[0] &lt;&lt; <span class="stringliteral">&quot; filename&quot;</span> &lt;&lt; <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::endl</a>;</div>
-<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">EXIT_FAILURE</a>;</div>
+<div class="line"><span class="lineno">   21</span>            std::cerr &lt;&lt; <span class="stringliteral">&quot;Usage: &quot;</span> &lt;&lt; argv[0] &lt;&lt; <span class="stringliteral">&quot; filename&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">return</span> EXIT_FAILURE;</div>
 <div class="line"><span class="lineno">   23</span>        }</div>
-<div class="line"><span class="lineno">   24</span>        <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::ifstream</a> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">input_file</a> (<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">argv</a>[1]);</div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (!<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">input_file</a>)</div>
+<div class="line"><span class="lineno">   24</span>        std::ifstream input_file (argv[1]);</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span> (!input_file)</div>
 <div class="line"><span class="lineno">   26</span>        {</div>
-<div class="line"><span class="lineno">   27</span>            <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::cerr</a> &lt;&lt; <span class="stringliteral">&quot;Error: could not open input filename &#39;&quot;</span></div>
-<div class="line"><span class="lineno">   28</span>                      &lt;&lt; <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">argv</a>[1] &lt;&lt; <span class="stringliteral">&quot;&#39;.&quot;</span> &lt;&lt; <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::endl</a>;</div>
-<div class="line"><span class="lineno">   29</span>            <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::cerr</a> &lt;&lt; <span class="stringliteral">&quot;Usage: &quot;</span> &lt;&lt; <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">argv</a>[0] &lt;&lt; <span class="stringliteral">&quot; filename&quot;</span> &lt;&lt; <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::endl</a>;</div>
-<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">EXIT_FAILURE</a>;</div>
+<div class="line"><span class="lineno">   27</span>            std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: could not open input filename &#39;&quot;</span></div>
+<div class="line"><span class="lineno">   28</span>                      &lt;&lt; argv[1] &lt;&lt; <span class="stringliteral">&quot;&#39;.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   29</span>            std::cerr &lt;&lt; <span class="stringliteral">&quot;Usage: &quot;</span> &lt;&lt; argv[0] &lt;&lt; <span class="stringliteral">&quot; filename&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">return</span> EXIT_FAILURE;</div>
 <div class="line"><span class="lineno">   31</span>        }</div>
 <div class="line"><span class="lineno">   32</span> </div>
-<div class="line"><span class="lineno">   33</span>        <a class="code hl_typedef" href="../../df/d3f/classKDTree.html#aae59232b6f2ff6cc1c1f4adf4e99509a">KDTree::Ref</a> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">kdtree</a>;</div>
-<div class="line"><span class="lineno">   34</span>        <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::string</a> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">command</a>;</div>
-<div class="line"><span class="lineno">   35</span>        <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::cout</a> &lt;&lt; <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::unitbuf</a>;</div>
-<div class="line"><span class="lineno">   36</span>        <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::istringstream</a> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">input_line</a>;</div>
-<div class="line"><span class="lineno">   37</span>        <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::string</a> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">line</a>;</div>
-<div class="line"><span class="lineno">   38</span>        <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::vector&lt;Pattern&gt;</a> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">dts</a>;</div>
+<div class="line"><span class="lineno">   33</span>        <a class="code hl_typedef" href="../../df/d3f/classKDTree.html#aae59232b6f2ff6cc1c1f4adf4e99509a">KDTree::Ref</a> kdtree;</div>
+<div class="line"><span class="lineno">   34</span>        std::string command;</div>
+<div class="line"><span class="lineno">   35</span>        std::cout &lt;&lt; std::unitbuf;</div>
+<div class="line"><span class="lineno">   36</span>        std::istringstream input_line;</div>
+<div class="line"><span class="lineno">   37</span>        std::string line;</div>
+<div class="line"><span class="lineno">   38</span>        std::vector&lt;Pattern&gt; dts;</div>
 <div class="line"><span class="lineno">   39</span> </div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">while</span>(<a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::getline</a>(<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">input_file</a>, <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">line</a>))</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">while</span>(std::getline(input_file, line))</div>
 <div class="line"><span class="lineno">   41</span>        {</div>
-<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">line</a> == <span class="stringliteral">&quot;&quot;</span> || <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">line</a>[0]==<span class="charliteral">&#39;#&#39;</span>)</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">if</span> (line == <span class="stringliteral">&quot;&quot;</span> || line[0]==<span class="charliteral">&#39;#&#39;</span>)</div>
 <div class="line"><span class="lineno">   43</span>                <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">   44</span> </div>
-<div class="line"><span class="lineno">   45</span>            <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">input_line</a>.clear();</div>
-<div class="line"><span class="lineno">   46</span>            <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">input_line</a>.str(<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">line</a>);            </div>
-<div class="line"><span class="lineno">   47</span>            <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">input_line</a> &gt;&gt; <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">command</a>;</div>
-<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">if</span> (! <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">input_line</a>)</div>
+<div class="line"><span class="lineno">   45</span>            input_line.clear();</div>
+<div class="line"><span class="lineno">   46</span>            input_line.str(line);            </div>
+<div class="line"><span class="lineno">   47</span>            input_line &gt;&gt; command;</div>
+<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">if</span> (! input_line)</div>
 <div class="line"><span class="lineno">   49</span>                <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">   50</span> </div>
-<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">command</a> == <span class="stringliteral">&quot;LOAD_DATASET&quot;</span>)</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">if</span> (command == <span class="stringliteral">&quot;LOAD_DATASET&quot;</span>)</div>
 <div class="line"><span class="lineno">   52</span>            {</div>
 <div class="line"><span class="lineno">   53</span>                <span class="comment">//input_file.ignore(); //skip newline.</span></div>
-<div class="line"><span class="lineno">   54</span>                <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">dts</a>.resize(0);</div>
-<div class="line"><span class="lineno">   55</span>                <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::cout</a> &lt;&lt; <span class="stringliteral">&quot;Loading dataset: &quot;</span>;</div>
+<div class="line"><span class="lineno">   54</span>                dts.resize(0);</div>
+<div class="line"><span class="lineno">   55</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Loading dataset: &quot;</span>;</div>
 <div class="line"><span class="lineno">   56</span>                <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">   57</span>                    <a class="code hl_function" href="../../dd/d6e/pattern_8cpp.html#a81ddcb973b1fe1dd9600f66300a823b6">load_dataset</a>(<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">input_file</a>, <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">dts</a>);</div>
-<div class="line"><span class="lineno">   58</span>                    <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::cout</a> &lt;&lt; <span class="stringliteral">&quot; size = &quot;</span> &lt;&lt; <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">dts</a>.<a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a8965aaf5d107cab6ae317f7a575cdebc">size</a>() </div>
-<div class="line"><span class="lineno">   59</span>                        &lt;&lt; <span class="stringliteral">&quot; patterns with dims = &quot;</span> &lt;&lt; <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">dts</a>[0].dim() &lt;&lt; <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::endl</a>;</div>
+<div class="line"><span class="lineno">   57</span>                    <a class="code hl_function" href="../../dd/d6e/pattern_8cpp.html#a81ddcb973b1fe1dd9600f66300a823b6">load_dataset</a>(input_file, dts);</div>
+<div class="line"><span class="lineno">   58</span>                    std::cout &lt;&lt; <span class="stringliteral">&quot; size = &quot;</span> &lt;&lt; dts.size() </div>
+<div class="line"><span class="lineno">   59</span>                        &lt;&lt; <span class="stringliteral">&quot; patterns with dims = &quot;</span> &lt;&lt; dts[0].dim() &lt;&lt; std::endl;</div>
 <div class="line"><span class="lineno">   60</span>                }</div>
-<div class="line"><span class="lineno">   61</span>                <span class="keywordflow">catch</span> (<a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::runtime_error</a> &amp;<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">e</a>)</div>
+<div class="line"><span class="lineno">   61</span>                <span class="keywordflow">catch</span> (std::runtime_error &amp;e)</div>
 <div class="line"><span class="lineno">   62</span>                {</div>
-<div class="line"><span class="lineno">   63</span>                    <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::cout</a> &lt;&lt; <span class="stringliteral">&quot;wrong input format&quot;</span> &lt;&lt; <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::endl</a>;</div>
-<div class="line"><span class="lineno">   64</span>                    <span class="keywordflow">return</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">EXIT_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">   63</span>                    std::cout &lt;&lt; <span class="stringliteral">&quot;wrong input format&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   64</span>                    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
 <div class="line"><span class="lineno">   65</span>                }</div>
-<div class="line"><span class="lineno">   66</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">command</a> == <span class="stringliteral">&quot;CREATE_KDTREE&quot;</span>)</div>
+<div class="line"><span class="lineno">   66</span>            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command == <span class="stringliteral">&quot;CREATE_KDTREE&quot;</span>)</div>
 <div class="line"><span class="lineno">   67</span>            {</div>
-<div class="line"><span class="lineno">   68</span>                <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::cout</a> &lt;&lt; <span class="stringliteral">&quot;Creating kdtree from dataset ... &quot;</span>;</div>
-<div class="line"><span class="lineno">   69</span>                <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">kdtree</a> = <a class="code hl_function" href="../../df/d3f/classKDTree.html#a99f61c5c36b235d4503884ac07760ded">KDTree::create</a>(<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">dts</a>);</div>
-<div class="line"><span class="lineno">   70</span>                <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::cout</a> &lt;&lt; <span class="stringliteral">&quot; ok.&quot;</span> &lt;&lt; <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::endl</a>;</div>
+<div class="line"><span class="lineno">   68</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Creating kdtree from dataset ... &quot;</span>;</div>
+<div class="line"><span class="lineno">   69</span>                kdtree = <a class="code hl_function" href="../../df/d3f/classKDTree.html#a99f61c5c36b235d4503884ac07760ded">KDTree::create</a>(dts);</div>
+<div class="line"><span class="lineno">   70</span>                std::cout &lt;&lt; <span class="stringliteral">&quot; ok.&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><span class="lineno">   71</span>            }</div>
-<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">command</a> == <span class="stringliteral">&quot;FOLD_KDTREE&quot;</span>) </div>
+<div class="line"><span class="lineno">   72</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command == <span class="stringliteral">&quot;FOLD_KDTREE&quot;</span>) </div>
 <div class="line"><span class="lineno">   73</span>            {</div>
-<div class="line"><span class="lineno">   74</span>                <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">kdtree</a>-&gt;<a class="code hl_function" href="../../d6/d7c/classAVLTree.html#aa8d3af8b2350c372f485ae9888f8ba0b">fold</a>(<a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::cout</a>);</div>
+<div class="line"><span class="lineno">   74</span>                kdtree-&gt;fold(std::cout);</div>
 <div class="line"><span class="lineno">   75</span>            }</div>
-<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">command</a> == <span class="stringliteral">&quot;UNFOLD_KDTREE&quot;</span>)</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command == <span class="stringliteral">&quot;UNFOLD_KDTREE&quot;</span>)</div>
 <div class="line"><span class="lineno">   77</span>            {</div>
 <div class="line"><span class="lineno">   78</span>                <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">   79</span>                    <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::cout</a> &lt;&lt; <span class="stringliteral">&quot;Unfolding kdtree ... &quot;</span>;</div>
-<div class="line"><span class="lineno">   80</span>                    <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">kdtree</a> = <a class="code hl_function" href="../../df/d3f/classKDTree.html#a99f61c5c36b235d4503884ac07760ded">KDTree::create</a>(<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">input_file</a>);</div>
-<div class="line"><span class="lineno">   81</span>                    <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::cout</a> &lt;&lt; <span class="stringliteral">&quot; ok.&quot;</span> &lt;&lt; <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::endl</a>;</div>
+<div class="line"><span class="lineno">   79</span>                    std::cout &lt;&lt; <span class="stringliteral">&quot;Unfolding kdtree ... &quot;</span>;</div>
+<div class="line"><span class="lineno">   80</span>                    kdtree = <a class="code hl_function" href="../../df/d3f/classKDTree.html#a99f61c5c36b235d4503884ac07760ded">KDTree::create</a>(input_file);</div>
+<div class="line"><span class="lineno">   81</span>                    std::cout &lt;&lt; <span class="stringliteral">&quot; ok.&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><span class="lineno">   82</span>                }</div>
-<div class="line"><span class="lineno">   83</span>                <span class="keywordflow">catch</span>(<a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::runtime_error</a>&amp; <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">e</a>)</div>
+<div class="line"><span class="lineno">   83</span>                <span class="keywordflow">catch</span>(std::runtime_error&amp; e)</div>
 <div class="line"><span class="lineno">   84</span>                {</div>
-<div class="line"><span class="lineno">   85</span>                    <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::cout</a> &lt;&lt; <span class="stringliteral">&quot;Wrong input format.&quot;</span> &lt;&lt; <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::endl</a>;</div>
+<div class="line"><span class="lineno">   85</span>                    std::cout &lt;&lt; <span class="stringliteral">&quot;Wrong input format.&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><span class="lineno">   86</span>                }</div>
 <div class="line"><span class="lineno">   87</span>            }</div>
-<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">command</a> == <span class="stringliteral">&quot;FIND_L1_NN&quot;</span>)</div>
+<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command == <span class="stringliteral">&quot;FIND_L1_NN&quot;</span>)</div>
 <div class="line"><span class="lineno">   89</span>            {</div>
-<div class="line"><span class="lineno">   90</span>                <a class="code hl_class" href="../../d5/d71/classPattern.html">Pattern</a> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">p</a>;</div>
-<div class="line"><span class="lineno">   91</span>                <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">input_line</a> &gt;&gt; <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">p</a>;</div>
-<div class="line"><span class="lineno">   92</span>                <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::cout</a> &lt;&lt; <span class="stringliteral">&quot;Find NN for p=&quot;</span> &lt;&lt; <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">p</a> &lt;&lt; <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::endl</a>;</div>
-<div class="line"><span class="lineno">   93</span>                <span class="keyword">auto</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">result</a> = <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">kdtree</a>-&gt;find_nn(<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">p</a>, <a class="code hl_function" href="../../dd/d6e/pattern_8cpp.html#a66c77a3bb3553a1ded58fdf4160ccdce">distance_L1</a>);</div>
-<div class="line"><span class="lineno">   94</span>                <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::cout</a> &lt;&lt; <span class="stringliteral">&quot;L1 nn  : &quot;</span> &lt;&lt; <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::get&lt;1&gt;</a>(<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">result</a>) &lt;&lt; <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::endl</a>;</div>
-<div class="line"><span class="lineno">   95</span>                <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::cout</a> &lt;&lt; <span class="stringliteral">&quot;L1 dist: &quot;</span> &lt;&lt; <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::get&lt;0&gt;</a>(<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">result</a>) &lt;&lt; <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::endl</a>;</div>
+<div class="line"><span class="lineno">   90</span>                <a class="code hl_class" href="../../d5/d71/classPattern.html">Pattern</a> p;</div>
+<div class="line"><span class="lineno">   91</span>                input_line &gt;&gt; p;</div>
+<div class="line"><span class="lineno">   92</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Find NN for p=&quot;</span> &lt;&lt; p &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   93</span>                <span class="keyword">auto</span> result = kdtree-&gt;find_nn(p, <a class="code hl_function" href="../../dd/d6e/pattern_8cpp.html#a66c77a3bb3553a1ded58fdf4160ccdce">distance_L1</a>);</div>
+<div class="line"><span class="lineno">   94</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;L1 nn  : &quot;</span> &lt;&lt; std::get&lt;1&gt;(result) &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   95</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;L1 dist: &quot;</span> &lt;&lt; std::get&lt;0&gt;(result) &lt;&lt; std::endl;</div>
 <div class="line"><span class="lineno">   96</span>            }</div>
-<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">command</a> == <span class="stringliteral">&quot;FIND_L2_NN&quot;</span>)</div>
+<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (command == <span class="stringliteral">&quot;FIND_L2_NN&quot;</span>)</div>
 <div class="line"><span class="lineno">   98</span>            {</div>
-<div class="line"><span class="lineno">   99</span>                <a class="code hl_class" href="../../d5/d71/classPattern.html">Pattern</a> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">p</a>;</div>
-<div class="line"><span class="lineno">  100</span>                <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">input_line</a> &gt;&gt; <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">p</a>;</div>
-<div class="line"><span class="lineno">  101</span>                <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::cout</a> &lt;&lt; <span class="stringliteral">&quot;Find NN for p=&quot;</span> &lt;&lt; <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">p</a> &lt;&lt; <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::endl</a>;</div>
-<div class="line"><span class="lineno">  102</span>                <span class="keyword">auto</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">result</a> = <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">kdtree</a>-&gt;find_nn(<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">p</a>, <a class="code hl_function" href="../../dd/d6e/pattern_8cpp.html#ae67440981c042f38aa2d1196a4ec65aa">distance_L2</a>);</div>
-<div class="line"><span class="lineno">  103</span>                <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::cout</a> &lt;&lt; <span class="stringliteral">&quot;L2 nn  : &quot;</span> &lt;&lt; <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::get&lt;1&gt;</a>(<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">result</a>) &lt;&lt; <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::endl</a>;</div>
-<div class="line"><span class="lineno">  104</span>                <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::cout</a> &lt;&lt; <span class="stringliteral">&quot;L2 dist: &quot;</span> &lt;&lt; <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::get&lt;0&gt;</a>(<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">result</a>) &lt;&lt; <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::endl</a>;</div>
+<div class="line"><span class="lineno">   99</span>                <a class="code hl_class" href="../../d5/d71/classPattern.html">Pattern</a> p;</div>
+<div class="line"><span class="lineno">  100</span>                input_line &gt;&gt; p;</div>
+<div class="line"><span class="lineno">  101</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Find NN for p=&quot;</span> &lt;&lt; p &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  102</span>                <span class="keyword">auto</span> result = kdtree-&gt;find_nn(p, <a class="code hl_function" href="../../dd/d6e/pattern_8cpp.html#ae67440981c042f38aa2d1196a4ec65aa">distance_L2</a>);</div>
+<div class="line"><span class="lineno">  103</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;L2 nn  : &quot;</span> &lt;&lt; std::get&lt;1&gt;(result) &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  104</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;L2 dist: &quot;</span> &lt;&lt; std::get&lt;0&gt;(result) &lt;&lt; std::endl;</div>
 <div class="line"><span class="lineno">  105</span>            }</div>
 <div class="line"><span class="lineno">  106</span>            <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  107</span>            {</div>
-<div class="line"><span class="lineno">  108</span>                <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::cerr</a> &lt;&lt; <span class="stringliteral">&quot;Error: input command unknown &#39;&quot;</span> &lt;&lt; <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">command</a></div>
-<div class="line"><span class="lineno">  109</span>                          &lt;&lt; <span class="stringliteral">&quot;&#39;.&quot;</span> &lt;&lt; <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::endl</a>;</div>
-<div class="line"><span class="lineno">  110</span>                <span class="keywordflow">return</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">EXIT_FAILURE</a>;</div>
+<div class="line"><span class="lineno">  108</span>                std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: input command unknown &#39;&quot;</span> &lt;&lt; command</div>
+<div class="line"><span class="lineno">  109</span>                          &lt;&lt; <span class="stringliteral">&quot;&#39;.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  110</span>                <span class="keywordflow">return</span> EXIT_FAILURE;</div>
 <div class="line"><span class="lineno">  111</span>            }</div>
 <div class="line"><span class="lineno">  112</span>        }</div>
 <div class="line"><span class="lineno">  113</span>    }</div>
-<div class="line"><span class="lineno">  114</span>    <span class="keywordflow">catch</span>(<a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::runtime_error</a> &amp;<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">e</a>)</div>
+<div class="line"><span class="lineno">  114</span>    <span class="keywordflow">catch</span>(std::runtime_error &amp;e)</div>
 <div class="line"><span class="lineno">  115</span>    {</div>
-<div class="line"><span class="lineno">  116</span>        <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::cerr</a> &lt;&lt; <span class="stringliteral">&quot;Run time exception: &quot;</span> &lt;&lt; <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">e</a>.what() &lt;&lt; <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::endl</a>;</div>
-<div class="line"><span class="lineno">  117</span>        <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">exit_code</a> = <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">EXIT_FAILURE</a>;</div>
+<div class="line"><span class="lineno">  116</span>        std::cerr &lt;&lt; <span class="stringliteral">&quot;Run time exception: &quot;</span> &lt;&lt; e.what() &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  117</span>        exit_code = EXIT_FAILURE;</div>
 <div class="line"><span class="lineno">  118</span>    }</div>
 <div class="line"><span class="lineno">  119</span>    <span class="keywordflow">catch</span>(...)</div>
 <div class="line"><span class="lineno">  120</span>    {</div>
-<div class="line"><span class="lineno">  121</span>        <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::cerr</a> &lt;&lt; <span class="stringliteral">&quot;Catched unknown exception!.&quot;</span> &lt;&lt; <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::endl</a>;</div>
-<div class="line"><span class="lineno">  122</span>        <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">exit_code</a> = <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">EXIT_FAILURE</a>;</div>
+<div class="line"><span class="lineno">  121</span>        std::cerr &lt;&lt; <span class="stringliteral">&quot;Catched unknown exception!.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  122</span>        exit_code = EXIT_FAILURE;</div>
 <div class="line"><span class="lineno">  123</span>    }</div>
-<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">exit_code</a>;</div>
+<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">return</span> exit_code;</div>
 <div class="line"><span class="lineno">  125</span>}</div>
-<div class="ttc" id="aclassAVLTree_html"><div class="ttname"><a href="../../d6/d7c/classAVLTree.html">AVLTree</a></div><div class="ttdoc">ADT AVLTree. A AVLTree is a binary tree that meets the next two invariants: is_a_binary_search_tree()...</div><div class="ttdef"><b>Definition</b> <a href="../../db/df1/avltree_8hpp_source.html#l00195">avltree.hpp:196</a></div></div>
-<div class="ttc" id="aclassAVLTree_html_a8965aaf5d107cab6ae317f7a575cdebc"><div class="ttname"><a href="../../d6/d7c/classAVLTree.html#a8965aaf5d107cab6ae317f7a575cdebc">AVLTree::size</a></div><div class="ttdeci">int size() const</div><div class="ttdoc">Return the number of keys stored in the tree.</div><div class="ttdef"><b>Definition</b> <a href="../../db/dd2/avltree__imp_8hpp_source.html#l00468">avltree_imp.hpp:468</a></div></div>
-<div class="ttc" id="aclassAVLTree_html_a9fab28b32e97ffc5e0f1a4ed3d9823b2"><div class="ttname"><a href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">AVLTree::AVLTree</a></div><div class="ttdeci">AVLTree()</div><div class="ttdoc">Create an empty AVLTree.</div><div class="ttdef"><b>Definition</b> <a href="../../db/dd2/avltree__imp_8hpp_source.html#l00236">avltree_imp.hpp:236</a></div></div>
-<div class="ttc" id="aclassAVLTree_html_aa8d3af8b2350c372f485ae9888f8ba0b"><div class="ttname"><a href="../../d6/d7c/classAVLTree.html#aa8d3af8b2350c372f485ae9888f8ba0b">AVLTree::fold</a></div><div class="ttdeci">std::ostream &amp; fold(std::ostream &amp;out) const</div><div class="ttdoc">Fold an AVLTree into an output stream.</div><div class="ttdef"><b>Definition</b> <a href="../../db/dd2/avltree__imp_8hpp_source.html#l00385">avltree_imp.hpp:385</a></div></div>
 <div class="ttc" id="aclassKDTree_html_a99f61c5c36b235d4503884ac07760ded"><div class="ttname"><a href="../../df/d3f/classKDTree.html#a99f61c5c36b235d4503884ac07760ded">KDTree::create</a></div><div class="ttdeci">static Ref create()</div><div class="ttdoc">Create an empty KDTree given a dataset.</div><div class="ttdef"><b>Definition</b> <a href="../../d7/d7b/kdtree_8cpp_source.html#l00050">kdtree.cpp:50</a></div></div>
 <div class="ttc" id="aclassKDTree_html_aae59232b6f2ff6cc1c1f4adf4e99509a"><div class="ttname"><a href="../../df/d3f/classKDTree.html#aae59232b6f2ff6cc1c1f4adf4e99509a">KDTree::Ref</a></div><div class="ttdeci">std::shared_ptr&lt; KDTree &gt; Ref</div><div class="ttdoc">a reference to a kdtree.</div><div class="ttdef"><b>Definition</b> <a href="../../d1/d3d/kdtree_8hpp_source.html#l00034">kdtree.hpp:34</a></div></div>
 <div class="ttc" id="aclassPattern_html"><div class="ttname"><a href="../../d5/d71/classPattern.html">Pattern</a></div><div class="ttdoc">ADT Pattern. Models a pattern for Machine Learning.</div><div class="ttdef"><b>Definition</b> <a href="../../df/d33/pattern_8hpp_source.html#l00023">pattern.hpp:24</a></div></div>

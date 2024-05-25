@@ -113,7 +113,7 @@ $(function(){initNavTree('d6/d5a/trie_8cpp.html','../../'); initResizable(); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aeb63d3aecf30056caccdb3f57775311d" id="r_aeb63d3aecf30056caccdb3f57775311d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d7c/classAVLTree.html">static</a> <a class="el" href="../../d6/d7c/classAVLTree.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb63d3aecf30056caccdb3f57775311d">preorder_traversal</a> (<a class="el" href="../../d1/dc6/classTrieNode.html#adebf5020a65c3f792bc48c5a4a45db67">TrieNode::Ref</a> node, <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::string</a> prefix, <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::vector</a>&lt; <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::string</a> &gt; &amp;<a class="el" href="../../d6/d7c/classAVLTree.html">keys</a>)</td></tr>
+<tr class="memitem:aeb63d3aecf30056caccdb3f57775311d" id="r_aeb63d3aecf30056caccdb3f57775311d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb63d3aecf30056caccdb3f57775311d">preorder_traversal</a> (<a class="el" href="../../d1/dc6/classTrieNode.html#adebf5020a65c3f792bc48c5a4a45db67">TrieNode::Ref</a> node, std::string prefix, std::vector&lt; std::string &gt; &amp;keys)</td></tr>
 <tr class="memdesc:aeb63d3aecf30056caccdb3f57775311d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to retrieve the keys.  <br /></td></tr>
 <tr class="separator:aeb63d3aecf30056caccdb3f57775311d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -134,19 +134,19 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/d7c/classAVLTree.html">static</a> <a class="el" href="../../d6/d7c/classAVLTree.html">void</a> preorder_traversal </td>
+          <td class="memname">static void preorder_traversal </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d1/dc6/classTrieNode.html#adebf5020a65c3f792bc48c5a4a45db67">TrieNode::Ref</a></td>          <td class="paramname"><span class="paramname"><em>node</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::string</a></td>          <td class="paramname"><span class="paramname"><em>prefix</em>, </span></td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>prefix</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::vector</a>&lt; <a class="el" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::string</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>keys</em></span>&#160;)</td>
+          <td class="paramtype">std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>keys</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -173,19 +173,18 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  162</span>    <span class="comment">// Remember: node-&gt;is_key() means the prefix is a key too.</span></div>
 <div class="line"><span class="lineno">  163</span> </div>
 <div class="line"><span class="lineno">  164</span>    <span class="keywordflow">if</span> (node-&gt;is_key()){</div>
-<div class="line"><span class="lineno">  165</span>        <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">keys</a>.push_back(prefix);</div>
+<div class="line"><span class="lineno">  165</span>        keys.push_back(prefix);</div>
 <div class="line"><span class="lineno">  166</span>    }</div>
 <div class="line"><span class="lineno">  167</span> </div>
 <div class="line"><span class="lineno">  168</span>    node-&gt;goto_first_child();</div>
 <div class="line"><span class="lineno">  169</span> </div>
 <div class="line"><span class="lineno">  170</span>    <span class="keywordflow">while</span> (node-&gt;current_exists()){</div>
-<div class="line"><span class="lineno">  171</span>        <a class="code hl_function" href="#aeb63d3aecf30056caccdb3f57775311d">preorder_traversal</a>(node-&gt;current_node(), prefix + node-&gt;current_symbol(), <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">keys</a>);</div>
+<div class="line"><span class="lineno">  171</span>        <a class="code hl_function" href="#aeb63d3aecf30056caccdb3f57775311d">preorder_traversal</a>(node-&gt;current_node(), prefix + node-&gt;current_symbol(), keys);</div>
 <div class="line"><span class="lineno">  172</span>        node-&gt;goto_next_child();</div>
 <div class="line"><span class="lineno">  173</span>    }</div>
 <div class="line"><span class="lineno">  174</span> </div>
 <div class="line"><span class="lineno">  175</span>    <span class="comment">//</span></div>
 <div class="line"><span class="lineno">  176</span>}</div>
-<div class="ttc" id="aclassAVLTree_html"><div class="ttname"><a href="../../d6/d7c/classAVLTree.html">AVLTree</a></div><div class="ttdoc">ADT AVLTree. A AVLTree is a binary tree that meets the next two invariants: is_a_binary_search_tree()...</div><div class="ttdef"><b>Definition</b> <a href="../../db/df1/avltree_8hpp_source.html#l00195">avltree.hpp:196</a></div></div>
 <div class="ttc" id="atrie_8cpp_html_aeb63d3aecf30056caccdb3f57775311d"><div class="ttname"><a href="#aeb63d3aecf30056caccdb3f57775311d">preorder_traversal</a></div><div class="ttdeci">static void preorder_traversal(TrieNode::Ref node, std::string prefix, std::vector&lt; std::string &gt; &amp;keys)</div><div class="ttdoc">Helper function to retrieve the keys.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/d5a/trie_8cpp_source.html#l00158">trie.cpp:158</a></div></div>
 </div><!-- fragment -->
 </div>

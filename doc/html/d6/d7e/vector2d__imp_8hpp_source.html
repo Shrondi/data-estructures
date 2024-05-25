@@ -117,7 +117,7 @@ $(function(){initNavTree('d6/d7e/vector2d__imp_8hpp_source.html','../../'); init
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// TODO: implement the interface for the proposed ADT.</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
 <div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../dc/d8c/classVector2D.html#ac3b2da737ea3e226031e137ccd5125bb">   16</a></span><a class="code hl_function" href="../../dc/d8c/classVector2D.html#ac3b2da737ea3e226031e137ccd5125bb">Vector2D&lt;T&gt;::Vector2D</a>(<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">T</a> x, <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">T</a> y){</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../dc/d8c/classVector2D.html#ac3b2da737ea3e226031e137ccd5125bb">   16</a></span><a class="code hl_function" href="../../dc/d8c/classVector2D.html#ac3b2da737ea3e226031e137ccd5125bb">Vector2D&lt;T&gt;::Vector2D</a>(T x, T y){</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    _x = x;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    _y = y;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>}</div>
@@ -127,57 +127,55 @@ $(function(){initNavTree('d6/d7e/vector2d__imp_8hpp_source.html','../../'); init
 <div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../dc/d8c/classVector2D.html#a4c39a512525ef6b5d2fb1dd8bb725090">   22</a></span><span class="keyword">typename</span> <a class="code hl_typedef" href="../../dc/d8c/classVector2D.html#a4fdc7e5e3a2e207f78b4997bccbe7bce">Vector2D&lt;T&gt;::Ref</a> <a class="code hl_function" href="../../dc/d8c/classVector2D.html#a4c39a512525ef6b5d2fb1dd8bb725090">Vector2D&lt;T&gt;::create</a>()</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::make_shared&lt;Vector2D&lt;T&gt;</a>&gt; (0, 0);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keywordflow">return</span> std::make_shared&lt;Vector2D&lt;T&gt;&gt; (0, 0);</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
 </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; </div>
 <div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../dc/d8c/classVector2D.html#aa07c5f34c1d3106198cc70b58da3df6c">   28</a></span><span class="keyword">typename</span> <a class="code hl_typedef" href="../../dc/d8c/classVector2D.html#a4fdc7e5e3a2e207f78b4997bccbe7bce">Vector2D&lt;T&gt;::Ref</a> <a class="code hl_function" href="../../dc/d8c/classVector2D.html#a4c39a512525ef6b5d2fb1dd8bb725090">Vector2D&lt;T&gt;::create</a>(<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">T</a> x, <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">T</a> y)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../dc/d8c/classVector2D.html#aa07c5f34c1d3106198cc70b58da3df6c">   28</a></span><span class="keyword">typename</span> <a class="code hl_typedef" href="../../dc/d8c/classVector2D.html#a4fdc7e5e3a2e207f78b4997bccbe7bce">Vector2D&lt;T&gt;::Ref</a> <a class="code hl_function" href="../../dc/d8c/classVector2D.html#a4c39a512525ef6b5d2fb1dd8bb725090">Vector2D&lt;T&gt;::create</a>(T x, T y)</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">std::make_shared&lt;Vector2D&lt;T&gt;</a>&gt; (x, y);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keywordflow">return</span> std::make_shared&lt;Vector2D&lt;T&gt;&gt; (x, y);</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
 </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
 <div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../dc/d8c/classVector2D.html#ab53d4a9380db8e437f8fcf140e089794">   34</a></span><a class="code hl_class" href="../../d6/d7c/classAVLTree.html">T</a> <a class="code hl_function" href="../../dc/d8c/classVector2D.html#ab53d4a9380db8e437f8fcf140e089794">Vector2D&lt;T&gt;::x</a>(){</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../dc/d8c/classVector2D.html#ab53d4a9380db8e437f8fcf140e089794">   34</a></span>T <a class="code hl_function" href="../../dc/d8c/classVector2D.html#ab53d4a9380db8e437f8fcf140e089794">Vector2D&lt;T&gt;::x</a>(){</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">return</span> _x;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
 </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
 <div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../dc/d8c/classVector2D.html#ad5b608638f2159633944c8a2d813bc5b">   39</a></span><a class="code hl_class" href="../../d6/d7c/classAVLTree.html">T</a> <a class="code hl_function" href="../../dc/d8c/classVector2D.html#ad5b608638f2159633944c8a2d813bc5b">Vector2D&lt;T&gt;::y</a>(){</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../dc/d8c/classVector2D.html#ad5b608638f2159633944c8a2d813bc5b">   39</a></span>T <a class="code hl_function" href="../../dc/d8c/classVector2D.html#ad5b608638f2159633944c8a2d813bc5b">Vector2D&lt;T&gt;::y</a>(){</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">return</span> _y;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
 </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
 <div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../dc/d8c/classVector2D.html#ac2ba4f21e009c6170b12b68f9ffd8147">   44</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d8c/classVector2D.html#ac2ba4f21e009c6170b12b68f9ffd8147">Vector2D&lt;T&gt;::set_x</a>(<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">T</a> x){</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../dc/d8c/classVector2D.html#ac2ba4f21e009c6170b12b68f9ffd8147">   44</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d8c/classVector2D.html#ac2ba4f21e009c6170b12b68f9ffd8147">Vector2D&lt;T&gt;::set_x</a>(T x){</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    _x = x;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_function" href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">assert</a>(_x == x);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    assert(_x == x);</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
 </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
 <div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="../../dc/d8c/classVector2D.html#af250b7b9f8b9b4dcc8ad8e3e39da609c">   50</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d8c/classVector2D.html#af250b7b9f8b9b4dcc8ad8e3e39da609c">Vector2D&lt;T&gt;::set_y</a>(<a class="code hl_class" href="../../d6/d7c/classAVLTree.html">T</a> y){</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="../../dc/d8c/classVector2D.html#af250b7b9f8b9b4dcc8ad8e3e39da609c">   50</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d8c/classVector2D.html#af250b7b9f8b9b4dcc8ad8e3e39da609c">Vector2D&lt;T&gt;::set_y</a>(T y){</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    _y = y;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
 </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../dc/d8c/classVector2D.html#a74e9e0064e317557ec0a51d3dae5805e">   55</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d8c/classVector2D.html#a74e9e0064e317557ec0a51d3dae5805e">Vector2D&lt;T&gt;::add</a>(<a class="code hl_typedef" href="../../dc/d8c/classVector2D.html#a4fdc7e5e3a2e207f78b4997bccbe7bce">Ref</a> <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">other</a>){</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    _x += <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">other</a>-&gt;x();</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    _y += <a class="code hl_class" href="../../d6/d7c/classAVLTree.html">other</a>-&gt;y();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../dc/d8c/classVector2D.html#a74e9e0064e317557ec0a51d3dae5805e">   55</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../dc/d8c/classVector2D.html#a74e9e0064e317557ec0a51d3dae5805e">Vector2D&lt;T&gt;::add</a>(<a class="code hl_typedef" href="../../dc/d8c/classVector2D.html#a4fdc7e5e3a2e207f78b4997bccbe7bce">Ref</a> other){</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    _x += other-&gt;x();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    _y += other-&gt;y();</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
 </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">//</span></div>
-<div class="ttc" id="aclassAVLTree_html"><div class="ttname"><a href="../../d6/d7c/classAVLTree.html">AVLTree</a></div><div class="ttdoc">ADT AVLTree. A AVLTree is a binary tree that meets the next two invariants: is_a_binary_search_tree()...</div><div class="ttdef"><b>Definition</b> <a href="../../db/df1/avltree_8hpp_source.html#l00195">avltree.hpp:196</a></div></div>
-<div class="ttc" id="aclassAVLTree_html_a9fab28b32e97ffc5e0f1a4ed3d9823b2"><div class="ttname"><a href="../../d6/d7c/classAVLTree.html#a9fab28b32e97ffc5e0f1a4ed3d9823b2">AVLTree::AVLTree</a></div><div class="ttdeci">AVLTree()</div><div class="ttdoc">Create an empty AVLTree.</div><div class="ttdef"><b>Definition</b> <a href="../../db/dd2/avltree__imp_8hpp_source.html#l00236">avltree_imp.hpp:236</a></div></div>
 <div class="ttc" id="aclassVector2D_html_a4c39a512525ef6b5d2fb1dd8bb725090"><div class="ttname"><a href="../../dc/d8c/classVector2D.html#a4c39a512525ef6b5d2fb1dd8bb725090">Vector2D::create</a></div><div class="ttdeci">static Ref create()</div><div class="ttdef"><b>Definition</b> <a href="#l00022">vector2d_imp.hpp:22</a></div></div>
 <div class="ttc" id="aclassVector2D_html_a4fdc7e5e3a2e207f78b4997bccbe7bce"><div class="ttname"><a href="../../dc/d8c/classVector2D.html#a4fdc7e5e3a2e207f78b4997bccbe7bce">Vector2D::Ref</a></div><div class="ttdeci">std::shared_ptr&lt; Vector2D&lt; T &gt; &gt; Ref</div><div class="ttdef"><b>Definition</b> <a href="../../d6/de1/vector2d_8hpp_source.html#l00058">vector2d.hpp:58</a></div></div>
 <div class="ttc" id="aclassVector2D_html_a74e9e0064e317557ec0a51d3dae5805e"><div class="ttname"><a href="../../dc/d8c/classVector2D.html#a74e9e0064e317557ec0a51d3dae5805e">Vector2D::add</a></div><div class="ttdeci">void add(Ref other)</div><div class="ttdef"><b>Definition</b> <a href="#l00055">vector2d_imp.hpp:55</a></div></div>
