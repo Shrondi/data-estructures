@@ -200,7 +200,7 @@ V const &HashTable<K, V>::operator[](K const &k) const
     //V aux;
     //return aux;
 
-    return table_[k].value();
+    return table_[find(k)].value();
     //
 }
 
@@ -214,9 +214,9 @@ V &HashTable<K, V>::operator[](K const &k)
     //return aux;
 
     if (has(k)){
-        return table_[k].value();
+        return table_[find(k)].value();
     }else{
-        return insert(k, V{});
+        return table_[insert(k, V{})].value();
     }
 
     //
