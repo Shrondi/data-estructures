@@ -48,6 +48,18 @@ update_counters(Log &log, size_t &i, size_t &j,
             // Remember: if the updated counter is greater or equal than max_acc
             //           the ip must be banned for 60 seconds.
 
+            if (counters.has(log[i].ip)){
+                ++counters[log[i].ip];
+
+                if (counters[log[i].ip] >= max_acc){
+                    System().ban_ip(log[i].ip, 60);
+                }
+
+            }else{
+                counters[log[i].ip] = 1;
+            }
+
+            
             //
         }
 
@@ -67,7 +79,9 @@ update_counters(Log &log, size_t &i, size_t &j,
             //  - its counter must be >0 before decrementing.
             // You should check these things to make sure you are doing
             //    well the work.
-
+            if (counters.has(log[j].ip) && counters[log[j].ip] > 0){
+                --counters[log[j].ip];
+            }
             //
         }
         ++j;
