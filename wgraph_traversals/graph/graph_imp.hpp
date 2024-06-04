@@ -101,7 +101,10 @@ template <class T, class E>
 Edge<T, E>::Edge(VertexRef u, VertexRef v, E const &data)
 {
     // TODO
-
+    u_ = u;
+    v_ = v;
+    item_ = data;
+    is_visited_ = false;
     //
     assert(has(u));
     assert(has(v));
@@ -118,7 +121,7 @@ bool Edge<T, E>::is_visited() const
 {
     bool ret_v = false;
     // TODO
-
+    ret_v = is_visited_ == true;
     //
     return ret_v;
 }
@@ -128,8 +131,9 @@ E const &Edge<T, E>::item() const
 {
     // TODO
     // Change the code to return a const reference to the proper attribute.
-    E aux;
-    return aux;
+    //E aux;
+    //return aux;
+    return item_;
     //
 }
 
@@ -138,7 +142,7 @@ bool Edge<T, E>::has(VertexRef const &n) const
 {
     bool ret_val = false;
     // TODO
-
+    ret_val = n == u_ || n == v_;
     //
     return ret_val;
 }
@@ -149,7 +153,7 @@ typename Edge<T, E>::VertexRef Edge<T, E>::other(VertexRef const &n) const
     assert(has(n));
     VertexRef ret_val;
     // TODO
-
+    ret_val = (n == u_ ? v_ : u_); 
     //
     return ret_val;
 }
@@ -159,8 +163,9 @@ typename Edge<T, E>::VertexRef const &Edge<T, E>::first() const
 {
     // TODO
     // Change the code to return a const reference to the proper attribute.
-    VertexRef aux;
-    return aux;
+    //VertexRef aux;
+    //return aux;
+    return u_;
     //
 }
 
@@ -169,8 +174,9 @@ typename Edge<T, E>::VertexRef const &Edge<T, E>::second() const
 {
     // TODO
     // Change the code to return a const reference to the proper attribute.
-    VertexRef aux;
-    return aux;
+    //VertexRef aux;
+    //return aux;
+    return v_;
     //
 }
 
@@ -178,7 +184,7 @@ template <class T, class E>
 void Edge<T, E>::set_visited(bool new_st)
 {
     // TODO
-
+    is_visited_ = new_st;
     //
     assert(new_st || !is_visited());
     assert(!new_st || is_visited());
@@ -188,7 +194,7 @@ template <class T, class E>
 void Edge<T, E>::set_item(E const &v)
 {
     // TODO
-
+    item_ = v;
     //
     assert(item() == v);
 }
