@@ -22,7 +22,9 @@ template <class T>
 Vertex<T>::Vertex(size_t l, T const &data)
 {
     // TODO
-
+    label_ = l;
+    item_ = data;
+    is_visited_ = false;
     //
     assert(label() == l);
     assert(item() == data);
@@ -34,8 +36,9 @@ const T &Vertex<T>::item() const
 {
     // TODO
     // Change the code to return a const reference to the proper attribute.
-    T aux;
-    return aux;
+    //T aux;
+    //return aux;
+    return item_;
     //
 }
 
@@ -46,7 +49,7 @@ typename Vertex<T>::key_t Vertex<T>::key() const
     // TODO
     // Remember: it is assumed that T type defines a type T::key_t and
     // a method 'T::key_t T::key() const'
-
+    ret_v = item_.key();
     //
     return ret_v;
 }
@@ -56,7 +59,7 @@ size_t Vertex<T>::label() const
 {
     size_t ret_v = 0;
     // TODO
-
+    ret_v = label_;
     //
     return ret_v;
 }
@@ -66,7 +69,7 @@ bool Vertex<T>::is_visited() const
 {
     bool ret_v = false;
     // TODO
-
+    ret_v = is_visited_ == true;
     //
     return ret_v;
 }
@@ -75,7 +78,7 @@ template <class T>
 void Vertex<T>::set_item(T const &v)
 {
     // TODO
-
+    item_ = v;
     //
     assert(item() == v);
 }
@@ -84,7 +87,7 @@ template <class T>
 void Vertex<T>::set_visited(bool new_st)
 {
     // TODO
-
+    is_visited_ = new_st;
     //
     assert(new_st || !is_visited());
     assert(!new_st || is_visited());
