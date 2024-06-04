@@ -50,23 +50,44 @@ float prim_algorithm(Graph<T, float> &g,
         // Update distances to MST for not visited vertex using as predecessor
         // the vertex 'u'.
 
+        for (size_t i = 0; i < C.size(); ++i){
+            if (A[i] == false && g.is_adjacent(U[i], U[u])){
+                float coste = g.edge(U[i], U[u])->item();
+                if (coste < C[i]){
+                    C[i] = coste;
+                    V[i] = u;
+                }
+            }
+        }
         //
 
         float least_cost = std::numeric_limits<float>::infinity();
         // Select the next vertex 'u' to add to the MST (with the least cost).
-
+        for (size_t i = 0; i < C.size(); ++i){
+            if (A[i] == false && C[i] < least_cost){
+                least_cost = C[i];
+                u = i;
+            }
+        }
         //
+        
 
         assert(!A[u]); // u does not belong to the MST yet.
 
         // if the least cost found is infinite, this means an unconnected graph
         // is being processed. Throw an exception.
-
+        if (least_cost == std::numeric_limits<float>::infinity()){
+            throw std::runtime_error("It is an unconnected graph.");
+        }
         //
 
         // Update the total distances, push back the edge found to the MST and
         // add the found vertex to the MST.
+        total_distance += least_cost;
 
+        mst.push_back(g.edge(U[u], U[V[u]]));
+
+        A[u] = true;
         //
     }
     //
