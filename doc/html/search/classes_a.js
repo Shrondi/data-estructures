@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['vector2d_0',['Vector2D',['../dc/d8c/classVector2D.html',1,'']]]
+  ['oacollisionresolution_0',['OACollisionResolution',['../dc/d3d/classOACollisionResolution.html',1,'']]],
+  ['os_1',['OS',['../d1/d4d/classOS.html',1,'']]]
 ];

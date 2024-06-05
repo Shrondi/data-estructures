@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['iterator_0',['iterator',['../dd/d55/classListIterator.html#a8dc38a6eaa6fa0976c53d49de408314b',1,'ListIterator::iterator'],['../d6/da9/classList.html#a52b0ad5061b96766684b0ef65305ae4e',1,'List::iterator']]]
+  ['distance_5ffunction_5ft_0',['distance_function_t',['../d5/d71/classPattern.html#a169b2aca553aab1bfbcd2a4a26206ae1',1,'Pattern']]]
 ];

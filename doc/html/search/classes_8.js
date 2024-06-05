@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['stack_0',['Stack',['../d4/dc1/classStack.html',1,'']]]
+  ['kdtree_0',['KDTree',['../df/d3f/classKDTree.html',1,'']]]
 ];

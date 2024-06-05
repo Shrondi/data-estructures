@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['tam_5f_0',['tam_',['../d4/d16/classCDArray.html#a2fb84126210fe1603872a37e498363e5',1,'CDArray']]],
-  ['this_5f_1',['this_',['../d6/da9/classList.html#ad3cc5d70d6e370669cc21d2f9e636804',1,'List']]]
+  ['name_0',['name',['../dc/da3/structCity__data.html#a3f709a39e061c54b820a3ef7276f8e92',1,'City_data']]],
+  ['next_5flabel_5f_1',['next_label_',['../d2/d62/classGraph.html#a2ab13314e49bcb5f8ca9277b2e1f9d24',1,'Graph']]],
+  ['node_5f_2',['node_',['../dd/d55/classListIterator.html#a6b3e69702b188bd6b30bacbd1bc0e5a7',1,'ListIterator']]]
 ];

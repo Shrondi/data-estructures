@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kdtree_0',['KDTree',['../df/d3f/classKDTree.html#a24143044da4bf09f8b4ef61eeec1f1b2',1,'KDTree']]]
+  ['joint_0',['joint',['../dc/d5c/classDisjointSets.html#a35110c416e5845e5cc0f4d2bdb8e6242',1,'DisjointSets']]]
 ];

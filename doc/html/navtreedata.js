@@ -57,14 +57,40 @@ var NAVTREE =
       [ "Evaluación", "db/d1f/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2alphabet__soup_2README.html#evaluación-4", null ],
       [ "Referencias", "db/d1f/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2alphabet__soup_2README.html#referencias-1", null ]
     ] ],
+    [ "Detector de ataques DOS (Hashing con direccionamiento abierto)", "d8/dca/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2dos__detector-open__addressing_2README.html", [
+      [ "Objetivos", "d8/dca/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2dos__detector-open__addressing_2README.html#objetivos-6", null ],
+      [ "Descripción", "d8/dca/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2dos__detector-open__addressing_2README.html#descripción-6", null ],
+      [ "Detalles de implementación", "d8/dca/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2dos__detector-open__addressing_2README.html#detalles-de-implementación-1", [
+        [ "Uso de enteros con un tamaño de bit fijo", "d8/dca/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2dos__detector-open__addressing_2README.html#uso-de-enteros-con-un-tamaño-de-bit-fijo", null ],
+        [ "Sobre la generación de números aleatorios", "d8/dca/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2dos__detector-open__addressing_2README.html#sobre-la-generación-de-números-aleatorios", null ],
+        [ "Sobre la simulación del sistema operativo", "d8/dca/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2dos__detector-open__addressing_2README.html#sobre-la-simulación-del-sistema-operativo", null ]
+      ] ],
+      [ "Evaluación", "d8/dca/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2dos__detector-open__addressing_2README.html#evaluación-5", null ],
+      [ "Referencias", "d8/dca/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2dos__detector-open__addressing_2README.html#referencias-2", null ]
+    ] ],
+    [ "TODO", "dd/da0/todo.html", null ],
+    [ "Árbol Abarcador de un Grafo", "dc/d3e/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2wgraph__traversals_2README.html", [
+      [ "Objetivo", "dc/d3e/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2wgraph__traversals_2README.html#objetivo-1", null ],
+      [ "Descripción", "dc/d3e/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2wgraph__traversals_2README.html#descripción-7", [
+        [ "Árboles abarcadores en profundidad o en amplitud", "dc/d3e/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2wgraph__traversals_2README.html#árboles-abarcadores-en-profundidad-o-en-amplitud", null ],
+        [ "Ordenación topológica de un grafo dirigido acíclico", "dc/d3e/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2wgraph__traversals_2README.html#ordenación-topológica-de-un-grafo-dirigido-acíclico", null ],
+        [ "Árbol abarcador de coste mínimo", "dc/d3e/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2wgraph__traversals_2README.html#árbol-abarcador-de-coste-mínimo", null ]
+      ] ],
+      [ "Evaluación", "dc/d3e/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2wgraph__traversals_2README.html#evaluación-6", null ],
+      [ "Referencias", "dc/d3e/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2wgraph__traversals_2README.html#referencias-3", null ]
+    ] ],
+    [ "El tipo abstracto Grafo", "de/d2d/md__2home_2carlos_2Escritorio_2ED_2Pr_xC3_xA1cticas_2data-estructures_2wgraph__traversals_2graph_2README.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
         [ "Typedefs", "functions_type.html", null ],
+        [ "Enumerations", "functions_enum.html", null ],
+        [ "Enumerator", "functions_eval.html", null ],
         [ "Related Symbols", "functions_rela.html", null ]
       ] ]
     ] ],
@@ -73,6 +99,7 @@ var NAVTREE =
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ]
       ] ]
     ] ]
@@ -82,8 +109,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d6/d7c/classAVLTree.html#a978f67c7afb82048159351c9499e42a3",
-"df/d33/pattern_8hpp.html#aee03c5bce55702a30ac80f582ea5569e"
+"d4/d7f/btree__utils__imp_8hpp_source.html",
+"d8/d15/classRPHash.html#a0b0046e520d7c696e2059217f304ec56",
+"dd/d08/test__list_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

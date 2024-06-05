@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['readme_2emd_0',['README.md',['../d2/d9a/alphabet__soup_2README_8md.html',1,'(Global Namespace)'],['../d6/de3/avl-tree_2README_8md.html',1,'(Global Namespace)'],['../de/d1f/binary__tree_2README_8md.html',1,'(Global Namespace)'],['../d2/d6f/dos__detector-open__addressing_2README_8md.html',1,'(Global Namespace)'],['../d7/d4d/kdtree_2pattern_2README_8md.html',1,'(Global Namespace)'],['../dd/d0e/kdtree_2README_8md.html',1,'(Global Namespace)'],['../d0/d33/linear__ds_2README_8md.html',1,'(Global Namespace)'],['../da/ddd/README_8md.html',1,'(Global Namespace)'],['../d8/d76/vector2d_2README_8md.html',1,'(Global Namespace)'],['../da/db1/wgraph__traversals_2graph_2README_8md.html',1,'(Global Namespace)'],['../df/dd4/wgraph__traversals_2README_8md.html',1,'(Global Namespace)']]]
+];
