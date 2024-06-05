@@ -40,6 +40,33 @@ float kruskal_algorithm(Graph<T, float> &g,
     // Hint: use std::sort and a proper compare function for edges to sort the edges vector.
     // Remember: the edge sort order is (weight:u.key():v.key()) and lexicographical sorting.
 
+    std::sort(edges.begin(), edges.end(), [](const auto &a, const auto &b)
+    {
+        if (a->item() != b->item()) {
+            return a->item() < b->item();
+        }
+
+        if (a->first()->label() != b->first()->label()) {
+            return a->first()->label() < b->first()->label();
+        }
+        
+        return a->second()->label() < b->second()->label();
+    });
+
+    for (auto edge : edges){
+
+        auto u = edge->first();
+        auto v = edge->second();
+
+        if (sets.find(u->label()) != sets.find(v->label())){
+            sets.joint(u->label(), v->label());
+
+            mst.push_back(edge);
+
+            total_distance += edge->item();
+        }
+    }
+
     //
 
     return total_distance;
